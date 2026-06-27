@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+medical_documents.db
+.pytest_cache/
+storage/originals/*
+storage/processed/*
+!storage/originals/.gitkeep
+!storage/processed/.gitkeep

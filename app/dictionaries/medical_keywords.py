@@ -1,0 +1,2 @@
+ENGLISH_MEDICAL_KEYWORDS = ["Laboratory","Lab","CBC","WBC","RBC","Hemoglobin","Hematology","Biochemistry","FBS","Glucose","TSH","Reference Range","Result","Unit","Pap smear","Pathology","Radiology","Ultrasound","MRI","CT","Findings","Impression","Specimen"]
+PERSIAN_MEDICAL_KEYWORDS = ["آزمایشگاه","بیمارستان","پاتوبیولوژی","رادیولوژی","سونوگرافی","پاتولوژی","نتیجه","محدوده نرمال","نام بیمار","کد ملی","پزشک"]
