@@ -12,10 +12,39 @@ class PreprocessingResult:
     steps: list[str] = field(default_factory=list)
     error: str | None = None
 
+@dataclass
+class RenderResult:
+    """Result of rendering PDF pages to images for OCR (no image enhancement)."""
+    success: bool
+    output_paths: list[str] = field(default_factory=list)
+    page_count: int = 0
+    error: str | None = None
+
 def _cv2():
     return __import__("cv2")
 
 class PreprocessingService:
+    def render_pdf_pages(self, path: str, document_id: int | None = None, max_pages: int | None = None) -> RenderResult:
+        """Render PDF pages to PNG images for OCR.
+
+        This is rendering only — it does NOT apply image-enhancement
+        preprocessing (denoise/threshold/sharpen). Use it for good-quality
+        scanned PDFs that need page images for OCR without altering the pixels.
+        Only up to ``max_pages`` (default ``settings.max_preprocess_pages``)
+        pages are rendered; fewer if the PDF has fewer pages.
+        """
+        try:
+            base=Path(settings.storage_dir)/'rendered'/str(document_id or uuid.uuid4().hex); base.mkdir(parents=True,exist_ok=True)
+            limit=max_pages or settings.max_preprocess_pages
+            doc=fitz.open(path); paths=[]
+            for i,page in enumerate(doc[:limit], start=1):
+                pix=page.get_pixmap(matrix=fitz.Matrix(2,2), alpha=False)
+                out=base/f"page_{i:03d}.png"; pix.save(str(out)); paths.append(str(out))
+            doc.close()
+            return RenderResult(True, paths, len(paths), None)
+        except Exception as e:
+            return RenderResult(False, [], 0, str(e))
+
     def _process_array(self, img, out: Path) -> list[str]:
         cv2=_cv2(); steps=[]
         if len(img.shape)==3:

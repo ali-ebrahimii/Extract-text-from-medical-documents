@@ -26,6 +26,17 @@ class DocumentStatus(str, Enum):
     EXTRACTION_FAILED = "extraction_failed"
     PROCESSED = "processed"
     DUPLICATE_DOCUMENT = "duplicate_document"
+    # NOTE: the values below describe human-review state and are kept here only
+    # for backwards compatibility. New code should use ``VerificationStatus``.
+    NEEDS_REVIEW = "needs_review"
+    VERIFIED = "verified"
+    REJECTED = "rejected"
+
+
+class VerificationStatus(str, Enum):
+    """Human-review state, kept separate from the pipeline ``DocumentStatus``."""
+
+    UNVERIFIED = "unverified"
     NEEDS_REVIEW = "needs_review"
     VERIFIED = "verified"
     REJECTED = "rejected"
