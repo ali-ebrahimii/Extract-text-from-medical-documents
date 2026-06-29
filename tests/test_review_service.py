@@ -46,5 +46,5 @@ def test_verify_sets_validation_only_when_empty(db_session):
                         file_size_bytes=1, file_hash='h2', validation_status='', verification_status='unverified')
     db_session.add(doc); db_session.commit(); db_session.refresh(doc)
     ReviewService().verify(db_session, doc)
-    assert doc.validation_status=='verified'
+    assert doc.validation_status=='processed'
     assert doc.verification_status=='verified'

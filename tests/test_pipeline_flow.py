@@ -122,6 +122,59 @@ def test_render_respects_page_limit_caps_at_max(tmp_path):
     assert len(r.output_paths)==5  # capped at default max
 
 
+def test_image_pipeline_runs_ocr_only_once(db_session, tmp_path, monkeypatch):
+    from app.models.ocr_page import OCRPage
+    doc=_make_doc(db_session, _png(tmp_path), 'img.png', 'image/png')
+    pipe=PipelineService()
+    monkeypatch.setattr(pipe.quality, 'assess', _good_quality)
+    calls={'images': 0, 'any': 0}
+    sentinel='CBC WBC Hemoglobin Result Unit Reference Range'
+    def images(paths):
+        calls['images']+=1
+        return OCRResult(True, sentinel, 0.9, [OCRPageResult(i+1, sentinel, 0.9, p) for i, p in enumerate(paths)])
+    monkeypatch.setattr(pipe.ocr, 'extract_images_text', images)
+    monkeypatch.setattr(pipe.ocr, 'extract_any', lambda *a, **k: calls.__setitem__('any', calls['any']+1) or images([str(doc.original_file_path)]))
+    pipe.process_document(db_session, doc.id)
+    refreshed=db_session.get(MedicalDocument, doc.id)
+    assert calls['images']==1           # OCR runs exactly once
+    assert calls['any']==0              # no second OCR pass
+    assert refreshed.ocr_text==sentinel  # relevance + extraction reuse the same OCR text
+    assert refreshed.relevance_score and refreshed.relevance_score > 0
+    pages=db_session.query(OCRPage).filter_by(document_id=doc.id).count()
+    assert pages==1                     # no duplicated OCRPage rows
+
+
+def test_poor_but_fixable_triggers_preprocessing(db_session, tmp_path, monkeypatch):
+    doc=_make_doc(db_session, _png(tmp_path), 'img.png', 'image/png')
+    pipe=PipelineService()
+    out=str(tmp_path/'out.png')
+    def fake_assess(path):
+        if 'out' in str(path):
+            return _good_quality(path)
+        return QualityResult('poor_quality', 0.12, False, ['low_contrast'], 0.1, 0.5, 0.1, 0.5, is_fixable=True)
+    monkeypatch.setattr(pipe.quality, 'assess', fake_assess)
+    called={'pre': 0}
+    monkeypatch.setattr(pipe.preprocessing, 'preprocess', lambda *a, **k: called.__setitem__('pre', called['pre']+1) or PreprocessingResult(True, out, [out], ['denoise']))
+    monkeypatch.setattr(pipe.ocr, 'extract_images_text', _fake_ocr_text())
+    pipe.process_document(db_session, doc.id)
+    refreshed=db_session.get(MedicalDocument, doc.id)
+    assert called['pre']==1
+    assert refreshed.validation_status!='poor_quality'
+
+
+def test_poor_not_fixable_stops_before_ocr(db_session, tmp_path, monkeypatch):
+    doc=_make_doc(db_session, _png(tmp_path), 'img.png', 'image/png')
+    pipe=PipelineService()
+    monkeypatch.setattr(pipe.quality, 'assess', lambda p: QualityResult('poor_quality', 0.05, False, ['unreadable_image'], 0, 0, 0, 0, is_fixable=False))
+    calls={'ocr': 0, 'pre': 0}
+    monkeypatch.setattr(pipe.ocr, 'extract_images_text', lambda paths: calls.__setitem__('ocr', calls['ocr']+1) or _fake_ocr_text()(paths))
+    monkeypatch.setattr(pipe.preprocessing, 'preprocess', lambda *a, **k: calls.__setitem__('pre', calls['pre']+1) or PreprocessingResult(True, 'x', ['x']))
+    pipe.process_document(db_session, doc.id)
+    refreshed=db_session.get(MedicalDocument, doc.id)
+    assert refreshed.validation_status=='poor_quality'
+    assert calls['ocr']==0 and calls['pre']==0
+
+
 def test_duplicate_allowed_by_default_adds_warning(client, tmp_path):
     p=_text_pdf(tmp_path)
     with p.open('rb') as f:

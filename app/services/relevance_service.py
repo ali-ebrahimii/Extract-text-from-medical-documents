@@ -42,6 +42,18 @@ PERSIAN_TERMS = [
 ENGLISH_TERMS = ["Laboratory","Pathobiology","Lab","CBC","WBC","RBC","Hemoglobin","Platelets","Hematology","Biochemistry","FBS","Glucose","TSH","SGOT","SGPT","AST","ALT","Reference Range","Normal Range","Result","Unit","Method","Pap smear","Pathology","Radiology","Ultrasound","MRI","CT","X-ray","Findings","Impression","Specimen"]
 
 
+# Persian (U+06F0-9) and Arabic-Indic (U+0660-9) digits -> ASCII 0-9.
+_DIGIT_MAP = {ord(p): str(i) for i, p in enumerate("۰۱۲۳۴۵۶۷۸۹")}
+_DIGIT_MAP.update({ord(a): str(i) for i, a in enumerate("٠١٢٣٤٥٦٧٨٩")})
+
+
+def normalize_digits(text: str) -> str:
+    """Convert Persian/Arabic-Indic digits to ASCII digits."""
+    if not text:
+        return ""
+    return text.translate(_DIGIT_MAP)
+
+
 def normalize_persian(text: str) -> str:
     """Normalize Arabic/Persian character variants and collapse whitespace.
 
@@ -49,6 +61,7 @@ def normalize_persian(text: str) -> str:
       letters, which PDF text layers often contain)
     - Arabic Yeh (ي) -> Persian Yeh (ی)
     - Arabic Kaf (ك) -> Persian Kaf (ک)
+    - Persian/Arabic-Indic digits -> ASCII digits
     - collapse runs of intra-line whitespace (newlines are preserved so callers
       can still reason about line structure)
     """
@@ -56,6 +69,7 @@ def normalize_persian(text: str) -> str:
         return ""
     text = unicodedata.normalize("NFKC", text)
     text = text.replace("ي", "ی").replace("ك", "ک")
+    text = normalize_digits(text)
     text = re.sub(r"[^\S\n]+", " ", text)
     return text
 

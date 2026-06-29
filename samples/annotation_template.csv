@@ -1,0 +1,3 @@
+filename,expected_document_type,expected_patient_name,expected_national_id_present,expected_date,expected_test_or_report_name,expected_lab_result_count,notes
+example_lab.pdf,lab,,true,1404/12/09,CBC,12,fill in expected values per real sample; leave blank to skip a metric
+example_radiology.pdf,radiology,,false,,Chest X-ray,,

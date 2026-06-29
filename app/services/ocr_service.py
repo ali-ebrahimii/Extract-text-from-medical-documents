@@ -8,7 +8,7 @@ class OCRPageResult:
     page_number:int; text:str; confidence:float; source_path:str|None=None
 @dataclass
 class OCRResult:
-    success:bool; text:str; confidence:float; pages:list[OCRPageResult]=field(default_factory=list); error:str|None=None
+    success:bool; text:str; confidence:float; pages:list[OCRPageResult]=field(default_factory=list); error:str|None=None; warnings:list[str]=field(default_factory=list)
 
 class OCRService:
     MISSING="Image OCR engine is not available. Install Tesseract or configure PaddleOCR."
@@ -22,18 +22,15 @@ class OCRService:
             return OCRResult(bool(text.strip()), text, .95 if text.strip() else 0, pages, None if text.strip() else "No embedded text found; image OCR required")
         except Exception as e: return OCRResult(False,"",0,[],str(e))
 
+    def _backend(self)->str:
+        return getattr(settings,"ocr_backend","tesseract").lower()
+
     def _should_try_paddle(self)->bool:
-        backend=getattr(settings,"ocr_backend","tesseract").lower()
+        backend=self._backend()
         if backend=="paddleocr": return True
         if backend=="auto": return bool(getattr(settings,"enable_paddleocr",False))
-        # tesseract backend: only when explicitly enabled
-        return bool(getattr(settings,"enable_paddleocr",False))
-
-    def _allow_tesseract_fallback(self)->bool:
-        # Tesseract is always an acceptable fallback unless the backend is
-        # explicitly forced to paddleocr-only behaviour. We still allow it so a
-        # missing PaddleOCR install never breaks the pipeline.
-        return True
+        # "tesseract" (and any unknown value): Tesseract only.
+        return False
 
     def _paddle_text(self,path:str):
         try:
@@ -48,10 +45,10 @@ class OCRService:
         except Exception: return None
 
     def _tesseract_text(self,path:str):
+        lang=getattr(settings,"tesseract_lang","eng")
         try:
             import pytesseract
             from PIL import Image
-            lang=getattr(settings,"tesseract_lang","eng")
             img=Image.open(path)
             data=pytesseract.image_to_data(img, lang=lang, output_type=pytesseract.Output.DICT)
             words=[w for w in data.get('text',[]) if w and w.strip()]
@@ -60,29 +57,33 @@ class OCRService:
             conf=(sum(confs)/len(confs)/100) if confs else (.6 if text.strip() else 0)
             return text, conf
         except Exception as e:
-            return None, str(e)
+            return None, (f"{e} (check TESSERACT_LANG='{lang}' and that the matching "
+                          "tesseract language packs are installed)")
 
     def extract_image_text(self,path:str,page_number:int=1)->OCRResult:
+        warnings:list[str]=[]
         if self._should_try_paddle():
             p=self._paddle_text(path)
             if p is not None:
                 text,conf=p
-                return OCRResult(bool(text.strip()),text,conf,[OCRPageResult(page_number,text,conf,path)],None if text.strip() else "PaddleOCR returned no text")
-            # PaddleOCR unavailable; fall back to Tesseract if allowed
-            if not self._allow_tesseract_fallback():
-                return OCRResult(False,"",0,[],self.MISSING)
+                return OCRResult(bool(text.strip()),text,conf,[OCRPageResult(page_number,text,conf,path)],None if text.strip() else "PaddleOCR returned no text",warnings)
+            # PaddleOCR requested but unavailable -> fall back to Tesseract with a warning.
+            warnings.append("paddleocr_failed_fell_back_to_tesseract")
         text,conf_or_err=self._tesseract_text(path)
         if text is None:
-            return OCRResult(False,"",0,[],f"{self.MISSING} ({conf_or_err})")
+            return OCRResult(False,"",0,[],f"{self.MISSING} ({conf_or_err})",warnings)
         conf=conf_or_err
-        return OCRResult(bool(text.strip()),text,conf,[OCRPageResult(page_number,text,conf,path)],None if text.strip() else "Tesseract returned no text")
+        return OCRResult(bool(text.strip()),text,conf,[OCRPageResult(page_number,text,conf,path)],None if text.strip() else "Tesseract returned no text",warnings)
 
     def extract_images_text(self,paths:list[str])->OCRResult:
-        pages=[]; errs=[]
+        pages=[]; errs=[]; warnings:list[str]=[]
         for i,p in enumerate(paths,1):
-            r=self.extract_image_text(p,i); pages.extend(r.pages); errs.append(r.error) if r.error else None
+            r=self.extract_image_text(p,i); pages.extend(r.pages)
+            if r.error: errs.append(r.error)
+            for w in r.warnings:
+                if w not in warnings: warnings.append(w)
         text="\f".join(p.text for p in pages); conf=sum((p.confidence for p in pages),0)/len(pages) if pages else 0
-        return OCRResult(bool(text.strip()),text,conf,pages,"; ".join(errs) if errs and not text.strip() else None)
+        return OCRResult(bool(text.strip()),text,conf,pages,"; ".join(errs) if errs and not text.strip() else None,warnings)
 
     def extract_any(self,path:str,analysis_result=None,preprocessed_paths:list[str]|None=None)->OCRResult:
         if preprocessed_paths: return self.extract_images_text(preprocessed_paths)

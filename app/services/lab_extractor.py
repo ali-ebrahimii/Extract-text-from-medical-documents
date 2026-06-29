@@ -1,5 +1,6 @@
 import re
 from app.dictionaries.lab_test_aliases import LAB_TEST_ALIASES
+from app.services.relevance_service import normalize_digits
 
 METHODS={"Photometr","ELISA","ECL","HPLC","Immunoassay"}
 FLAGS={"High","Low","Critical","H","L"}
@@ -54,7 +55,9 @@ class LabExtractor:
 
     def extract(self,text:str)->list[dict]:
         rows=[]
-        for page_no, page_text in enumerate((text or "").split("\f"), start=1):
+        # Normalize Persian/Arabic digits before parsing so OCR like "FBS ۱۰۱" parses.
+        text=normalize_digits(text or "")
+        for page_no, page_text in enumerate(text.split("\f"), start=1):
             for raw in page_text.splitlines():
                 line=" ".join(raw.strip().split())
                 if not line or not re.search(r"[A-Za-z]",line): continue

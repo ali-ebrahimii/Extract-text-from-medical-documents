@@ -2,7 +2,7 @@ from datetime import datetime
 
 from sqlalchemy.orm import Session
 
-from app.core.enums import VerificationStatus
+from app.core.enums import DocumentStatus, VerificationStatus
 from app.models.document import MedicalDocument
 from app.models.review import ReviewTask
 
@@ -35,9 +35,10 @@ class ReviewService:
 
     def verify(self, db: Session, doc: MedicalDocument) -> MedicalDocument:
         doc.verification_status = VerificationStatus.VERIFIED.value
-        # Only set validation_status if it is empty/null; never overwrite it.
+        # "verified" belongs to verification_status, not validation_status. If the
+        # pipeline state is somehow empty, default it to the processed state.
         if not doc.validation_status:
-            doc.validation_status = VerificationStatus.VERIFIED.value
+            doc.validation_status = DocumentStatus.PROCESSED.value
         self._close_open_tasks(db, doc)
         db.commit()
         db.refresh(doc)

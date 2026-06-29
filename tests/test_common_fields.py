@@ -32,3 +32,29 @@ def test_admission_date_extracted():
     d=CommonFieldExtractor().extract_structured('تاريخ پذيرش : 14:12:57 - 1404/12/09')
     assert d['date_of_test_or_report']['value']=='1404/12/09'
     assert d['date_of_test_or_report']['calendar']=='jalali'
+
+
+def test_date_field_includes_line_evidence():
+    text='آزمايشگاه تاو\nکد ملي : 0021456631\nتاريخ پذيرش : 14:12:57 - 1404/12/09'
+    d=CommonFieldExtractor().extract_structured(text)
+    date=d['date_of_test_or_report']
+    assert date['value']=='1404/12/09'
+    assert date['source_line_index']==2
+    assert '1404/12/09' in date['source_text']
+
+
+def test_national_id_evidence_hides_raw_value():
+    d=CommonFieldExtractor().extract_structured('کد ملي : 0021456631')
+    nid=d['national_id']
+    assert nid['value'] is None            # raw value hidden by default
+    assert nid['hash'] is not None
+    assert nid['source_text'] is not None
+    assert '0021456631' not in nid['source_text']  # raw digits masked in evidence
+
+
+def test_national_id_raw_exposed_when_allowed(monkeypatch):
+    from app.core.config import settings
+    monkeypatch.setattr(settings, 'allow_raw_national_id', True, raising=False)
+    d=CommonFieldExtractor().extract_structured('کد ملي : 0021456631')
+    assert d['national_id']['value']=='0021456631'
+    assert '0021456631' in (d['national_id']['source_text'] or '')
