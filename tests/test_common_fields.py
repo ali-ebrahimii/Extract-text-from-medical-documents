@@ -58,3 +58,27 @@ def test_national_id_raw_exposed_when_allowed(monkeypatch):
     d=CommonFieldExtractor().extract_structured('کد ملي : 0021456631')
     assert d['national_id']['value']=='0021456631'
     assert '0021456631' in (d['national_id']['source_text'] or '')
+
+
+def test_tavo_male_header_extracts_patient_sex_age():
+    d=CommonFieldExtractor().extract_structured('کبیری- آقای پدرام- دکتر43 : سن')
+    assert d['sex']['value']=='male'
+    assert d['age']['value']==43
+    assert 'پدرام' in d['patient_name']['value'] and 'کبیری' in d['patient_name']['value']
+    assert d['doctor_name']['value'] is None
+
+
+def test_tavo_female_header_extracts_patient_sex_age():
+    d=CommonFieldExtractor().extract_structured('غفاریان- خانم غزل- دکتر45 : سن')
+    assert d['sex']['value']=='female'
+    assert d['age']['value']==45
+    assert 'غزل' in d['patient_name']['value'] and 'غفاریان' in d['patient_name']['value']
+
+
+def test_tavo_fixture_header_and_date():
+    from pathlib import Path
+    d=CommonFieldExtractor().extract_structured(Path('tests/fixtures/tavo/header_patient_age.txt').read_text(encoding='utf-8'))
+    assert d['patient_name']['value']
+    assert d['sex']['value']=='female'
+    assert d['age']['value']==45
+    assert d['date_of_test_or_report']['value']=='1404/12/09'

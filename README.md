@@ -229,7 +229,7 @@ rm -rf storage/
 - OCR quality depends on locally installed OCR engines and source image quality. Real quality must be measured on real samples (see [Evaluating on real samples](#evaluating-on-real-samples)).
 - PaddleOCR support is optional and used only when installed and enabled; it cannot combine English+Persian in one run.
 - Lab/common-field extraction is **regex/dictionary based (MVP only)**; it does not hallucinate missing values and sends uncertain rows/documents to review.
-- **No layout-aware table extraction yet.** The lab extractor parses single-line rows; column-major layouts (one field per line, common in some real lab PDFs such as the Taav samples) are not yet reassembled into rows and are conservatively routed to review.
+- Layout-aware lab extraction is still limited: Tavo-style column-major tables are supported for common analytes, but not every vendor/table format is recognized.
 - No Celery/background/async worker yet; the pipeline runs synchronously on upload.
 - No Alembic migration layer yet; SQLite + `create_all` is used for the MVP, so schema changes require a development reset (see above).
 - No human review UI yet; review is via the API endpoints only.
@@ -245,3 +245,32 @@ uvicorn app.main:app --reload
 ```bash
 pytest -q
 ```
+
+
+## Evaluation and Tavo lab OCR notes
+
+Recent fixes target the real sample evaluation workflow:
+
+- `.jpg` inputs are now evaluated and validated as `image/jpeg`; `image/jpg` is tolerated as an upload alias for compatibility.
+- Tavo lab PDFs with column-major OCR/table text are supported for common biochemistry, CBC, thyroid, and vitamin-D analytes.
+- Tavo Persian patient header lines such as `خانوادگی- آقای نام- دکتر43 : سن` are parsed as patient name, sex, and age; `دکتر43` is treated as age context, not a doctor name.
+- Guideline/reference comments such as `High >400 l`, `Desirable <200`, and `Average risk : 4.4 - 7.1` are suppressed as standalone lab results.
+- Known limitation: not every lab vendor/table layout is supported. Uncertain extraction should remain `needs_review` rather than inventing values.
+
+Run evaluation on real files with:
+
+```bash
+python scripts/evaluate_samples.py --input-dir samples/raw --output-dir samples/output --reset-db
+```
+
+For non-SQLite databases, destructive reset requires explicit confirmation:
+
+```bash
+python scripts/evaluate_samples.py --input-dir samples/raw --output-dir samples/output --reset-db --yes
+```
+
+After evaluation, inspect:
+
+- `samples/output/summary.csv`
+- `samples/output/json/*.json`
+- `samples/output/ocr/*.txt`
