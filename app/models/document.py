@@ -30,6 +30,7 @@ class MedicalDocument(Base):
     preprocessing_required = Column(Boolean, default=False)
     preprocessing_status = Column(String, nullable=True)
     preprocessed_file_path = Column(String, nullable=True)
+    warnings = Column(JSON, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     patients = relationship("DocumentPatient", back_populates="document", cascade="all, delete-orphan")
