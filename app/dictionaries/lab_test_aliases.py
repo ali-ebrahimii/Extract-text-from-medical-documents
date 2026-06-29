@@ -1,0 +1,1 @@
+LAB_TEST_ALIASES = {"Fasting blood sugar":"FBS","FBS":"FBS","Glucose":"FBS","W.B.C":"WBC","WBC":"WBC","R.B.C":"RBC","RBC":"RBC","Hemoglobin":"Hb","Hb":"Hb","SGOT(AST)":"AST","S.G.O.T":"AST","SGPT(ALT)":"ALT","S.G.P.T":"ALT","TSH":"TSH","T.S.H":"TSH","25-OH Vitamin D3":"Vitamin D"}

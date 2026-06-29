@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+pydantic-settings
+sqlalchemy
+pymupdf
+opencv-python
+pillow
+numpy
+python-dotenv
+pytesseract
+pytest
+httpx
