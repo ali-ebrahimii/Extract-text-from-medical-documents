@@ -6,5 +6,7 @@ medical_documents.db
 .pytest_cache/
 storage/originals/*
 storage/processed/*
+storage/rendered/*
 !storage/originals/.gitkeep
 !storage/processed/.gitkeep
+!storage/rendered/.gitkeep

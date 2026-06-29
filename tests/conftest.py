@@ -5,6 +5,17 @@ from app.models.document import Base
 from app.db.session import get_db
 from app.main import app
 @pytest.fixture()
+def db_session():
+    fd,path=tempfile.mkstemp(suffix='.db'); os.close(fd)
+    engine=create_engine(f'sqlite:///{path}', connect_args={'check_same_thread':False})
+    Base.metadata.create_all(engine)
+    Session=sessionmaker(bind=engine)
+    db=Session()
+    try: yield db
+    finally:
+        db.close(); os.remove(path)
+
+@pytest.fixture()
 def client():
     from fastapi.testclient import TestClient
     fd,path=tempfile.mkstemp(suffix='.db'); os.close(fd)
