@@ -1,5 +1,6 @@
 __pycache__/
 *.py[cod]
+.DS_Store
 .env
 .venv/
 medical_documents.db
@@ -10,3 +11,9 @@ storage/rendered/*
 !storage/originals/.gitkeep
 !storage/processed/.gitkeep
 !storage/rendered/.gitkeep
+
+# Evaluation harness artifacts (keep the annotation template, ignore inputs/outputs)
+samples/raw/
+samples/output/
+eval.db
+eval_storage/

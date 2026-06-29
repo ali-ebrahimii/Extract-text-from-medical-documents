@@ -71,12 +71,13 @@ The backend now distinguishes text PDFs, scanned PDFs, and image uploads before 
    - scanned PDFs are rendered to page images (up to `MAX_PREPROCESS_PAGES`) and run light OCR;
    - image uploads run quality assessment, preprocessing only when needed, and OCR before relevance checks.
    - Image relevance is OCR-based, never filename-only.
-4. **Quality validation** is skipped for text PDFs and applied to scanned PDFs / image uploads only.
-5. **Preprocessing happens only when needed.** Good-quality input is never preprocessed (preprocessing can damage already-clean images). Rendering a scanned PDF to page images for OCR is treated as *rendering*, not image-enhancement preprocessing.
+4. **Quality validation** is skipped for text PDFs and applied to scanned PDFs / image uploads only. Scanned PDFs are assessed **page-by-page** (`assess_many`); the document-level summary follows the worst page conservatively (status/fixability from the worst page, average score reported) and per-page details are stored in the quality-check `issues`.
+5. **Preprocessing happens only when needed.** Quality has two separate flags: `is_acceptable` (good enough as-is) and `is_fixable` (preprocessing can plausibly help). `good_quality` is never preprocessed; `needs_preprocessing` and `poor_quality`-but-`is_fixable` are enhanced and re-assessed (continuing only if quality actually improves); `poor_quality` and not `is_fixable` stops at `poor_quality`. Rendering a scanned PDF to page images for OCR is *rendering*, not image enhancement.
 6. **Preprocessing** never overwrites originals. Enhanced pages are saved under `storage/processed/{document_id}/page_001.png`; rendered-for-OCR pages under `storage/rendered/{document_id}/page_001.png`.
-7. **OCR** stores full text and page-level OCR rows in `ocr_pages`.
-8. **Classification and extraction** run on OCR/PDF text, including Persian/English lab reports.
-9. **Human verification** (`verification_status`) is tracked separately from pipeline state (`validation_status`).
+7. **OCR runs once per upload** for images/scanned PDFs: a single OCR pass produces the text used for *both* relevance validation and extraction (no duplicated OCR work or duplicated `ocr_pages` rows). Full text and page-level OCR rows are stored in `ocr_pages`.
+8. **Classification and extraction** run on OCR/PDF text, including Persian/English lab reports. Persian/Arabic-Indic digits (`۰۱۲۳…`, `٠١٢٣…`) are normalized to ASCII before parsing.
+9. **Common fields include line-level evidence** — each field carries `value`, `confidence`, `source_text`, `source_line_index` (and `calendar` for dates). The national-ID evidence is masked unless `ALLOW_RAW_NATIONAL_ID=true`.
+10. **Human verification** (`verification_status`) is tracked separately from pipeline state (`validation_status`).
 
 ## Text PDFs vs scanned PDFs
 
@@ -178,6 +179,42 @@ The upload flow detects an existing `file_hash`.
 - `BLOCK_DUPLICATE_UPLOADS=false` (default): the upload is allowed and the response includes the warning `duplicate_file_hash_detected`.
 - `BLOCK_DUPLICATE_UPLOADS=true`: the document is marked `validation_status=duplicate_document`, the extraction pipeline is skipped, and the warnings include `existing_document_id=<id>` pointing at the original.
 
+## Evaluating on real samples
+
+Real extraction quality must be measured on real documents, not synthetic ones. Two offline scripts help, and neither requires running the FastAPI server — they use the same DB/session/services as the app.
+
+### 1. Run the pipeline over a folder
+
+```bash
+python scripts/evaluate_samples.py \
+  --input-dir samples/raw \
+  --output-dir samples/output \
+  --reset-db --limit 20
+```
+
+Supported inputs: `.pdf`, `.jpg`, `.jpeg`, `.png`, `.webp`. For each file it writes:
+
+- `samples/output/json/{name}.json` — the full API-shaped response;
+- `samples/output/ocr/{name}.txt` — the extracted OCR/PDF text;
+- a row in `samples/output/summary.csv`.
+
+Flags: `--reset-db` (drop+recreate tables and clear the output dir), `--limit N` (quick testing), `--copy-files true|false` (copy inputs into `storage/originals`, the default, vs. reference them in place). Originals are never modified.
+
+> Point `DATABASE_URL`/`STORAGE_DIR` at scratch locations if you don't want to touch your dev database, e.g. `DATABASE_URL=sqlite:///./eval.db STORAGE_DIR=eval_storage python scripts/evaluate_samples.py ...`.
+
+### 2. Compare against manual annotations
+
+Fill in `samples/annotation_template.csv` (one row per file; leave a column blank to skip that metric), then:
+
+```bash
+python scripts/compare_annotations.py \
+  --summary samples/output/summary.csv \
+  --annotations samples/annotation_template.csv \
+  --output samples/output/metrics.json
+```
+
+It reports `document_type_accuracy`, `patient_name_found_accuracy`, `date_found_accuracy`, `lab_result_count_exact_match`, `average_extraction_confidence`, `needs_review_rate`, and `rejection_rate` over the annotated rows.
+
 ## Development reset
 
 SQLite schema changes are not yet managed by Alembic, so during development you may need to delete the database and stored files after a model change:
@@ -189,11 +226,13 @@ rm -rf storage/
 
 ## Current limitations
 
-- OCR quality depends on locally installed OCR engines and source image quality.
+- OCR quality depends on locally installed OCR engines and source image quality. Real quality must be measured on real samples (see [Evaluating on real samples](#evaluating-on-real-samples)).
 - PaddleOCR support is optional and used only when installed and enabled; it cannot combine English+Persian in one run.
-- Lab/common-field extraction is regex/dictionary based; it does not hallucinate missing values and sends uncertain rows/documents to review.
-- No Celery/background queue has been added; the pipeline runs synchronously on upload.
+- Lab/common-field extraction is **regex/dictionary based (MVP only)**; it does not hallucinate missing values and sends uncertain rows/documents to review.
+- **No layout-aware table extraction yet.** The lab extractor parses single-line rows; column-major layouts (one field per line, common in some real lab PDFs such as the Taav samples) are not yet reassembled into rows and are conservatively routed to review.
+- No Celery/background/async worker yet; the pipeline runs synchronously on upload.
 - No Alembic migration layer yet; SQLite + `create_all` is used for the MVP, so schema changes require a development reset (see above).
+- No human review UI yet; review is via the API endpoints only.
 
 ## Running the API
 

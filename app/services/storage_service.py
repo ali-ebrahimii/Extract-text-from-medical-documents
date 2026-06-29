@@ -13,3 +13,19 @@ class StorageService:
                 size+=len(chunk); h.update(chunk); f.write(chunk)
         upload.file.seek(0)
         return str(path), size, h.hexdigest()
+
+    def save_file(self, src_path: str, copy: bool = True) -> tuple[str, int, str]:
+        """Ingest an existing file from disk (used by the offline evaluation script).
+
+        Computes size and SHA-256. By default copies the file into
+        ``storage/originals`` so the original input is never modified; set
+        ``copy=False`` to reference the file in place.
+        """
+        src=Path(src_path)
+        data=src.read_bytes()
+        size=len(data); digest=hashlib.sha256(data).hexdigest()
+        if not copy:
+            return str(src), size, digest
+        dest=self.root/'originals'/f"{uuid.uuid4().hex}{src.suffix.lower()}"
+        shutil.copyfile(src, dest)
+        return str(dest), size, digest
