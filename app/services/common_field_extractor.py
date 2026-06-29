@@ -76,6 +76,19 @@ class CommonFieldExtractor:
         v, idx, src=self._search_lines(lines, r"\b([A-Za-z]-?\d{3,}-\d{3,})\b")
         return v, idx, src
 
+
+    def _tavo_header(self, lines: list[str]) -> dict:
+        for i, line in enumerate(lines):
+            m=re.search(r"(.{1,80}?)-\s*(آقای|آقاي|خانم)\s+(.{1,40}?)-\s*دکتر\s*([0-9]{1,3})\s*[:：]\s*سن", line)
+            if not m:
+                continue
+            family=self._clean(m.group(1))
+            title=m.group(2); given=self._clean(m.group(3)); age=int(m.group(4))
+            sex="female" if title=="خانم" else "male"
+            name=self._clean(f"{given} {family}")
+            return {"patient_name": (name, .65, i, line.strip()), "sex": (sex, .75, i, line.strip()), "age": (age, .75, i, line.strip())}
+        return {}
+
     def extract_structured(self, text: str) -> dict:
         # Normalize Persian/Arabic variants, presentation-form glyphs and digits so
         # labels, dates and IDs from real PDF text layers match reliably.
@@ -97,6 +110,7 @@ class CommonFieldExtractor:
         print_date, pd_idx, pd_src=self._search_lines(lines, r"(?:Print(?:ed)?(?:\s*On)?|تاریخ\s*چاپ|تاريخ\s*چاپ)\s*[:：]?\s*(?:\d{1,2}:\d{2}:\d{2}\s*-\s*)?([0-9]{4}[/-][0-9]{1,2}[/-][0-9]{1,2})")
 
         name, name_idx, name_src=self._search_lines(lines, r"(?:Patient\s*Name|نام\s*(?:بیمار|بيمار)|Name)\s*[:：]?\s*([^\n]+)")
+        tavo=self._tavo_header(lines)
         sex=None; age=None; sex_src=None; sex_idx=None; age_src=None; age_idx=None
         for i, line in enumerate(lines):
             m=re.search(r"\b(آقای|آقاي|خانم)\s+([^\n]+?)\s+سن\s*[:：]?\s*([0-9]{1,3})", line)
@@ -105,6 +119,12 @@ class CommonFieldExtractor:
                 if not name: name=m.group(2).strip(" -"); name_src=line.strip(); name_idx=i
                 age=int(m.group(3)); age_src=line.strip(); age_idx=i
                 break
+        if not name and "patient_name" in tavo:
+            name, _, name_idx, name_src=tavo["patient_name"]
+        if age is None and "age" in tavo:
+            age, _, age_idx, age_src=tavo["age"]
+        if sex is None and "sex" in tavo:
+            sex, _, sex_idx, sex_src=tavo["sex"]
         if sex is None:
             sv, si, ss=self._search_lines(lines, r"\b(Male|Female|آقای|آقاي|خانم)\b")
             if sv:

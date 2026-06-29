@@ -64,3 +64,41 @@ def test_missing_unit_and_range_lowers_confidence_for_known_test():
     rows={r['test_name_standard']: r for r in LabExtractor().extract('TSH 5.6 ELISA')}
     assert 'TSH' in rows
     assert rows['TSH']['confidence'] <= 0.7
+
+
+def test_guideline_reference_comments_are_not_lab_rows():
+    ex=LabExtractor()
+    assert ex.extract('High >400 l') == []
+    assert ex.extract('Desirable <200') == []
+    assert ex.extract('Average risk : 4.4 - 7.1') == []
+
+
+def test_real_rows_with_flags_and_guidelines_still_parse():
+    rows=_rows('Lymphocytes 43 % 20 - 40 High\nTriglycerides 130 mg/dL Desirable <200 Photometr')
+    assert rows['Lymphocytes']['abnormal_flag']=='High'
+    assert rows['Triglycerides']['result_numeric']==130
+
+
+def test_tavo_column_major_biochemistry_fixture():
+    text=__import__('pathlib').Path('tests/fixtures/tavo/column_major_biochemistry.txt').read_text(encoding='utf-8')
+    rows=_rows(text)
+    assert rows['FBS']['result_numeric']==88
+    assert rows['FBS']['unit']=='mg/dL'
+    assert rows['Triglycerides']['reference_range'].startswith('Desirable <200')
+    assert rows['Cholesterol']['test_name_raw']=='Cholestrol'
+    assert rows['AST']['abnormal_flag']=='High'
+    assert rows['ALT']['method']=='Photometr'
+    assert 'High' not in rows
+    assert len(rows) >= 5
+
+
+def test_tavo_column_major_cbc_block():
+    text='''Test\nResult\nHematology\nUnit\nNormal Range\nMethod\nWBC\n7.2\n10^3/uL\n4.0-10.0\nRBC\n5.1\n10^6/uL\n4.5-5.9\nHemoglobin\n14.0\ng/dL\n13-17\nPlatelets\n250\n10^3/uL\n150-450'''
+    rows=_rows(text)
+    assert {'WBC','RBC','Hb','Platelets'} <= set(rows)
+
+
+def test_deduplicates_single_line_and_column_major_results():
+    text='''Fasting blood sugar 88 mg/dL 70-115\nTest\nResult\nUnit\nNormal Range\nMethod\nFasting blood sugar\n88\nmg/dL\n70-115\nPhotometr'''
+    rows=[r for r in LabExtractor().extract(text) if r['test_name_standard']=='FBS']
+    assert len(rows)==1

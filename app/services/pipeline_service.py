@@ -29,7 +29,8 @@ class PipelineService:
     def _stop(self,db,doc,status,reason=None):
         doc.validation_status=status; doc.rejection_reason=reason; db.commit(); db.refresh(doc); return doc
     def _save_quality(self,db,doc,q):
-        db.add(DocumentQualityCheck(document_id=doc.id, blur_score=q.blur_score, brightness_score=q.brightness_score, contrast_score=q.contrast_score, resolution_score=q.resolution_score, crop_score=q.crop_score, orientation_score=q.orientation_score, ocr_readability_score=q.ocr_readability_score, overall_quality_score=q.overall_quality_score, is_acceptable=q.is_acceptable, issues=q.issues))
+        details={'issues':q.issues,'metrics':q.metrics,'page_scores':q.page_scores,'page_issues':q.page_issues,'worst_page_number':q.worst_page_number,'average_quality_score':q.average_quality_score,'min_quality_score':q.min_quality_score,'num_pages':q.num_pages}
+        db.add(DocumentQualityCheck(document_id=doc.id, blur_score=q.blur_score, brightness_score=q.brightness_score, contrast_score=q.contrast_score, resolution_score=q.resolution_score, crop_score=q.crop_score, orientation_score=q.orientation_score, ocr_readability_score=q.ocr_readability_score, overall_quality_score=q.overall_quality_score, is_acceptable=q.is_acceptable, issues=details))
     def _save_ocr_pages(self,db,doc,ocr):
         for p in ocr.pages:
             db.add(OCRPage(document_id=doc.id,page_number=p.page_number,source_path=p.source_path,ocr_text=p.text,ocr_confidence=p.confidence))
@@ -87,6 +88,8 @@ class PipelineService:
         rel=self.relevance.check_from_text(relevance_text, doc.original_file_name)
         doc.relevance_score=rel.relevance_score; db.add(DocumentRelevanceCheck(document_id=doc.id,is_medical_document=rel.is_medical_document,relevance_score=rel.relevance_score,detected_keywords=rel.detected_keywords,detected_document_signals=rel.detected_document_signals,rejection_reason=rel.rejection_reason))
         if not rel.is_medical_document and relevance_text.strip():
+            if ocr is not None:
+                doc.ocr_text=ocr.text; doc.ocr_confidence=ocr.confidence; self._save_ocr_pages(db,doc,ocr)
             doc.document_type=DocumentType.UNRELATED_DOCUMENT.value; return self._stop(db,doc,DocumentStatus.UNRELATED_DOCUMENT.value,rel.rejection_reason)
         if not rel.is_medical_document and not analysis.should_skip_image_quality_check:
             warnings.append('relevance_uncertain_ocr_text_unavailable')
@@ -107,6 +110,8 @@ class PipelineService:
         specific=[] if cls.document_type==DocumentType.LAB.value else {}
         if cls.document_type==DocumentType.LAB.value:
             specific=self.lab.extract(ocr.text)
+            if not doc.test_or_report_name and specific:
+                doc.test_or_report_name='Lab Report'; common_s['test_or_report_name']={'value':'Lab Report','confidence':.5,'source_text':None,'source_line_index':None,'inferred':True}; common['test_or_report_name']='Lab Report'
             for r in specific: db.add(LabResult(document_id=doc.id, **r))
         elif cls.document_type==DocumentType.PAP_SMEAR.value:
             specific=self.pap.extract(ocr.text); db.add(PapSmearReport(document_id=doc.id, **specific))

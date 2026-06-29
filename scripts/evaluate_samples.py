@@ -16,9 +16,12 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import shutil
 import sys
 from pathlib import Path
+
+os.environ.setdefault("DATABASE_URL", "sqlite:///./eval_medical_documents.db")
 
 # Make the project importable when run directly (python scripts/evaluate_samples.py).
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -30,7 +33,8 @@ from app.services.storage_service import StorageService  # noqa: E402
 from app.services.pipeline_service import PipelineService  # noqa: E402
 from app.api.routes.documents import rich_doc  # noqa: E402
 
-SUPPORTED = {".pdf", ".jpg", ".jpeg", ".png", ".webp"}
+MIME_MAP = {".pdf":"application/pdf",".jpg":"image/jpeg",".jpeg":"image/jpeg",".png":"image/png",".webp":"image/webp"}
+SUPPORTED = set(MIME_MAP)
 
 CSV_COLUMNS = [
     "filename", "document_id", "validation_status", "verification_status",
@@ -39,6 +43,9 @@ CSV_COLUMNS = [
     "ocr_text_length", "extraction_confidence", "patient_name_found",
     "national_id_hash_found", "date_found", "test_or_report_name_found",
     "lab_result_count", "pap_smear_found", "radiology_found",
+    "patient_name_value_masked_or_present", "center_name_found", "tracking_number_found",
+    "age_found", "sex_found", "false_positive_suspected_count", "ocr_warning_count",
+    "quality_worst_page_number", "quality_min_score",
     "rejection_reason", "warnings",
 ]
 
@@ -51,6 +58,10 @@ def _summary_row(filename: str, response: dict) -> dict:
     common = response.get("common_fields") or {}
     extracted = response.get("extracted_data") or {}
     nid = common.get("national_id") or {}
+    quality_details = ((response.get("quality") or {}).get("details") or {})
+    warnings = response.get("warnings") or []
+    lab_results = extracted.get("lab_results") or []
+    fp_count = sum(1 for r in lab_results if (r.get("test_name_standard") or "").lower() in {"high","desirable","average risk","low risk","borderline hight"})
     return {
         "filename": filename,
         "document_id": response.get("document_id"),
@@ -68,11 +79,20 @@ def _summary_row(filename: str, response: dict) -> dict:
         "national_id_hash_found": bool(nid.get("hash")),
         "date_found": _found(common.get("date_of_test_or_report")),
         "test_or_report_name_found": _found(common.get("test_or_report_name")),
-        "lab_result_count": len(extracted.get("lab_results") or []),
+        "patient_name_value_masked_or_present": _found(common.get("patient_name")),
+        "center_name_found": _found(common.get("center_name")),
+        "tracking_number_found": _found(common.get("tracking_number")),
+        "age_found": _found(common.get("age")),
+        "sex_found": _found(common.get("sex")),
+        "false_positive_suspected_count": fp_count,
+        "ocr_warning_count": len([w for w in warnings if "ocr" in str(w).lower()]),
+        "quality_worst_page_number": quality_details.get("worst_page_number"),
+        "quality_min_score": quality_details.get("min_quality_score"),
+        "lab_result_count": len(lab_results),
         "pap_smear_found": bool(extracted.get("pap_smear_reports")),
         "radiology_found": bool(extracted.get("radiology_reports")),
         "rejection_reason": response.get("rejection_reason"),
-        "warnings": "|".join(response.get("warnings") or []),
+        "warnings": "|".join(warnings),
     }
 
 
@@ -84,7 +104,7 @@ def reset_database() -> None:
 def process_file(db, path: Path, copy_files: bool) -> dict:
     stored_path, size, digest = StorageService().save_file(str(path), copy=copy_files)
     ext = path.suffix.lower()
-    content_type = "application/pdf" if ext == ".pdf" else f"image/{ext.lstrip('.')}"
+    content_type = MIME_MAP.get(ext, "application/octet-stream")
     doc = MedicalDocument(
         original_file_path=stored_path, original_file_name=path.name,
         original_file_type=content_type, file_size_bytes=size, file_hash=digest,
@@ -101,6 +121,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--output-dir", required=True)
     ap.add_argument("--reset-db", action="store_true", help="drop+recreate tables and clear output dir")
     ap.add_argument("--limit", type=int, default=0, help="process at most N files (0 = all)")
+    ap.add_argument("--yes", action="store_true", help="confirm destructive non-SQLite --reset-db")
     ap.add_argument("--copy-files", default="true", choices=["true", "false"],
                     help="copy inputs into storage/originals (default true)")
     args = ap.parse_args(argv)
@@ -111,6 +132,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Input dir not found: {input_dir}", file=sys.stderr)
         return 2
 
+    db_url=os.environ.get("DATABASE_URL", "sqlite:///./eval_medical_documents.db")
+    if args.reset_db:
+        print(f"Reset requested for database: {db_url}")
+        if not db_url.startswith("sqlite") and not args.yes:
+            print("Refusing to reset a non-SQLite database without --yes", file=sys.stderr); return 2
     if args.reset_db and output_dir.exists():
         shutil.rmtree(output_dir)
     (output_dir / "json").mkdir(parents=True, exist_ok=True)

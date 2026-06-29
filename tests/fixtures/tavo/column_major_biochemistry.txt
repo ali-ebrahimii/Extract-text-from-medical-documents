@@ -1,0 +1,41 @@
+آزمایشگاه پاتوبیولوژی تاو
+کبیری- آقای پدرام- دکتر43 : سن
+تاريخ پذيرش : 14:12:57 - 1404/12/09
+Test
+Result
+Biochemistry
+Unit
+Normal Range
+Flag
+Method
+Fasting blood sugar
+88
+mg/dL
+70-115
+Photometr
+Triglycerides
+130
+mg/dL
+Desirable <200
+Borderline Hight : 200-400
+High >400 l
+Photometr
+Cholestrol
+180
+mg/dL
+Desirable <200
+Borderline High: 200-240
+High >240
+Photometr
+SGOT(AST)
+47
+U/L
+<37
+High
+Photometr
+SGPT(ALT)
+46
+U/L
+<40
+High
+Photometr
