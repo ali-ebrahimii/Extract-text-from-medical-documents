@@ -9,6 +9,12 @@ class Settings(BaseSettings):
     relevance_threshold: float = 0.15
     quality_poor_threshold: float = 0.25
     quality_good_threshold: float = 0.65
+    pdf_text_threshold: int = Field(default=40, alias="PDF_TEXT_THRESHOLD")
+    max_preprocess_pages: int = Field(default=5, alias="MAX_PREPROCESS_PAGES")
+    ocr_backend: str = Field(default="tesseract", alias="OCR_BACKEND")
+    enable_paddleocr: bool = Field(default=False, alias="ENABLE_PADDLEOCR")
+    allow_raw_national_id: bool = Field(default=False, alias="ALLOW_RAW_NATIONAL_ID")
+    block_duplicate_uploads: bool = Field(default=False, alias="BLOCK_DUPLICATE_UPLOADS")
     class Config:
         env_file = ".env"
         extra = "ignore"

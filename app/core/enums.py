@@ -24,6 +24,8 @@ class DocumentStatus(str, Enum):
     CLASSIFICATION_PROCESSING = "classification_processing"
     EXTRACTION_PROCESSING = "extraction_processing"
     EXTRACTION_FAILED = "extraction_failed"
+    PROCESSED = "processed"
+    DUPLICATE_DOCUMENT = "duplicate_document"
     NEEDS_REVIEW = "needs_review"
     VERIFIED = "verified"
     REJECTED = "rejected"

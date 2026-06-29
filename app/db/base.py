@@ -6,6 +6,7 @@ from app.models.lab_result import LabResult
 from app.models.pap_smear import PapSmearReport
 from app.models.radiology import RadiologyReport
 from app.models.review import ReviewTask
+from app.models.ocr_page import OCRPage
 from app.db.session import engine
 from sqlalchemy.orm import declarative_base
 # Base is imported from document module for all models.
