@@ -84,7 +84,7 @@ URL security behavior:
 - Downloads use connection/read timeouts, streaming chunks, a redirect limit, and the `MAX_UPLOAD_MB` size limit.
 - Empty downloads and non-200 HTTP responses are rejected.
 - Localhost, loopback, private, link-local, reserved, and metadata-service IPs are blocked unless private hosts are explicitly enabled for a controlled environment.
-- `file_name` is derived from the request, `Content-Disposition`, URL path basename, or `downloaded_file`; `mime_type` is derived from the request, `Content-Type`, or file extension. `.jpg`/`.jpeg` inputs normalize to `image/jpeg`.
+- `file_name` is derived from the request, `Content-Disposition`, URL path basename, or `downloaded_file`; when the derived name has no supported extension, the service appends one from supported PDF/image MIME types. `mime_type` is derived from the request, `Content-Type`, or file extension. `.jpg`/`.jpeg` inputs normalize to `image/jpeg`.
 
 URL configuration:
 
@@ -237,7 +237,7 @@ Metrics include document type accuracy, patient/date found accuracy, lab result 
 
 - This is not a system of record and does not persist results.
 - No `/documents/*` or review routes are active in the FastAPI app.
-- `file_url` download is not implemented in this MVP.
+- `file_url` download supports HTTP(S) pre-signed temporary URLs. Authorization-header based URL downloads are not supported yet.
 - Extraction is regex/dictionary based and can miss vendor-specific table layouts.
 - OCR accuracy depends on image quality, language packs, and installed OCR engines.
 - The backend/dev team must handle auth, storage, database records, review workflow, and patient-profile integration.

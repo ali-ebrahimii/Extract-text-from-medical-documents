@@ -7,6 +7,9 @@ class DocumentType(str, Enum):
     UNKNOWN_MEDICAL = "unknown_medical"
     UNRELATED_DOCUMENT = "unrelated_document"
 
+# TODO: DocumentStatus and VerificationStatus are legacy DB workflow enums kept for
+# the db-backed MVP under legacy/. New stateless extraction code should not use
+# DocumentStatus to model validation or database workflow.
 class DocumentStatus(str, Enum):
     UPLOADED = "uploaded"
     SECURITY_REJECTED = "security_rejected"
