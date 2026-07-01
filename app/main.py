@@ -1,3 +1,5 @@
+import uuid
+
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
@@ -11,7 +13,7 @@ app = FastAPI(title="Stateless Medical Document Extraction Service")
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
     body = exc.body if isinstance(exc.body, dict) else {}
-    request_id = body.get("request_id") or ""
+    request_id = body.get("request_id") or str(uuid.uuid4())
     message = "Invalid extraction request"
     for error in exc.errors():
         if error.get("type") == "value_error":
