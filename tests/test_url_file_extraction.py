@@ -1,4 +1,5 @@
 import socket
+import uuid
 
 import httpx
 import pytest
@@ -72,7 +73,7 @@ def patch_url_route(monkeypatch):
 
 def test_valid_pdf_url_downloads_and_calls_pipeline(client, monkeypatch):
     patch_url_route(monkeypatch)
-    r = client.post("/extract", json={"request_id": "req-1", "document_id": "doc-1", "file_url": "https://example.com/report.pdf", "file_name": "report.pdf", "mime_type": "application/pdf"})
+    r = client.post("/extract", json={"request_id": "req-1", "document_id": "doc-1", "file_url": "https://example.com/report.pdf?X-Amz-Signature=test", "file_name": "report.pdf", "mime_type": "application/pdf"})
     assert r.status_code == 200
     assert r.json()["status"] == "success"
     assert FakePipeline.calls[0].file_name == "report.pdf"
@@ -172,3 +173,11 @@ def test_invalid_request_with_no_input_returns_invalid_request(client):
     assert r.status_code == 200
     assert body["request_id"] == "bad-2"
     assert body["errors"][0]["code"] == "INVALID_REQUEST"
+
+
+def test_invalid_request_without_request_id_generates_uuid(client):
+    r = client.post("/extract", json={})
+    body = r.json()
+    assert r.status_code == 200
+    assert body["errors"][0]["code"] == "INVALID_REQUEST"
+    uuid.UUID(body["request_id"])
