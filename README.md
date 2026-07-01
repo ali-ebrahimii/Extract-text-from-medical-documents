@@ -49,7 +49,7 @@ curl -F "file=@sample.pdf" \
 
 ### `POST /extract`
 
-Use JSON with one of `file_path`, `base64_content`, or `file_url`. `file_url` is reserved and returns `URL_DOWNLOAD_FAILED` in this MVP.
+Use JSON with exactly one of `file_path`, `base64_content`, or `file_url`. For backend integration, prefer `file_url`: the backend should send a short-lived pre-signed HTTP(S) URL for the document/image. The service downloads the content into a temporary file, processes it, deletes the temporary file, and returns only `ExtractionResponse` JSON. No downloaded files are permanently saved.
 
 ```bash
 curl -X POST http://localhost:8000/extract \
@@ -62,6 +62,40 @@ curl -X POST http://localhost:8000/extract \
     "debug":false
   }'
 ```
+
+
+URL example for backend integration:
+
+```json
+{
+  "request_id": "req-123",
+  "document_id": "doc-456",
+  "file_url": "https://storage.example.com/temp/report.pdf?signature=...",
+  "file_name": "report.pdf",
+  "mime_type": "application/pdf",
+  "debug": false
+}
+```
+
+URL security behavior:
+
+- Only `http://` and `https://` schemes are parsed; by default, public `https://` URLs are required when no allow-list is configured.
+- Unsupported schemes such as `file://`, `ftp://`, and `s3://` are rejected.
+- Downloads use connection/read timeouts, streaming chunks, a redirect limit, and the `MAX_UPLOAD_MB` size limit.
+- Empty downloads and non-200 HTTP responses are rejected.
+- Localhost, loopback, private, link-local, reserved, and metadata-service IPs are blocked unless private hosts are explicitly enabled for a controlled environment.
+- `file_name` is derived from the request, `Content-Disposition`, URL path basename, or `downloaded_file`; `mime_type` is derived from the request, `Content-Type`, or file extension. `.jpg`/`.jpeg` inputs normalize to `image/jpeg`.
+
+URL configuration:
+
+```env
+FILE_URL_ALLOWED_HOSTS=
+FILE_URL_ALLOW_PRIVATE_HOSTS=false
+FILE_URL_TIMEOUT_SECONDS=15
+FILE_URL_MAX_REDIRECTS=3
+```
+
+If `FILE_URL_ALLOWED_HOSTS` is empty, only public HTTPS URLs are allowed. If set, only those hostnames/domains are allowed (comma-separated; wildcard subdomains like `*.example.com` are supported). Private/internal IPs remain blocked unless `FILE_URL_ALLOW_PRIVATE_HOSTS=true`.
 
 Base64 example:
 
@@ -113,7 +147,16 @@ Common error codes include:
 - `PDF_PASSWORD_PROTECTED`
 - `FILE_READ_ERROR`
 - `BASE64_DECODE_FAILED`
+- `INVALID_REQUEST`
+- `INVALID_FILE_URL`
+- `URL_SCHEME_NOT_ALLOWED`
+- `URL_HOST_NOT_ALLOWED`
+- `URL_PRIVATE_HOST_BLOCKED`
+- `URL_DOWNLOAD_TIMEOUT`
 - `URL_DOWNLOAD_FAILED`
+- `URL_FILE_TOO_LARGE`
+- `URL_EMPTY_FILE`
+- `URL_CONTENT_TYPE_UNSUPPORTED`
 - `POOR_IMAGE_QUALITY`
 - `OCR_ENGINE_MISSING`
 - `OCR_EMPTY_TEXT`

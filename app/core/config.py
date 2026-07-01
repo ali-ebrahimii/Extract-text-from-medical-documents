@@ -17,6 +17,10 @@ class Settings(BaseSettings):
     allow_raw_national_id: bool = Field(default=False, alias="ALLOW_RAW_NATIONAL_ID")
     debug_output_dir: str = Field(default="debug_output", alias="DEBUG_OUTPUT_DIR")
     debug_save_intermediate_files: bool = Field(default=False, alias="DEBUG_SAVE_INTERMEDIATE_FILES")
+    file_url_allowed_hosts: str = Field(default="", alias="FILE_URL_ALLOWED_HOSTS")
+    file_url_allow_private_hosts: bool = Field(default=False, alias="FILE_URL_ALLOW_PRIVATE_HOSTS")
+    file_url_timeout_seconds: int = Field(default=15, alias="FILE_URL_TIMEOUT_SECONDS")
+    file_url_max_redirects: int = Field(default=3, alias="FILE_URL_MAX_REDIRECTS")
 
     class Config:
         env_file = ".env"
