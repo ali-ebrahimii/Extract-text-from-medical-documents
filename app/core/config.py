@@ -1,10 +1,9 @@
 from pydantic import Field
 from pydantic_settings import BaseSettings
 
+
 class Settings(BaseSettings):
-    app_name: str = "Medical Document Extraction MVP"
-    database_url: str = Field(default="sqlite:///./medical_documents.db", alias="DATABASE_URL")
-    storage_dir: str = Field(default="storage", alias="STORAGE_DIR")
+    app_name: str = "Stateless Medical Document Extraction Service"
     max_upload_mb: int = Field(default=20, alias="MAX_UPLOAD_MB")
     relevance_threshold: float = 0.15
     quality_poor_threshold: float = 0.25
@@ -16,8 +15,12 @@ class Settings(BaseSettings):
     tesseract_lang: str = Field(default="eng+fas", alias="TESSERACT_LANG")
     paddleocr_lang: str = Field(default="en", alias="PADDLEOCR_LANG")
     allow_raw_national_id: bool = Field(default=False, alias="ALLOW_RAW_NATIONAL_ID")
-    block_duplicate_uploads: bool = Field(default=False, alias="BLOCK_DUPLICATE_UPLOADS")
+    debug_output_dir: str = Field(default="debug_output", alias="DEBUG_OUTPUT_DIR")
+    debug_save_intermediate_files: bool = Field(default=False, alias="DEBUG_SAVE_INTERMEDIATE_FILES")
+
     class Config:
         env_file = ".env"
         extra = "ignore"
+
+
 settings = Settings()

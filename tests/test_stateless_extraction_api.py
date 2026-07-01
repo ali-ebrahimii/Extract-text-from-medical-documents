@@ -61,3 +61,16 @@ def test_evaluation_script_produces_summary_csv(tmp_path):
     assert len(rows)==1
     assert rows[0]['filename']=='lab.pdf'
     assert (out/'json'/'lab.json').exists()
+
+
+def test_app_starts_without_documents_routes(client):
+    assert client.get('/extract/health').status_code == 200
+    assert client.get('/documents').status_code == 404
+
+
+def test_invalid_base64_returns_decode_error(client):
+    r=client.post('/extract', json={'file_name':'bad.pdf','mime_type':'application/pdf','base64_content':'not valid base64'})
+    body=r.json()
+    assert r.status_code == 200
+    assert body['status'] == 'invalid_file'
+    assert body['errors'][0]['code'] == 'BASE64_DECODE_FAILED'
