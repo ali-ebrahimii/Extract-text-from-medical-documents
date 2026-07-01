@@ -1,10 +1,11 @@
 from __future__ import annotations
-import base64, shutil, tempfile, uuid
+import base64, os, shutil, tempfile, uuid
 from pathlib import Path
 from fastapi import APIRouter, File, Form, UploadFile
 from app.schemas.extraction import ExtractionRequest, ExtractionResponse, ExtractionStatus, ExtractionError
 from app.services.extraction_pipeline import ExtractionInput, ExtractionPipeline
 from app.services.file_validation_service import SUPPORTED, MIME_ALIASES
+from app.services.url_file_loader import UrlFileLoadError, load_url_to_tempfile
 
 router=APIRouter(prefix='/extract', tags=['stateless-extraction'])
 
@@ -31,7 +32,19 @@ async def extract_file(file: UploadFile=File(...), document_id:str|None=Form(Non
 def extract(req: ExtractionRequest):
     request_id=req.request_id or str(uuid.uuid4())
     if req.file_url:
-        return ExtractionResponse(request_id=request_id,document_id=req.document_id,status=ExtractionStatus.EXTRACTION_FAILED,errors=[ExtractionError(code='URL_DOWNLOAD_FAILED',message='file_url download is not implemented in this MVP')])
+        downloaded = None
+        try:
+            downloaded = load_url_to_tempfile(req.file_url, req.file_name, req.mime_type)
+            inp = ExtractionInput(downloaded.path, downloaded.file_name, downloaded.mime_type, req.document_id, request_id, req.debug)
+            return ExtractionPipeline().process(inp, debug=req.debug)
+        except UrlFileLoadError as exc:
+            return ExtractionResponse(request_id=request_id,document_id=req.document_id,status=ExtractionStatus.INVALID_FILE,errors=[ExtractionError(code=exc.code,message=exc.message)])
+        finally:
+            if downloaded:
+                try:
+                    os.unlink(downloaded.path)
+                except OSError:
+                    pass
     if req.file_path:
         name=req.file_name or Path(req.file_path).name
         return ExtractionPipeline().process(ExtractionInput(req.file_path,name,_mime_for(name,req.mime_type),req.document_id,request_id,req.debug),debug=req.debug)
