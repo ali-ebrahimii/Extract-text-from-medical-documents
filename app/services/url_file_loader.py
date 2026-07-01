@@ -16,6 +16,13 @@ import httpx
 from app.core.config import settings
 from app.services.file_validation_service import MIME_ALIASES, SUPPORTED
 
+MIME_EXTENSION_MAP = {
+    "application/pdf": ".pdf",
+    "image/jpeg": ".jpg",
+    "image/png": ".png",
+    "image/webp": ".webp",
+}
+
 
 class UrlFileLoadError(Exception):
     def __init__(self, code: str, message: str):
@@ -113,7 +120,22 @@ def _derive_file_name(provided: str | None, content_disposition: str | None, url
     if from_cd:
         return from_cd
     basename = Path(unquote(urlparse(url).path)).name
-    return basename or "downloaded_file"
+    if basename and basename.lower() != "download":
+        return basename
+    return "downloaded_file"
+
+
+def _has_supported_extension(file_name: str) -> bool:
+    return Path(file_name).suffix.lower() in SUPPORTED
+
+
+def _append_extension_from_mime(file_name: str, mime_type: str) -> str:
+    if _has_supported_extension(file_name):
+        return file_name
+    ext = MIME_EXTENSION_MAP.get(mime_type)
+    if ext and ext in SUPPORTED:
+        return f"{file_name}{ext}"
+    return file_name
 
 
 def _derive_mime_type(provided: str | None, content_type: str | None, file_name: str) -> str:
@@ -153,6 +175,7 @@ def load_url_to_tempfile(file_url: str, file_name: str | None = None, mime_type:
                                 raise UrlFileLoadError("URL_DOWNLOAD_FAILED", "file_url download did not return HTTP 200")
                             final_name = _derive_file_name(file_name, response.headers.get("content-disposition"), url)
                             final_mime = _derive_mime_type(mime_type, response.headers.get("content-type"), final_name)
+                            final_name = _append_extension_from_mime(final_name, final_mime)
                             if final_mime not in set(SUPPORTED.values()) | {"application/octet-stream"}:
                                 raise UrlFileLoadError("URL_CONTENT_TYPE_UNSUPPORTED", "file_url content type is not supported")
                             for chunk in response.iter_bytes(chunk_size=1024 * 1024):

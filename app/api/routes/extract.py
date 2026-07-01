@@ -39,6 +39,8 @@ def extract(req: ExtractionRequest):
             return ExtractionPipeline().process(inp, debug=req.debug)
         except UrlFileLoadError as exc:
             return ExtractionResponse(request_id=request_id,document_id=req.document_id,status=ExtractionStatus.INVALID_FILE,errors=[ExtractionError(code=exc.code,message=exc.message)])
+        except Exception:
+            return ExtractionResponse(request_id=request_id,document_id=req.document_id,status=ExtractionStatus.INVALID_FILE,errors=[ExtractionError(code='URL_DOWNLOAD_FAILED',message='file_url download failed')])
         finally:
             if downloaded:
                 try:

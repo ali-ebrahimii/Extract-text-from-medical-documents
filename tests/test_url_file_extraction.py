@@ -84,7 +84,36 @@ def test_valid_jpg_url_uses_image_jpeg(client, monkeypatch):
     FakeClient.response = FakeStreamResponse(headers={"content-type": "image/jpg"}, chunks=[b"jpgbytes"])
     r = client.post("/extract", json={"request_id": "req-2", "file_url": "https://example.com/image.jpg"})
     assert r.status_code == 200
+    assert FakePipeline.calls[0].file_name == "image.jpg"
     assert FakePipeline.calls[0].mime_type == "image/jpeg"
+
+
+def test_url_no_filename_content_type_pdf_gets_pdf_extension(client, monkeypatch):
+    patch_url_route(monkeypatch)
+    FakeClient.response = FakeStreamResponse(headers={"content-type": "application/pdf"}, chunks=[b"%PDF-1.4\n%%EOF"])
+    r = client.post("/extract", json={"file_url": "https://example.com"})
+    assert r.status_code == 200
+    assert r.json()["status"] == "success"
+    assert FakePipeline.calls[0].file_name == "downloaded_file.pdf"
+    assert FakePipeline.calls[0].mime_type == "application/pdf"
+
+
+def test_url_download_path_content_type_jpeg_gets_jpg_extension(client, monkeypatch):
+    patch_url_route(monkeypatch)
+    FakeClient.response = FakeStreamResponse(headers={"content-type": "image/jpeg"}, chunks=[b"jpgbytes"])
+    r = client.post("/extract", json={"file_url": "https://example.com/download?id=1"})
+    assert r.status_code == 200
+    assert FakePipeline.calls[0].file_name == "downloaded_file.jpg"
+    assert FakePipeline.calls[0].mime_type == "image/jpeg"
+
+
+def test_provided_file_name_without_extension_uses_mime_extension(client, monkeypatch):
+    patch_url_route(monkeypatch)
+    FakeClient.response = FakeStreamResponse(headers={"content-type": "application/octet-stream"}, chunks=[b"%PDF-1.4\n%%EOF"])
+    r = client.post("/extract", json={"file_url": "https://example.com/blob", "file_name": "report", "mime_type": "application/pdf"})
+    assert r.status_code == 200
+    assert FakePipeline.calls[0].file_name == "report.pdf"
+    assert FakePipeline.calls[0].mime_type == "application/pdf"
 
 
 def test_unsupported_scheme_is_rejected(client):

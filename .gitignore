@@ -3,17 +3,12 @@ __pycache__/
 .DS_Store
 .env
 .venv/
-medical_documents.db
 .pytest_cache/
-storage/originals/*
-storage/processed/*
-storage/rendered/*
-!storage/originals/.gitkeep
-!storage/processed/.gitkeep
-!storage/rendered/.gitkeep
-
-# Evaluation harness artifacts (keep the annotation template, ignore inputs/outputs)
+*.db
 samples/raw/
 samples/output/
 eval.db
 eval_storage/
+debug_output/
+htmlcov/
+.coverage
