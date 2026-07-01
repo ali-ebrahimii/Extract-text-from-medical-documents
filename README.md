@@ -274,3 +274,60 @@ After evaluation, inspect:
 - `samples/output/summary.csv`
 - `samples/output/json/*.json`
 - `samples/output/ocr/*.txt`
+
+## Stateless extraction API (primary path)
+
+This service is now intended to be a **stateless extraction API**. The backend/dev team owns upload orchestration, permanent file storage, databases, authentication, saved extraction results, review UI, patient-profile integration, production buckets, and migrations. This service reads a temporary input, performs document analysis/OCR/extraction, and returns JSON only.
+
+### Endpoints
+
+- `POST /extract/file` — multipart upload. The uploaded file is copied to a temporary file, processed, and deleted automatically.
+- `POST /extract` — JSON input with exactly one of `file_path`, `file_url`, or `base64_content`.
+- `GET /extract/health` — health check for the stateless extraction API.
+
+Example JSON request:
+
+```json
+{
+  "request_id": "req-123",
+  "document_id": "backend-doc-456",
+  "file_name": "report.pdf",
+  "mime_type": "application/pdf",
+  "file_path": "/tmp/backend-upload/report.pdf",
+  "debug": false
+}
+```
+
+The response includes `request_id`, `document_id`, `status`, `document_type`, `confidence`, `quality`, `ocr`, `common_fields`, `extracted_data`, `errors`, and `warnings`. Raw national IDs are not exposed by default; only hashes are returned unless `ALLOW_RAW_NATIONAL_ID=true` is configured.
+
+### Standard statuses and codes
+
+Statuses: `success`, `low_confidence`, `unsupported_file`, `invalid_file`, `poor_quality`, `ocr_failed`, `unrelated_document`, `extraction_failed`.
+
+Error codes include: `UNSUPPORTED_FILE_TYPE`, `INVALID_MIME_TYPE`, `FILE_READ_ERROR`, `PDF_PASSWORD_PROTECTED`, `POOR_IMAGE_QUALITY`, `OCR_ENGINE_MISSING`, `OCR_FAILED`, `OCR_EMPTY_TEXT`, `UNRELATED_DOCUMENT`, `CLASSIFICATION_FAILED`, `EXTRACTION_FAILED`, `LOW_CONFIDENCE`, `URL_DOWNLOAD_FAILED`, and `BASE64_DECODE_FAILED`.
+
+Warning codes include: `LOW_OCR_CONFIDENCE`, `MISSING_PATIENT_NAME`, `MISSING_REPORT_DATE`, `MISSING_LAB_ROWS`, `POSSIBLE_TABLE_LAYOUT_ISSUE`, `LOW_EXTRACTION_CONFIDENCE`, `PADDLEOCR_FALLBACK_TO_TESSERACT`, `QUALITY_PREPROCESSING_APPLIED`, and `INFERRED_REPORT_NAME`.
+
+### Evaluation
+
+Run the stateless evaluation harness without any database setup:
+
+```bash
+python scripts/evaluate_samples.py \
+  --input-dir samples/raw \
+  --output-dir samples/output \
+  --limit 20 \
+  --debug
+```
+
+It writes one JSON result per document, one OCR text file per document when `--debug` is enabled, and `summary.csv`.
+
+### Legacy routes
+
+The previous `/documents/*` and review routes remain for backward compatibility and internal comparison, but they are database-backed legacy routes. New integrations should use `/extract/file` or `/extract`.
+
+### Current limitations
+
+- `file_url` currently returns `URL_DOWNLOAD_FAILED` instead of downloading remote content.
+- Image OCR quality depends on the locally installed OCR backend and language packs.
+- Debug responses can include OCR text and parser details; keep `debug=false` for normal backend handoff.

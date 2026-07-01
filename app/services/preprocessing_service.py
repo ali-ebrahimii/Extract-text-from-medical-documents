@@ -24,7 +24,7 @@ def _cv2():
     return __import__("cv2")
 
 class PreprocessingService:
-    def render_pdf_pages(self, path: str, document_id: int | None = None, max_pages: int | None = None) -> RenderResult:
+    def render_pdf_pages(self, path: str, document_id: int | None = None, max_pages: int | None = None, output_dir: str | None = None) -> RenderResult:
         """Render PDF pages to PNG images for OCR.
 
         This is rendering only — it does NOT apply image-enhancement
@@ -34,7 +34,7 @@ class PreprocessingService:
         pages are rendered; fewer if the PDF has fewer pages.
         """
         try:
-            base=Path(settings.storage_dir)/'rendered'/str(document_id or uuid.uuid4().hex); base.mkdir(parents=True,exist_ok=True)
+            base=Path(output_dir) if output_dir else Path(settings.storage_dir)/'rendered'/str(document_id or uuid.uuid4().hex); base.mkdir(parents=True,exist_ok=True)
             limit=max_pages or settings.max_preprocess_pages
             doc=fitz.open(path); paths=[]
             for i,page in enumerate(doc[:limit], start=1):
@@ -55,9 +55,9 @@ class PreprocessingService:
         thr=cv2.adaptiveThreshold(eq,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,31,11); steps.append('adaptive_threshold')
         sharp=cv2.filter2D(thr,-1,np.array([[0,-1,0],[-1,5,-1],[0,-1,0]])); steps.append('sharpening')
         cv2.imwrite(str(out), sharp); return steps
-    def preprocess(self,path:str, document_id:int|None=None, max_pages:int|None=None)->PreprocessingResult:
+    def preprocess(self,path:str, document_id:int|None=None, max_pages:int|None=None, output_dir: str | None = None)->PreprocessingResult:
         try:
-            ext=Path(path).suffix.lower(); base=Path(settings.storage_dir)/'processed'/str(document_id or uuid.uuid4().hex); base.mkdir(parents=True,exist_ok=True)
+            ext=Path(path).suffix.lower(); base=Path(output_dir) if output_dir else Path(settings.storage_dir)/'processed'/str(document_id or uuid.uuid4().hex); base.mkdir(parents=True,exist_ok=True)
             if ext=='.pdf':
                 doc=fitz.open(path); paths=[]; steps=['render_pdf_pages']
                 for i,page in enumerate(doc[:max_pages or settings.max_preprocess_pages], start=1):
