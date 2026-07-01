@@ -3,7 +3,6 @@ uvicorn
 python-multipart
 pydantic
 pydantic-settings
-sqlalchemy
 pymupdf
 opencv-python-headless
 pillow

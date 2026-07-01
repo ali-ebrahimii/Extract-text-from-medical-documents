@@ -58,12 +58,8 @@ def test_assess_many_uses_worst_page_conservatively(tmp_path):
 
 def test_quality_result_page_details_shape():
     from app.services.quality_service import QualityResult
-    from app.services.pipeline_service import PipelineService
+    from app.services.extraction_pipeline import ExtractionPipeline
     q=QualityResult('poor_quality',0.5,False,['low_contrast'],0,0,0,0,page_scores=[.9,.2],page_issues=[{'page_number':2,'issues':['low_contrast']}],worst_page_number=2,average_quality_score=.55,min_quality_score=.2,num_pages=2,metrics={'x':1})
-    captured={}
-    class DB:
-        def add(self,obj): captured['issues']=obj.issues
-    class Doc: id=1
-    PipelineService()._save_quality(DB(),Doc(),q)
-    assert captured['issues']['page_issues'][0]['page_number']==2
-    assert captured['issues']['worst_page_number']==2
+    schema=ExtractionPipeline()._quality_schema(q)
+    assert schema.page_issues[0]['page_number']==2
+    assert schema.worst_page_number==2

@@ -1,21 +1,20 @@
 #!/usr/bin/env python
-"""Compare pipeline summary.csv against manual annotations and emit simple metrics.
-
-Example:
-    python scripts/compare_annotations.py \
-        --summary samples/output/summary.csv \
-        --annotations samples/annotation_template.csv \
-        --output samples/output/metrics.json
-
-Metrics are computed only over rows where the corresponding annotation field is
-present (blank annotations are skipped, never guessed).
-"""
+"""Compare stateless extraction summary.csv against manual annotations."""
 from __future__ import annotations
 
 import argparse
 import csv
 import json
 from pathlib import Path
+
+REJECTION_STATUSES = {
+    "unsupported_file",
+    "invalid_file",
+    "poor_quality",
+    "ocr_failed",
+    "unrelated_document",
+    "extraction_failed",
+}
 
 
 def _read_csv(path: Path) -> list[dict]:
@@ -37,25 +36,37 @@ def _accuracy(pairs: list[tuple[bool, bool]]) -> float | None:
     return round(sum(1 for a, b in pairs if a == b) / len(pairs), 4)
 
 
+def _codes(value: str | None) -> set[str]:
+    return {part.strip() for part in str(value or "").split("|") if part.strip()}
+
+
 def compute_metrics(summary: list[dict], annotations: list[dict]) -> dict:
     ann_by_file = {a.get("filename"): a for a in annotations}
-    dtype_pairs: list[tuple] = []
+    dtype_pairs: list[tuple[str, str]] = []
     name_pairs: list[tuple[bool, bool]] = []
     date_pairs: list[tuple[bool, bool]] = []
     lab_exact: list[bool] = []
-    extraction_confs: list[float] = []
-    needs_review = 0
+    confidences: list[float] = []
+    low_confidence = 0
     rejected = 0
+    missing_lab_rows = 0
+    ocr_failed = 0
     n = 0
 
     for row in summary:
         n += 1
-        if str(row.get("verification_status")).strip() == "needs_review":
-            needs_review += 1
-        if str(row.get("verification_status")).strip() == "rejected" or str(row.get("validation_status")).strip() in {"unrelated_document", "poor_quality", "ocr_failed", "invalid_file", "unsupported_file_type", "duplicate_document"}:
+        status = str(row.get("status") or "").strip()
+        warning_codes = _codes(row.get("warning_codes"))
+        if status == "low_confidence":
+            low_confidence += 1
+        if status in REJECTION_STATUSES:
             rejected += 1
+        if "MISSING_LAB_ROWS" in warning_codes:
+            missing_lab_rows += 1
+        if status == "ocr_failed":
+            ocr_failed += 1
         try:
-            extraction_confs.append(float(row.get("extraction_confidence")))
+            confidences.append(float(row.get("confidence")))
         except (TypeError, ValueError):
             pass
 
@@ -81,9 +92,11 @@ def compute_metrics(summary: list[dict], annotations: list[dict]) -> dict:
         "patient_name_found_accuracy": _accuracy(name_pairs),
         "date_found_accuracy": _accuracy(date_pairs),
         "lab_result_count_exact_match": round(sum(lab_exact) / len(lab_exact), 4) if lab_exact else None,
-        "average_extraction_confidence": round(sum(extraction_confs) / len(extraction_confs), 4) if extraction_confs else None,
-        "needs_review_rate": round(needs_review / n, 4) if n else None,
+        "average_confidence": round(sum(confidences) / len(confidences), 4) if confidences else None,
+        "low_confidence_rate": round(low_confidence / n, 4) if n else None,
         "rejection_rate": round(rejected / n, 4) if n else None,
+        "missing_lab_rows_rate": round(missing_lab_rows / n, 4) if n else None,
+        "ocr_failure_rate": round(ocr_failed / n, 4) if n else None,
     }
 
 
@@ -94,10 +107,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--output", required=True)
     args = ap.parse_args(argv)
 
-    summary = _read_csv(Path(args.summary))
-    annotations = _read_csv(Path(args.annotations))
-    metrics = compute_metrics(summary, annotations)
-
+    metrics = compute_metrics(_read_csv(Path(args.summary)), _read_csv(Path(args.annotations)))
     out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")
