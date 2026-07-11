@@ -1,0 +1,311 @@
+{
+  "document": {
+    "index": 6,
+    "filename": "0023471026_14041209_O_00404121728.pdf",
+    "source_relative_path": "samples/selected samples/0023471026_14041209_O_00404121728.pdf",
+    "file_ext": ".pdf",
+    "mime_type": "application/pdf",
+    "file_size_kb": 40.79,
+    "status": "extracted_good",
+    "warnings": [],
+    "document_type": "lab",
+    "document_type_confidence": 0.6,
+    "relevance_score": 1.0,
+    "medical_hits": [
+      "biochemistry",
+      "method",
+      "آزمایشگاه",
+      "آزمايشگاه",
+      "پاتوبیولوژی",
+      "پاتوبيولوژی",
+      "پزشک",
+      "پذیرش"
+    ],
+    "source_preview": "notebook_outputs/selected_samples_v7/source_previews/0006_0023471026_14041209_O_00404121728.png"
+  },
+  "quality": {
+    "status": "pdf_quality_not_assessed_here",
+    "overall_quality_score": null,
+    "issues": [],
+    "width": null,
+    "height": null
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.95,
+    "text_length": 406,
+    "source": "pdf_text_layer",
+    "best_variant": "pdf_text_layer",
+    "best_psm": null,
+    "best_lang": null,
+    "text_quality": {
+      "score": 0.493,
+      "status": "usable_noisy_text",
+      "alias_hits": 8,
+      "medical_hits": 8,
+      "numeric_hits": 23,
+      "line_count": 25,
+      "token_count": 71,
+      "gibberish_ratio": 0.039,
+      "culture_signal": false,
+      "reasons": []
+    },
+    "candidate_count": 0,
+    "candidate_scores": []
+  },
+  "common_fields": {
+    "center_name": {
+      "value": "آزمایشگاه پاتوبیولوژی تاو",
+      "confidence": 0.7,
+      "source_text": "# آزمایشگاه پاتوبیولوژی تاو#"
+    },
+    "national_id": {
+      "value": "7b2b950d246b21b2c88874f16875bd7aef6c8c011d707f637db2f177b634e44e",
+      "confidence": 0.9,
+      "source_text": "کد ملی :**********",
+      "strict_label_required": true
+    },
+    "tracking_number": {
+      "value": "O-40412-1728",
+      "confidence": 0.85,
+      "source_text": "O-40412-1728"
+    },
+    "date_of_test_or_report": {
+      "value": "1404/12/09",
+      "confidence": 0.9,
+      "source_text": "تاریخ پذیرش1404/12/09",
+      "calendar": "jalali"
+    },
+    "patient_name": {
+      "value": "نیلوفر انباز",
+      "confidence": 0.88,
+      "source_text": " انباز- خانم نیلوفر- دکتر25 : سن"
+    },
+    "sex": {
+      "value": "female",
+      "confidence": 0.85,
+      "source_text": " انباز- خانم نیلوفر- دکتر25 : سن"
+    },
+    "age": {
+      "value": 25,
+      "confidence": 0.85,
+      "source_text": " انباز- خانم نیلوفر- دکتر25 : سن"
+    },
+    "doctor_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    }
+  },
+  "field_validation": {
+    "field_validation_status": {
+      "center_name": "valid",
+      "national_id": "valid",
+      "tracking_number": "valid",
+      "date_of_test_or_report": "valid",
+      "patient_name": "valid",
+      "sex": "valid",
+      "age": "valid",
+      "doctor_name": "missing"
+    },
+    "critical_field_reason_codes": [],
+    "critical_fields_valid_for_backend": true
+  },
+  "row_validation": {
+    "row_validation_status": {
+      "valid": 1,
+      "review": 1
+    },
+    "safe_row_count": 1,
+    "unsafe_row_count": 1,
+    "unsafe_rows_sample": [
+      {
+        "test_name_standard": "Blood/Hb",
+        "result_value": "110",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence"
+        ],
+        "source_text": "blood sugar 110 mg/dL 70-115 Photometr This answer is signed out by Dr.N.Adanvar Print On 1405/01/30-13:48:59 By 2"
+      }
+    ]
+  },
+  "backend_save_policy": {
+    "backend_save_allowed": true,
+    "review_required": false,
+    "reupload_required": false,
+    "route": "save_to_database",
+    "reason_codes": [
+      "some_rows_require_review"
+    ],
+    "safe_payload": {
+      "common_fields": {},
+      "lab_results": [
+        {
+          "section": "biochemistry",
+          "test_name_standard": "FBS",
+          "test_name_raw": "Fasting blood sugar",
+          "result_value": "110",
+          "result_numeric": 110.0,
+          "unit": "mg/dL",
+          "reference_range": "70-115",
+          "flag": null,
+          "method": "Photometr",
+          "confidence": 0.82,
+          "source_text": "Fasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2",
+          "validation_status": "valid",
+          "save_allowed": true,
+          "reason_codes": [],
+          "corrected_numeric": null,
+          "corrected_value": null
+        }
+      ]
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "biochemistry",
+        "test_name_standard": "FBS",
+        "test_name_raw": "Fasting blood sugar",
+        "result_value": "110",
+        "result_numeric": 110.0,
+        "unit": "mg/dL",
+        "reference_range": "70-115",
+        "flag": null,
+        "method": "Photometr",
+        "confidence": 0.82,
+        "source_text": "Fasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2",
+        "validation_status": "valid",
+        "save_allowed": true,
+        "reason_codes": [],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Blood/Hb",
+        "test_name_raw": "Blood",
+        "result_value": "110",
+        "result_numeric": 110.0,
+        "unit": "mg/dL",
+        "reference_range": "70-115",
+        "flag": null,
+        "method": "Photometr",
+        "confidence": 0.58,
+        "source_text": "blood sugar 110 mg/dL 70-115 Photometr This answer is signed out by Dr.N.Adanvar Print On 1405/01/30-13:48:59 By 2",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      }
+    ]
+  },
+  "extracted_parts": [
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "center_name",
+      "value": "آزمایشگاه پاتوبیولوژی تاو",
+      "confidence": 0.7,
+      "source_text": "# آزمایشگاه پاتوبیولوژی تاو#",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "national_id",
+      "value": "7b2b950d246b21b2c88874f16875bd7aef6c8c011d707f637db2f177b634e44e",
+      "confidence": 0.9,
+      "source_text": "کد ملی :**********",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "tracking_number",
+      "value": "O-40412-1728",
+      "confidence": 0.85,
+      "source_text": "O-40412-1728",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "date_of_test_or_report",
+      "value": "1404/12/09",
+      "confidence": 0.9,
+      "source_text": "تاریخ پذیرش1404/12/09",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "patient_name",
+      "value": "نیلوفر انباز",
+      "confidence": 0.88,
+      "source_text": " انباز- خانم نیلوفر- دکتر25 : سن",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "sex",
+      "value": "female",
+      "confidence": 0.85,
+      "source_text": " انباز- خانم نیلوفر- دکتر25 : سن",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "age",
+      "value": 25,
+      "confidence": 0.85,
+      "source_text": " انباز- خانم نیلوفر- دکتر25 : سن",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "FBS",
+      "value": "110",
+      "result_numeric": 110.0,
+      "unit": "mg/dL",
+      "reference_range": "70-115",
+      "flag": null,
+      "method": "Photometr",
+      "confidence": 0.82,
+      "source_text": "Fasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2",
+      "test_name_raw": "Fasting blood sugar",
+      "row_validation_status": "valid",
+      "row_save_allowed": true,
+      "row_reason_codes": "",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "urine_or_microbiology",
+      "field_name": "Blood/Hb",
+      "value": "110",
+      "result_numeric": 110.0,
+      "unit": "mg/dL",
+      "reference_range": "70-115",
+      "flag": null,
+      "method": "Photometr",
+      "confidence": 0.58,
+      "source_text": "blood sugar 110 mg/dL 70-115 Photometr This answer is signed out by Dr.N.Adanvar Print On 1405/01/30-13:48:59 By 2",
+      "test_name_raw": "Blood",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence",
+      "corrected_numeric": null,
+      "corrected_value": null
+    }
+  ],
+  "extracted_text": "# آزمایشگاه پاتوبیولوژی تاو#\n تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20\n021-91012828\nO-40412-1728\n: پزشک\n انباز- خانم نیلوفر- دکتر25 : سن\nشماره :\nنام :\nکد ملی :0023471026\n - سالFemale\n: تاریخ پذیرش1404/12/09 - 14:12:48\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2"
+}

@@ -1,0 +1,460 @@
+{
+  "document": {
+    "index": 11,
+    "filename": "20260427_181636.jpg",
+    "source_relative_path": "samples/selected samples/20260427_181636.jpg",
+    "file_ext": ".jpg",
+    "mime_type": "image/jpeg",
+    "file_size_kb": 38.7,
+    "status": "extracted_good",
+    "warnings": [],
+    "document_type": "lab",
+    "document_type_confidence": 0.6,
+    "relevance_score": 1.0,
+    "medical_hits": [
+      "hormone",
+      "tsh",
+      "pt",
+      "reference range",
+      "آزمایشگاه",
+      "آزمايشگاه",
+      "پذیرش"
+    ],
+    "source_preview": "notebook_outputs/selected_samples_v7/source_previews/0011_20260427_181636.png"
+  },
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.638,
+    "issues": [],
+    "width": 765,
+    "height": 1020,
+    "brightness_mean": 149.44,
+    "contrast_std": 28.32,
+    "laplacian_variance": 327.44
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.64125,
+    "text_length": 310,
+    "source": "image_ocr_variants",
+    "best_variant": "mild_contrast_rot90",
+    "best_psm": 6,
+    "best_lang": "eng+fas",
+    "text_quality": {
+      "score": 0.357,
+      "status": "usable_noisy_text",
+      "alias_hits": 6,
+      "medical_hits": 7,
+      "numeric_hits": 21,
+      "line_count": 14,
+      "token_count": 61,
+      "gibberish_ratio": 0.041,
+      "culture_signal": false,
+      "reasons": []
+    },
+    "candidate_count": 102,
+    "candidate_scores": [
+      {
+        "variant": "mild_contrast_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 36.01,
+        "len": 310,
+        "conf": 0.641,
+        "error": null
+      },
+      {
+        "variant": "original_oriented_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 32.73,
+        "len": 227,
+        "conf": 0.727,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 31.23,
+        "len": 229,
+        "conf": 0.674,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 30.72,
+        "len": 216,
+        "conf": 0.648,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 30.21,
+        "len": 212,
+        "conf": 0.707,
+        "error": null
+      },
+      {
+        "variant": "original_oriented_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 29.62,
+        "len": 325,
+        "conf": 0.609,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast_rot90",
+        "psm": 6,
+        "lang": "eng",
+        "score": 26.08,
+        "len": 279,
+        "conf": 0.437,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 23.6,
+        "len": 299,
+        "conf": 0.61,
+        "error": null
+      },
+      {
+        "variant": "original_oriented_rot90",
+        "psm": 11,
+        "lang": "eng",
+        "score": 23.5,
+        "len": 197,
+        "conf": 0.51,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast_rot90",
+        "psm": 11,
+        "lang": "eng",
+        "score": 23.0,
+        "len": 195,
+        "conf": 0.494,
+        "error": null
+      }
+    ]
+  },
+  "common_fields": {
+    "center_name": {
+      "value": "4 153 شماره‎ HUT ی‎ پزش آزمایشگاه",
+      "confidence": 0.7,
+      "source_text": "4 153 شماره‎ HUT ی‎ پزش آزمایشگاه"
+    },
+    "national_id": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "strict_label_required": true
+    },
+    "tracking_number": {
+      "value": "Hormone",
+      "confidence": 0.85,
+      "source_text": "پذیرش\nHormone"
+    },
+    "date_of_test_or_report": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "calendar": null
+    },
+    "patient_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "sex": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "age": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "doctor_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    }
+  },
+  "field_validation": {
+    "field_validation_status": {
+      "center_name": "valid",
+      "national_id": "missing",
+      "tracking_number": "valid",
+      "date_of_test_or_report": "missing",
+      "patient_name": "missing",
+      "sex": "missing",
+      "age": "missing",
+      "doctor_name": "missing"
+    },
+    "critical_field_reason_codes": [
+      "missing_patient_identity_or_backend_context",
+      "missing_report_date"
+    ],
+    "critical_fields_valid_for_backend": false
+  },
+  "row_validation": {
+    "row_validation_status": {
+      "review": 4
+    },
+    "safe_row_count": 0,
+    "unsafe_row_count": 4,
+    "unsafe_rows_sample": [
+      {
+        "test_name_standard": "PT",
+        "result_value": "9",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "pT مراجعه‎ تم 9-13 : شارهپذیرش Hormone es! Result Unit 5 Reference Range 13 102 Gil 052-21 |"
+      },
+      {
+        "test_name_standard": "TSH",
+        "result_value": "0.98",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "TSH 0.98 ...نان‎ هه 0.30 -0 |"
+      },
+      {
+        "test_name_standard": "Free T4",
+        "result_value": "082",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "Free T4 weg ngidL ELISA 082 VES ’ __(231) | ="
+      },
+      {
+        "test_name_standard": "T4",
+        "result_value": "082",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "T4 weg ngidL ELISA 082 VES ’ __(231) | ="
+      }
+    ]
+  },
+  "backend_save_policy": {
+    "backend_save_allowed": false,
+    "review_required": true,
+    "reupload_required": false,
+    "route": "manual_review",
+    "reason_codes": [
+      "missing_patient_identity_or_backend_context",
+      "missing_report_date",
+      "no_safe_lab_rows",
+      "some_rows_require_review"
+    ],
+    "safe_payload": {
+      "common_fields": {},
+      "lab_results": []
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "coagulation",
+        "test_name_standard": "PT",
+        "test_name_raw": "PT",
+        "result_value": "9",
+        "result_numeric": 9.0,
+        "unit": null,
+        "reference_range": "052-21",
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "pT مراجعه‎ تم 9-13 : شارهپذیرش Hormone es! Result Unit 5 Reference Range 13 102 Gil 052-21 |",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "TSH",
+        "test_name_raw": "TSH",
+        "result_value": "0.98",
+        "result_numeric": 0.98,
+        "unit": null,
+        "reference_range": "0.30-0",
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "TSH 0.98 ...نان‎ هه 0.30 -0 |",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "Free T4",
+        "test_name_raw": "Free T4",
+        "result_value": "082",
+        "result_numeric": 82.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "Free T4 weg ngidL ELISA 082 VES ’ __(231) | =",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "T4",
+        "test_name_raw": "T4",
+        "result_value": "082",
+        "result_numeric": 82.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "T4 weg ngidL ELISA 082 VES ’ __(231) | =",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      }
+    ]
+  },
+  "extracted_parts": [
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "center_name",
+      "value": "4 153 شماره‎ HUT ی‎ پزش آزمایشگاه",
+      "confidence": 0.7,
+      "source_text": "4 153 شماره‎ HUT ی‎ پزش آزمایشگاه",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "tracking_number",
+      "value": "Hormone",
+      "confidence": 0.85,
+      "source_text": "پذیرش\nHormone",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "lab_result",
+      "section": "coagulation",
+      "field_name": "PT",
+      "value": "9",
+      "result_numeric": 9.0,
+      "unit": null,
+      "reference_range": "052-21",
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "pT مراجعه‎ تم 9-13 : شارهپذیرش Hormone es! Result Unit 5 Reference Range 13 102 Gil 052-21 |",
+      "test_name_raw": "PT",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "special_biochemistry_or_hormone",
+      "field_name": "TSH",
+      "value": "0.98",
+      "result_numeric": 0.98,
+      "unit": null,
+      "reference_range": "0.30-0",
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "TSH 0.98 ...نان‎ هه 0.30 -0 |",
+      "test_name_raw": "TSH",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "special_biochemistry_or_hormone",
+      "field_name": "Free T4",
+      "value": "082",
+      "result_numeric": 82.0,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "Free T4 weg ngidL ELISA 082 VES ’ __(231) | =",
+      "test_name_raw": "Free T4",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "special_biochemistry_or_hormone",
+      "field_name": "T4",
+      "value": "082",
+      "result_numeric": 82.0,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "T4 weg ngidL ELISA 082 VES ’ __(231) | =",
+      "test_name_raw": "T4",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    }
+  ],
+  "extracted_text": "4 153 شماره‎ HUT ی‎ پزش آزمایشگاه\nشهار‎ (مخبری)- علستان متری 35 - GF yo UT جنت‎\n2 شماره‎ | 5\n33392907-44492805 قلفن‎\n22 ن:‎\nSee خازنی‎ فرژانه pT مراجعه‎ تم 9-13 : شارهپذیرش\nHormone\nes! Result Unit 5 Reference Range\n13 102 Gil 052-21\n| TSH 0.98 ...نان‎ هه 0.30 -0\n| Free T4 weg ngidL ELISA 082\nVES\n’ __(231) |\n="
+}

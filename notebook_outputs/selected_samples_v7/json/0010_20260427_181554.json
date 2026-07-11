@@ -1,0 +1,556 @@
+{
+  "document": {
+    "index": 10,
+    "filename": "20260427_181554.jpg",
+    "source_relative_path": "samples/selected samples/20260427_181554.jpg",
+    "file_ext": ".jpg",
+    "mime_type": "image/jpeg",
+    "file_size_kb": 42.47,
+    "status": "extracted_good",
+    "warnings": [],
+    "document_type": "lab",
+    "document_type_confidence": 1.0,
+    "relevance_score": 1.0,
+    "medical_hits": [
+      "hematology",
+      "wbc",
+      "rbc",
+      "reference range",
+      "آزمایشگاه",
+      "آزمايشگاه",
+      "پزشک"
+    ],
+    "source_preview": "notebook_outputs/selected_samples_v7/source_previews/0010_20260427_181554.png"
+  },
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.746,
+    "issues": [],
+    "width": 765,
+    "height": 1020,
+    "brightness_mean": 152.19,
+    "contrast_std": 26.5,
+    "laplacian_variance": 494.78
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.6728358208955224,
+    "text_length": 344,
+    "source": "image_ocr_variants",
+    "best_variant": "light_autocontrast_rot90",
+    "best_psm": 6,
+    "best_lang": "eng+fas",
+    "text_quality": {
+      "score": 0.464,
+      "status": "usable_noisy_text",
+      "alias_hits": 14,
+      "medical_hits": 7,
+      "numeric_hits": 26,
+      "line_count": 11,
+      "token_count": 68,
+      "gibberish_ratio": 0.04,
+      "culture_signal": false,
+      "reasons": []
+    },
+    "candidate_count": 102,
+    "candidate_scores": [
+      {
+        "variant": "light_autocontrast_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 46.74,
+        "len": 344,
+        "conf": 0.673,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 44.93,
+        "len": 331,
+        "conf": 0.595,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 42.72,
+        "len": 324,
+        "conf": 0.67,
+        "error": null
+      },
+      {
+        "variant": "original_oriented_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 42.13,
+        "len": 327,
+        "conf": 0.695,
+        "error": null
+      },
+      {
+        "variant": "original_oriented_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 40.9,
+        "len": 200,
+        "conf": 0.786,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot90",
+        "psm": 6,
+        "lang": "eng",
+        "score": 37.53,
+        "len": 329,
+        "conf": 0.437,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 36.99,
+        "len": 189,
+        "conf": 0.777,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 36.88,
+        "len": 179,
+        "conf": 0.759,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast_rot90",
+        "psm": 6,
+        "lang": "eng",
+        "score": 36.6,
+        "len": 301,
+        "conf": 0.454,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast_rot90",
+        "psm": 6,
+        "lang": "eng",
+        "score": 35.01,
+        "len": 310,
+        "conf": 0.402,
+        "error": null
+      }
+    ]
+  },
+  "common_fields": {
+    "center_name": {
+      "value": "1 7 آنالیز پزشکی آزمایشگاه",
+      "confidence": 0.7,
+      "source_text": "1 7 آنالیز پزشکی آزمایشگاه"
+    },
+    "national_id": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "strict_label_required": true
+    },
+    "tracking_number": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "date_of_test_or_report": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "calendar": null
+    },
+    "patient_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "sex": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "age": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "doctor_name": {
+      "value": "ی آزمایشگاه",
+      "confidence": 0.75,
+      "source_text": "پزشکی آزمایشگاه"
+    }
+  },
+  "field_validation": {
+    "field_validation_status": {
+      "center_name": "valid",
+      "national_id": "missing",
+      "tracking_number": "missing",
+      "date_of_test_or_report": "missing",
+      "patient_name": "missing",
+      "sex": "missing",
+      "age": "missing",
+      "doctor_name": "valid"
+    },
+    "critical_field_reason_codes": [
+      "missing_patient_identity_or_backend_context",
+      "missing_report_date"
+    ],
+    "critical_fields_valid_for_backend": false
+  },
+  "row_validation": {
+    "row_validation_status": {
+      "review": 6
+    },
+    "safe_row_count": 0,
+    "unsafe_row_count": 6,
+    "unsafe_rows_sample": [
+      {
+        "test_name_standard": "WBC",
+        "result_value": "5.1",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "WBC. 5.1 10°3/uL 4-1"
+      },
+      {
+        "test_name_standard": "NEUT%",
+        "result_value": "55",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence"
+        ],
+        "source_text": "Neutrophils 55% |"
+      },
+      {
+        "test_name_standard": "RBC",
+        "result_value": "4.60",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "RBC. 4.60 40*6/uL 44-54"
+      },
+      {
+        "test_name_standard": "LYMPH%",
+        "result_value": "38",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence"
+        ],
+        "source_text": "Lymphocytes 38% |"
+      },
+      {
+        "test_name_standard": "HGB",
+        "result_value": "5",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "HB 5 148 5و‎ 12-6 _"
+      },
+      {
+        "test_name_standard": "MONO%",
+        "result_value": "1",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "Monocytes: a pg — 1"
+      }
+    ]
+  },
+  "backend_save_policy": {
+    "backend_save_allowed": false,
+    "review_required": true,
+    "reupload_required": false,
+    "route": "manual_review",
+    "reason_codes": [
+      "missing_patient_identity_or_backend_context",
+      "missing_report_date",
+      "no_safe_lab_rows",
+      "some_rows_require_review"
+    ],
+    "safe_payload": {
+      "common_fields": {},
+      "lab_results": []
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "hematology",
+        "test_name_standard": "WBC",
+        "test_name_raw": "WBC",
+        "result_value": "5.1",
+        "result_numeric": 5.1,
+        "unit": null,
+        "reference_range": "4-1",
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "WBC. 5.1 10°3/uL 4-1",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "NEUT%",
+        "test_name_raw": "Neutrophils",
+        "result_value": "55",
+        "result_numeric": 55.0,
+        "unit": "%",
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "Neutrophils 55% |",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "RBC",
+        "test_name_raw": "RBC",
+        "result_value": "4.60",
+        "result_numeric": 4.6,
+        "unit": null,
+        "reference_range": "44-54",
+        "flag": "rechecked",
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "RBC. 4.60 40*6/uL 44-54",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "LYMPH%",
+        "test_name_raw": "Lymphocytes",
+        "result_value": "38",
+        "result_numeric": 38.0,
+        "unit": "%",
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "Lymphocytes 38% |",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "HGB",
+        "test_name_raw": "Hb",
+        "result_value": "5",
+        "result_numeric": 5.0,
+        "unit": null,
+        "reference_range": "12-6",
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "HB 5 148 5و‎ 12-6 _",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "MONO%",
+        "test_name_raw": "Monocytes",
+        "result_value": "1",
+        "result_numeric": 1.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "Monocytes: a pg — 1",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      }
+    ]
+  },
+  "extracted_parts": [
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "center_name",
+      "value": "1 7 آنالیز پزشکی آزمایشگاه",
+      "confidence": 0.7,
+      "source_text": "1 7 آنالیز پزشکی آزمایشگاه",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "doctor_name",
+      "value": "ی آزمایشگاه",
+      "confidence": 0.75,
+      "source_text": "پزشکی آزمایشگاه",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "lab_result",
+      "section": "hematology",
+      "field_name": "WBC",
+      "value": "5.1",
+      "result_numeric": 5.1,
+      "unit": null,
+      "reference_range": "4-1",
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "WBC. 5.1 10°3/uL 4-1",
+      "test_name_raw": "WBC",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "hematology",
+      "field_name": "NEUT%",
+      "value": "55",
+      "result_numeric": 55.0,
+      "unit": "%",
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "Neutrophils 55% |",
+      "test_name_raw": "Neutrophils",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "hematology",
+      "field_name": "RBC",
+      "value": "4.60",
+      "result_numeric": 4.6,
+      "unit": null,
+      "reference_range": "44-54",
+      "flag": "rechecked",
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "RBC. 4.60 40*6/uL 44-54",
+      "test_name_raw": "RBC",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "hematology",
+      "field_name": "LYMPH%",
+      "value": "38",
+      "result_numeric": 38.0,
+      "unit": "%",
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "Lymphocytes 38% |",
+      "test_name_raw": "Lymphocytes",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "hematology",
+      "field_name": "HGB",
+      "value": "5",
+      "result_numeric": 5.0,
+      "unit": null,
+      "reference_range": "12-6",
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "HB 5 148 5و‎ 12-6 _",
+      "test_name_raw": "Hb",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "hematology",
+      "field_name": "MONO%",
+      "value": "1",
+      "result_numeric": 1.0,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "Monocytes: a pg — 1",
+      "test_name_raw": "Monocytes",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    }
+  ],
+  "extracted_text": "1 7 آنالیز پزشکی آزمایشگاه\n154 شماره - (مخبری) عستان متری 35 - کزی مر آباد جنت\n34392907 4392805- تلفن\n7 از 3 می Jet‏ سن: خازنی فرزانه خافم : کننده مراجعه تام Ge‏\nHematology‏\n[Test Result Unit Reference Range Differential\n‘| WBC. 5.1 10°3/uL 4-1 Neutrophils 55%\n| RBC. 4.60 40*6/uL 44-54 Lymphocytes 38%\n| HB 5 148 5و‎ 12-6 _ Monocytes: a\npg\n— 1"
+}

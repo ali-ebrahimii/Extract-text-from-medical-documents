@@ -1,0 +1,16 @@
+{
+  "gitignore_path": ".gitignore",
+  "missing_recommended_gitignore_lines": [
+    "samples/selected samples/",
+    "samples/selected_samples/",
+    "notebook_outputs/"
+  ],
+  "tracked_sensitive_files_count": 0,
+  "tracked_sensitive_files_sample": [],
+  "cleanup_commands": [
+    "git rm -r --cached 'samples/selected samples' 'samples/selected_samples' 'notebook_outputs' 2>/dev/null || true",
+    "git add .gitignore",
+    "git commit -m 'chore: ignore PHI samples and notebook outputs'"
+  ],
+  "warning": "If sensitive files were already pushed to a public/shared repo, removing them from HEAD is not enough; consider history cleanup."
+}

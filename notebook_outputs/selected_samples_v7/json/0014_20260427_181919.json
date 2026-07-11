@@ -1,0 +1,578 @@
+{
+  "document": {
+    "index": 14,
+    "filename": "20260427_181919.jpg",
+    "source_relative_path": "samples/selected samples/20260427_181919.jpg",
+    "file_ext": ".jpg",
+    "mime_type": "image/jpeg",
+    "file_size_kb": 58.18,
+    "status": "extracted_good",
+    "warnings": [],
+    "document_type": "lab",
+    "document_type_confidence": 0.8,
+    "relevance_score": 1.0,
+    "medical_hits": [
+      "biochemistry",
+      "glucose",
+      "creatinine",
+      "cholesterol",
+      "triglycerides",
+      "reference range",
+      "آزمایشگاه",
+      "آزمايشگاه",
+      "پزشک",
+      "پذیرش"
+    ],
+    "source_preview": "notebook_outputs/selected_samples_v7/source_previews/0014_20260427_181919.png"
+  },
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.765,
+    "issues": [],
+    "width": 765,
+    "height": 1020,
+    "brightness_mean": 154.67,
+    "contrast_std": 32.71,
+    "laplacian_variance": 1434.62
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.74,
+    "text_length": 437,
+    "source": "image_ocr_variants",
+    "best_variant": "original_oriented_rot90",
+    "best_psm": 11,
+    "best_lang": "eng+fas",
+    "text_quality": {
+      "score": 0.635,
+      "status": "good_text",
+      "alias_hits": 18,
+      "medical_hits": 10,
+      "numeric_hits": 21,
+      "line_count": 39,
+      "token_count": 81,
+      "gibberish_ratio": 0.043,
+      "culture_signal": false,
+      "reasons": []
+    },
+    "candidate_count": 102,
+    "candidate_scores": [
+      {
+        "variant": "original_oriented_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 63.94,
+        "len": 437,
+        "conf": 0.74,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 63.13,
+        "len": 426,
+        "conf": 0.796,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 62.92,
+        "len": 419,
+        "conf": 0.752,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot90",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 61.8,
+        "len": 401,
+        "conf": 0.668,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 61.41,
+        "len": 507,
+        "conf": 0.707,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot90",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 60.5,
+        "len": 405,
+        "conf": 0.712,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 60.35,
+        "len": 552,
+        "conf": 0.66,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 60.14,
+        "len": 543,
+        "conf": 0.712,
+        "error": null
+      },
+      {
+        "variant": "original_oriented_rot90",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 59.61,
+        "len": 509,
+        "conf": 0.706,
+        "error": null
+      },
+      {
+        "variant": "original_oriented_rot90",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 57.55,
+        "len": 354,
+        "conf": 0.813,
+        "error": null
+      }
+    ]
+  },
+  "common_fields": {
+    "center_name": {
+      "value": "آنالیز پزشکی آزمایشگاه",
+      "confidence": 0.7,
+      "source_text": "آنالیز پزشکی آزمایشگاه"
+    },
+    "national_id": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "strict_label_required": true
+    },
+    "tracking_number": {
+      "value": "09-3",
+      "confidence": 0.85,
+      "source_text": "پذیرش\n09-3"
+    },
+    "date_of_test_or_report": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "calendar": null
+    },
+    "patient_name": {
+      "value": "مار فوانهخازنی",
+      "confidence": 0.88,
+      "source_text": "\nمار\nفوانهخازنی خانم : ند برد"
+    },
+    "sex": {
+      "value": "female",
+      "confidence": 0.85,
+      "source_text": "\nمار\nفوانهخازنی خانم : ند برد"
+    },
+    "age": {
+      "value": 72,
+      "confidence": 0.85,
+      "source_text": "سال 72 سن"
+    },
+    "doctor_name": {
+      "value": "ی آزمایشگاه",
+      "confidence": 0.75,
+      "source_text": "پزشکی آزمایشگاه"
+    }
+  },
+  "field_validation": {
+    "field_validation_status": {
+      "center_name": "valid",
+      "national_id": "missing",
+      "tracking_number": "valid",
+      "date_of_test_or_report": "missing",
+      "patient_name": "valid",
+      "sex": "valid",
+      "age": "valid",
+      "doctor_name": "valid"
+    },
+    "critical_field_reason_codes": [
+      "missing_report_date"
+    ],
+    "critical_fields_valid_for_backend": false
+  },
+  "row_validation": {
+    "row_validation_status": {
+      "valid": 1,
+      "review": 5
+    },
+    "safe_row_count": 1,
+    "unsafe_row_count": 5,
+    "unsafe_rows_sample": [
+      {
+        "test_name_standard": "Creatinine",
+        "result_value": "0.78",
+        "validation_status": "review",
+        "reason_codes": [
+          "missing_unit"
+        ],
+        "source_text": "Creatininee\n0.78\nmg/d\n25"
+      },
+      {
+        "test_name_standard": "Uric Acid",
+        "result_value": "197",
+        "validation_status": "review",
+        "reason_codes": [
+          "missing_unit"
+        ],
+        "source_text": "Uric Acid\nmala\nak\n197"
+      },
+      {
+        "test_name_standard": "Total Cholesterol",
+        "result_value": "93",
+        "validation_status": "review",
+        "reason_codes": [
+          "missing_unit"
+        ],
+        "source_text": "Total Cholesterol\nrderli\n93"
+      },
+      {
+        "test_name_standard": "FBS",
+        "result_value": "101",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "Glucose‏ 101* 70-0 mg/d"
+      },
+      {
+        "test_name_standard": "Urine Glucose",
+        "result_value": "101",
+        "validation_status": "review",
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "source_text": "Glucose‏ 101* 70-0 mg/d"
+      }
+    ]
+  },
+  "backend_save_policy": {
+    "backend_save_allowed": false,
+    "review_required": true,
+    "reupload_required": false,
+    "route": "manual_review",
+    "reason_codes": [
+      "missing_report_date",
+      "some_rows_require_review"
+    ],
+    "safe_payload": {
+      "common_fields": {},
+      "lab_results": []
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "biochemistry",
+        "test_name_standard": "Urea",
+        "test_name_raw": "Urea",
+        "result_value": "31",
+        "result_numeric": 31.0,
+        "unit": "mg/dL",
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.82,
+        "source_text": "Urea\n31\nmg/dL.",
+        "validation_status": "valid",
+        "save_allowed": true,
+        "reason_codes": [],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "biochemistry",
+        "test_name_standard": "Creatinine",
+        "test_name_raw": "Creatininee",
+        "result_value": "0.78",
+        "result_numeric": 0.78,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.82,
+        "source_text": "Creatininee\n0.78\nmg/d\n25",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "biochemistry",
+        "test_name_standard": "Uric Acid",
+        "test_name_raw": "Uric Acid",
+        "result_value": "197",
+        "result_numeric": 197.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.82,
+        "source_text": "Uric Acid\nmala\nak\n197",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "biochemistry",
+        "test_name_standard": "Total Cholesterol",
+        "test_name_raw": "Total Cholesterol",
+        "result_value": "93",
+        "result_numeric": 93.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.82,
+        "source_text": "Total Cholesterol\nrderli\n93",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "biochemistry",
+        "test_name_standard": "FBS",
+        "test_name_raw": "Glucose",
+        "result_value": "101",
+        "result_numeric": 101.0,
+        "unit": null,
+        "reference_range": "70-0",
+        "flag": "rechecked",
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "Glucose‏ 101* 70-0 mg/d",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Urine Glucose",
+        "test_name_raw": "Glucose",
+        "result_value": "101",
+        "result_numeric": 101.0,
+        "unit": null,
+        "reference_range": "70-0",
+        "flag": "rechecked",
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "Glucose‏ 101* 70-0 mg/d",
+        "validation_status": "review",
+        "save_allowed": false,
+        "reason_codes": [
+          "low_row_confidence",
+          "missing_unit"
+        ],
+        "corrected_numeric": null,
+        "corrected_value": null
+      }
+    ]
+  },
+  "extracted_parts": [
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "center_name",
+      "value": "آنالیز پزشکی آزمایشگاه",
+      "confidence": 0.7,
+      "source_text": "آنالیز پزشکی آزمایشگاه",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "tracking_number",
+      "value": "09-3",
+      "confidence": 0.85,
+      "source_text": "پذیرش\n09-3",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "patient_name",
+      "value": "مار فوانهخازنی",
+      "confidence": 0.88,
+      "source_text": "\nمار\nفوانهخازنی خانم : ند برد",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "sex",
+      "value": "female",
+      "confidence": 0.85,
+      "source_text": "\nمار\nفوانهخازنی خانم : ند برد",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "age",
+      "value": 72,
+      "confidence": 0.85,
+      "source_text": "سال 72 سن",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "doctor_name",
+      "value": "ی آزمایشگاه",
+      "confidence": 0.75,
+      "source_text": "پزشکی آزمایشگاه",
+      "field_validation_status": "valid"
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "Urea",
+      "value": "31",
+      "result_numeric": 31.0,
+      "unit": "mg/dL",
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.82,
+      "source_text": "Urea\n31\nmg/dL.",
+      "test_name_raw": "Urea",
+      "row_validation_status": "valid",
+      "row_save_allowed": true,
+      "row_reason_codes": "",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "Creatinine",
+      "value": "0.78",
+      "result_numeric": 0.78,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.82,
+      "source_text": "Creatininee\n0.78\nmg/d\n25",
+      "test_name_raw": "Creatininee",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "Uric Acid",
+      "value": "197",
+      "result_numeric": 197.0,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.82,
+      "source_text": "Uric Acid\nmala\nak\n197",
+      "test_name_raw": "Uric Acid",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "Total Cholesterol",
+      "value": "93",
+      "result_numeric": 93.0,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.82,
+      "source_text": "Total Cholesterol\nrderli\n93",
+      "test_name_raw": "Total Cholesterol",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "FBS",
+      "value": "101",
+      "result_numeric": 101.0,
+      "unit": null,
+      "reference_range": "70-0",
+      "flag": "rechecked",
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "Glucose‏ 101* 70-0 mg/d",
+      "test_name_raw": "Glucose",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    },
+    {
+      "part_type": "lab_result",
+      "section": "urine_or_microbiology",
+      "field_name": "Urine Glucose",
+      "value": "101",
+      "result_numeric": 101.0,
+      "unit": null,
+      "reference_range": "70-0",
+      "flag": "rechecked",
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "Glucose‏ 101* 70-0 mg/d",
+      "test_name_raw": "Glucose",
+      "row_validation_status": "review",
+      "row_save_allowed": false,
+      "row_reason_codes": "low_row_confidence|missing_unit",
+      "corrected_numeric": null,
+      "corrected_value": null
+    }
+  ],
+  "extracted_text": "آنالیز پزشکی آزمایشگاه\n153 شماره )-\n(مخبری کلستان متری 35 - کزی مر OUT‏ جنت\n33492 907-34492805 تلفن\nلا Ses‏\nآقازاده دکتر خانم کار :سر معالج پزشک\n1304/09/01 : تاریخ پذیرش\n09-3\nص17\nمار\nفوانهخازنی خانم : ند برد\nسال 72 سن:\nBiochemistry\nTest\nResult\nReference Range\nUnit\nFa:\nو1 Blood Glucose‏\n101*\n70-0\nmg/d\nUrea\n31\nmg/dL.\nCreatininee\n0.78\nmg/d\n25\nUric Acid\nmala\nak\n197\nTotal Cholesterol\nrderli\n93\nTriglycerides\nHDL Cholesterol\nLDL Cholesterol"
+}
