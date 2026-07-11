@@ -1,0 +1,229 @@
+{
+  "document": {
+    "index": 12,
+    "filename": "-2147483648_-210195.jpg",
+    "file_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/-2147483648_-210195.jpg",
+    "file_ext": ".jpg",
+    "mime_type": "image/jpeg",
+    "file_size_kb": 42.0,
+    "status": "needs_manual_review",
+    "warnings": [
+      "low_structured_data"
+    ],
+    "document_type": "lab",
+    "document_type_confidence": 0.6,
+    "medical_ok": true,
+    "relevance_score": 1.0,
+    "medical_hits": [
+      "lab",
+      "pt",
+      "آزمایشگاه",
+      "آزمايشگاه",
+      "پزشک",
+      "پذیرش"
+    ],
+    "document_signals": [
+      "lab",
+      "آزمایشگاه",
+      "آزمايشگاه"
+    ]
+  },
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.612,
+    "issues": [
+      "too_bright",
+      "possible_rotation_or_sideways"
+    ],
+    "width": 1080,
+    "height": 666,
+    "brightness_mean": 245.69,
+    "contrast_std": 33.56,
+    "laplacian_variance": 2702.47
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.5193243243243244,
+    "text_length": 425,
+    "source": "image_ocr_variants",
+    "best_variant": "threshold_fallback",
+    "best_psm": 6,
+    "best_lang": "eng+fas",
+    "candidate_count": 84,
+    "candidate_scores": [
+      {
+        "variant": "threshold_fallback",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 13.74,
+        "len": 434,
+        "conf": 0.519,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 11.96,
+        "len": 423,
+        "conf": 0.628,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 10.92,
+        "len": 464,
+        "conf": 0.558,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 10.6,
+        "len": 450,
+        "conf": 0.543,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 11,
+        "lang": "eng",
+        "score": 10.05,
+        "len": 408,
+        "conf": 0.36,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 10.02,
+        "len": 459,
+        "conf": 0.538,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 6,
+        "lang": "eng",
+        "score": 9.75,
+        "len": 388,
+        "conf": 0.426,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 9.68,
+        "len": 409,
+        "conf": 0.477,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 9.45,
+        "len": 425,
+        "conf": 0.595,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 9.18,
+        "len": 401,
+        "conf": 0.589,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 9.16,
+        "len": 435,
+        "conf": 0.612,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 9.09,
+        "len": 392,
+        "conf": 0.635,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 11,
+        "lang": "eng",
+        "score": 8.79,
+        "len": 392,
+        "conf": 0.395,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 6,
+        "lang": "eng",
+        "score": 8.41,
+        "len": 401,
+        "conf": 0.358,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 8.34,
+        "len": 417,
+        "conf": 0.576,
+        "error": null
+      }
+    ],
+    "text_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/notebook_outputs/selected_samples_v5/texts/0012_-2147483648_-210195.txt"
+  },
+  "common_fields": {
+    "center_name": {
+      "value": "روز ام پاتوییولوزک آزمایشگاه al",
+      "confidence": 0.7,
+      "source_text": "روز ام پاتوییولوزک آزمایشگاه al"
+    },
+    "national_id": {
+      "value": "4f94cbd663b2e95d6048499af10d2e57739c2864d0b5da10db4a15ae106ee83a",
+      "confidence": 0.9,
+      "source_text": "**********"
+    },
+    "doctor_name": {
+      "value": "39518 ge aS",
+      "confidence": 0.75,
+      "source_text": "پزشک 39518 ge aS"
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "coagulation",
+        "test_name_standard": "PT",
+        "test_name_raw": "PT",
+        "result_value": "39518",
+        "result_numeric": 39518.0,
+        "unit": null,
+        "reference_range": "39-275",
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "pt کت al نام 1313-79 پذیرش: شمازه\nBeaks ین دک GT جخاپ lle پزشک 39518 ge aS\nImmunoassays-Endocrinology\nTest Result Unit Method: Reference Value\ni paUsal 39-275,\nDAT 209 ELA Perimeno"
+      }
+    ],
+    "radiology": null,
+    "other_parts": []
+  },
+  "extracted_text": "روز ام پاتوییولوزک آزمایشگاه al\n. 4 3 0 91\n2 پلاک تامیک, ane scp GED بیات متری 4 bed las شهرری ale اس \nwow.Emroazlab.com @Emruoztub 0355928772\nSheds se, 1303/07/8 پذیرش: ریخ نیک آپ زهرا pt کت al نام 1313-79 پذیرش: شمازه\nBeaks ین دک GT جخاپ lle پزشک 39518 ge aS\nImmunoassays-Endocrinology\nTest Result Unit Method: Reference Value\ni paUsal 39-275,\nDAT 209 ELA Perimenopausal\nPostmenopausal 13-143\n30 Ahmad Forouzesh, 07\nWri ead"
+}

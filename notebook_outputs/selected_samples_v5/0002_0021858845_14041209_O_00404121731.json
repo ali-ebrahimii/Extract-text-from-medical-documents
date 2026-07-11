@@ -1,0 +1,321 @@
+{
+  "document": {
+    "index": 2,
+    "filename": "0021858845_14041209_O_00404121731.pdf",
+    "file_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/0021858845_14041209_O_00404121731.pdf",
+    "file_ext": ".pdf",
+    "mime_type": "application/pdf",
+    "file_size_kb": 42.88,
+    "status": "extracted_good",
+    "warnings": [],
+    "document_type": "lab",
+    "document_type_confidence": 0.6,
+    "medical_ok": true,
+    "relevance_score": 1.0,
+    "medical_hits": [
+      "hematology",
+      "hemoglobin",
+      "platelet",
+      "آزمایشگاه",
+      "آزمايشگاه",
+      "پاتوبیولوژی",
+      "پاتوبيولوژی",
+      "پزشک",
+      "پذیرش"
+    ],
+    "document_signals": [
+      "hematology",
+      "آزمایشگاه",
+      "آزمايشگاه"
+    ]
+  },
+  "quality": {
+    "status": "pdf_quality_not_assessed_here",
+    "overall_quality_score": null,
+    "issues": [],
+    "width": null,
+    "height": null
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.95,
+    "text_length": 768,
+    "source": "pdf_text_layer",
+    "best_variant": "pdf_text_layer",
+    "best_psm": null,
+    "best_lang": null,
+    "candidate_count": 0,
+    "candidate_scores": [],
+    "text_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/notebook_outputs/selected_samples_v5/texts/0002_0021858845_14041209_O_00404121731.txt"
+  },
+  "common_fields": {
+    "center_name": {
+      "value": "آزمایشگاه پاتوبیولوژی تاو",
+      "confidence": 0.7,
+      "source_text": "# آزمایشگاه پاتوبیولوژی تاو#"
+    },
+    "national_id": {
+      "value": "993bd7f6f5888804e4bef523c060a0159f93915ad216bfd00ee1ff0808e8fe97",
+      "confidence": 0.9,
+      "source_text": "کد ملی :**********"
+    },
+    "tracking_number": {
+      "value": "O-40412-1731",
+      "confidence": 0.85,
+      "source_text": "O-40412-1731"
+    },
+    "date_of_test_or_report": {
+      "value": "1404/12/09",
+      "confidence": 0.9,
+      "source_text": "تاریخ پذیرش1404/12/09"
+    },
+    "patient_name": {
+      "value": "مھلا روشن",
+      "confidence": 0.85,
+      "source_text": "روشن- خانم مھلا- دکتر27 : سن"
+    },
+    "sex": {
+      "value": "female",
+      "confidence": 0.85,
+      "source_text": "روشن- خانم مھلا- دکتر27 : سن"
+    },
+    "age": {
+      "value": 27,
+      "confidence": 0.85,
+      "source_text": "روشن- خانم مھلا- دکتر27 : سن"
+    },
+    "doctor_name": {
+      "value": "روشن- خانم مھلا- دکتر27 : سن",
+      "confidence": 0.75,
+      "source_text": "پزشک\nروشن- خانم مھلا- دکتر27 : سن"
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "hematology",
+        "test_name_standard": "WBC",
+        "test_name_raw": "W.B.C",
+        "result_value": "8.65",
+        "result_numeric": 8.65,
+        "unit": "10^3/uL",
+        "reference_range": "3.5-10.5",
+        "flag": "H",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "W.B.C\n8.65\n10^3/uL\n3.5-10.5\nR.B.C\n4.86\n10^6/uL\n3.9 - 5.03\nHemoglobin\n13.4\ng/dL\n12.0 - 16.0\nH.C.T\n40.2\n%\n34.9-44.5 %\nM.C.V\n82.7\nfL\n81.6-98.3 fl\nM.C.H\n27.6\npg\n25.8-33.1 pg\nM.C.H.C\n33"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "RBC",
+        "test_name_raw": "R.B.C",
+        "result_value": "4.86",
+        "result_numeric": 4.86,
+        "unit": "10^6/uL",
+        "reference_range": "3.9-5.03",
+        "flag": "H",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "R.B.C\n4.86\n10^6/uL\n3.9 - 5.03\nHemoglobin\n13.4\ng/dL\n12.0 - 16.0\nH.C.T\n40.2\n%\n34.9-44.5 %\nM.C.V\n82.7\nfL\n81.6-98.3 fl\nM.C.H\n27.6\npg\n25.8-33.1 pg\nM.C.H.C\n33.3\ng/dL\n32-36 g/dl\nPlatelets"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "HGB",
+        "test_name_raw": "Hemoglobin",
+        "result_value": "13.4",
+        "result_numeric": 13.4,
+        "unit": "g/dL",
+        "reference_range": "12.0-16.0",
+        "flag": "H",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Hemoglobin\n13.4\ng/dL\n12.0 - 16.0\nH.C.T\n40.2\n%\n34.9-44.5 %\nM.C.V\n82.7\nfL\n81.6-98.3 fl\nM.C.H\n27.6\npg\n25.8-33.1 pg\nM.C.H.C\n33.3\ng/dL\n32-36 g/dl\nPlatelets\n262\n10^3 /uL\n150 - 450\nRDW-CV"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "HCT",
+        "test_name_raw": "H.C.T",
+        "result_value": "40.2",
+        "result_numeric": 40.2,
+        "unit": "%",
+        "reference_range": "34.9-44.5",
+        "flag": "H",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "H.C.T\n40.2\n%\n34.9-44.5 %\nM.C.V\n82.7\nfL\n81.6-98.3 fl\nM.C.H\n27.6\npg\n25.8-33.1 pg\nM.C.H.C\n33.3\ng/dL\n32-36 g/dl\nPlatelets\n262\n10^3 /uL\n150 - 450\nRDW-CV\n13.4\n%\n11.9-15.5 %\nRDW-SD\n37.5\nf"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "MCV",
+        "test_name_raw": "M.C.V",
+        "result_value": "82.7",
+        "result_numeric": 82.7,
+        "unit": "fL",
+        "reference_range": "81.6-98.3",
+        "flag": "H",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "M.C.V\n82.7\nfL\n81.6-98.3 fl\nM.C.H\n27.6\npg\n25.8-33.1 pg\nM.C.H.C\n33.3\ng/dL\n32-36 g/dl\nPlatelets\n262\n10^3 /uL\n150 - 450\nRDW-CV\n13.4\n%\n11.9-15.5 %\nRDW-SD\n37.5\nfl\n36 - 54\nPDW\n12.2\nfL\n9-1"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "MCH",
+        "test_name_raw": "M.C.H",
+        "result_value": "27.6",
+        "result_numeric": 27.6,
+        "unit": "pg",
+        "reference_range": "25.8-33.1",
+        "flag": "H",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "M.C.H\n27.6\npg\n25.8-33.1 pg\nM.C.H.C\n33.3\ng/dL\n32-36 g/dl\nPlatelets\n262\n10^3 /uL\n150 - 450\nRDW-CV\n13.4\n%\n11.9-15.5 %\nRDW-SD\n37.5\nfl\n36 - 54\nPDW\n12.2\nfL\n9-17 fl\nNeutrophils\n77.0\n%\n40 "
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "MCHC",
+        "test_name_raw": "M.C.H.C",
+        "result_value": "33.3",
+        "result_numeric": 33.3,
+        "unit": "g/dL",
+        "reference_range": "32-36",
+        "flag": "H",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "M.C.H.C\n33.3\ng/dL\n32-36 g/dl\nPlatelets\n262\n10^3 /uL\n150 - 450\nRDW-CV\n13.4\n%\n11.9-15.5 %\nRDW-SD\n37.5\nfl\n36 - 54\nPDW\n12.2\nfL\n9-17 fl\nNeutrophils\n77.0\n%\n40 - 80\nLymphocytes\n17.7\n%\n20 "
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "RDW-CV",
+        "test_name_raw": "RDW-CV",
+        "result_value": "13.4",
+        "result_numeric": 13.4,
+        "unit": "%",
+        "reference_range": "11.9-15.5",
+        "flag": "Low",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "RDW-CV\n13.4\n%\n11.9-15.5 %\nRDW-SD\n37.5\nfl\n36 - 54\nPDW\n12.2\nfL\n9-17 fl\nNeutrophils\n77.0\n%\n40 - 80\nLymphocytes\n17.7\n%\n20 - 40\nLow\nMonocytes\n4.6\n%\n4.1-12.4 %\nEosinophils\n0.7\n%\n0.4-6.7 "
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "RDW-SD",
+        "test_name_raw": "RDW-SD",
+        "result_value": "37.5",
+        "result_numeric": 37.5,
+        "unit": "fl",
+        "reference_range": "36-54",
+        "flag": "Low",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "RDW-SD\n37.5\nfl\n36 - 54\nPDW\n12.2\nfL\n9-17 fl\nNeutrophils\n77.0\n%\n40 - 80\nLymphocytes\n17.7\n%\n20 - 40\nLow\nMonocytes\n4.6\n%\n4.1-12.4 %\nEosinophils\n0.7\n%\n0.4-6.7 %\nThis answer is signed ou"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "PLT",
+        "test_name_raw": "Platelets",
+        "result_value": "262",
+        "result_numeric": 262.0,
+        "unit": "10^3 /uL",
+        "reference_range": "150-450",
+        "flag": "Low",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Platelets\n262\n10^3 /uL\n150 - 450\nRDW-CV\n13.4\n%\n11.9-15.5 %\nRDW-SD\n37.5\nfl\n36 - 54\nPDW\n12.2\nfL\n9-17 fl\nNeutrophils\n77.0\n%\n40 - 80\nLymphocytes\n17.7\n%\n20 - 40\nLow\nMonocytes\n4.6\n%\n4.1-"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "PDW",
+        "test_name_raw": "PDW",
+        "result_value": "12.2",
+        "result_numeric": 12.2,
+        "unit": "fL",
+        "reference_range": "9-17",
+        "flag": "Low",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "PDW\n12.2\nfL\n9-17 fl\nNeutrophils\n77.0\n%\n40 - 80\nLymphocytes\n17.7\n%\n20 - 40\nLow\nMonocytes\n4.6\n%\n4.1-12.4 %\nEosinophils\n0.7\n%\n0.4-6.7 %\nThis answer is signed out by Dr.N.Adanvar\nPrint"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "NEUT%",
+        "test_name_raw": "Neutrophils",
+        "result_value": "77.0",
+        "result_numeric": 77.0,
+        "unit": "%",
+        "reference_range": "40-80",
+        "flag": "Low",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Neutrophils\n77.0\n%\n40 - 80\nLymphocytes\n17.7\n%\n20 - 40\nLow\nMonocytes\n4.6\n%\n4.1-12.4 %\nEosinophils\n0.7\n%\n0.4-6.7 %\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "LYMPH%",
+        "test_name_raw": "Lymphocytes",
+        "result_value": "17.7",
+        "result_numeric": 17.7,
+        "unit": "%",
+        "reference_range": "20-40",
+        "flag": "Low",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Lymphocytes\n17.7\n%\n20 - 40\nLow\nMonocytes\n4.6\n%\n4.1-12.4 %\nEosinophils\n0.7\n%\n0.4-6.7 %\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:20 By 2"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "MONO%",
+        "test_name_raw": "Monocytes",
+        "result_value": "4.6",
+        "result_numeric": 4.6,
+        "unit": "%",
+        "reference_range": "4.1-12.4",
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Monocytes\n4.6\n%\n4.1-12.4 %\nEosinophils\n0.7\n%\n0.4-6.7 %\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:20 By 2"
+      },
+      {
+        "section": "hematology",
+        "test_name_standard": "EO%",
+        "test_name_raw": "Eosinophils",
+        "result_value": "0.7",
+        "result_numeric": 0.7,
+        "unit": "%",
+        "reference_range": "0.4-6.7",
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Eosinophils\n0.7\n%\n0.4-6.7 %\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:20 By 2"
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Blood/Hb",
+        "test_name_raw": "Hemoglobin",
+        "result_value": "13.4",
+        "result_numeric": 13.4,
+        "unit": "g/dL",
+        "reference_range": "12.0-16.0",
+        "flag": "H",
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Hemoglobin\n13.4\ng/dL\n12.0 - 16.0\nH.C.T\n40.2\n%\n34.9-44.5 %\nM.C.V\n82.7\nfL\n81.6-98.3 fl\nM.C.H\n27.6\npg\n25.8-33.1 pg\nM.C.H.C\n33.3\ng/dL\n32-36 g/dl\nPlatelets\n262\n10^3 /uL\n150 - 450\nRDW-CV"
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Blood/Hb",
+        "test_name_raw": "Blood/Hb",
+        "result_value": "13",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "d W.B.C 8.65 10^3/uL 3.5-10.5 R.B.C 4.86 10^6/uL 3.9 - 5.03 Hemoglobin 13.4 g/dL 12.0 - 16.0 H.C.T 40.2 % 34.9-44.5 % M.C.V 82.7 fL 8"
+      }
+    ],
+    "radiology": null,
+    "other_parts": []
+  },
+  "extracted_text": "# آزمایشگاه پاتوبیولوژی تاو#\n تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20\n021-91012828\nO-40412-1731\n: پزشک\n روشن- خانم مھلا- دکتر27 : سن\nشماره :\nنام :\nکد ملی :0021858845\n - سالFemale\n: تاریخ پذیرش1404/12/09 - 14:13:17\nTest\nResult\nHematology\nUnit\nNormal Range\nFlag\nMethod\nW.B.C\n8.65\n10^3/uL\n3.5-10.5\nR.B.C\n4.86\n10^6/uL\n3.9 - 5.03\nHemoglobin\n13.4\ng/dL\n12.0 - 16.0\nH.C.T\n40.2\n%\n34.9-44.5 %\nM.C.V\n82.7\nfL\n81.6-98.3 fl\nM.C.H\n27.6\npg\n25.8-33.1 pg\nM.C.H.C\n33.3\ng/dL\n32-36 g/dl\nPlatelets\n262\n10^3 /uL\n150 - 450\nRDW-CV\n13.4\n%\n11.9-15.5 %\nRDW-SD\n37.5\nfl\n36 - 54\nPDW\n12.2\nfL\n9-17 fl\nNeutrophils\n77.0\n%\n40 - 80\nLymphocytes\n17.7\n%\n20 - 40\nLow\nMonocytes\n4.6\n%\n4.1-12.4 %\nEosinophils\n0.7\n%\n0.4-6.7 %\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:20 By 2"
+}

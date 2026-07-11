@@ -1,0 +1,107 @@
+# آزمایشگاه پاتوبیولوژی تاو#
+ تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20
+021-91012828
+O-40412-1721
+: پزشک
+ امینی طھران- آقای کورش- دکتر34 : سن
+شماره :
+نام :
+کد ملی :0014161672
+ - سالMale
+: تاریخ پذیرش1404/12/09 - 14:11:34
+Test
+Result
+Hematology
+Unit
+Normal Range
+Flag
+Method
+W.B.C
+7.24
+10^3/uL
+3.5-10.5
+R.B.C
+4.9
+10^6/uL
+4.32 - 5.72
+Hemoglobin
+15.0
+g/dL
+13.5 - 17.5
+H.C.T
+45.0
+%
+38.8-50 %
+M.C.V
+91.8
+fL
+81.2-95.1 fl
+M.C.H
+30.6
+pg
+25.8-33.1 pg
+M.C.H.C
+33.3
+g/dL
+32-36 g/dl
+Platelets
+265
+10^3 /uL
+150 - 450
+RDW-CV
+12.6
+%
+11.8-15.6 %
+RDW-SD
+40.7
+fl
+36 - 54
+PDW
+14.3
+fL
+9-17 fl
+Neutrophils
+49.7
+%
+40 - 80
+Lymphocytes
+43
+%
+20 - 40
+High
+Monocytes
+5.5
+%
+4.1-12.4 %
+Eosinophils
+1.7
+%
+0.4-6.7 %
+Basophils
+0.1
+%
+0.3-1.4 %
+Test
+Result
+Biochemistry
+Unit
+Normal Range
+Flag
+Method
+Fasting blood sugar
+91
+mg/dL
+70-115
+Photometr
+SGOT(AST)
+19
+U/L
+<37
+Photometr
+SGPT(ALT)
+21
+U/L
+< 40
+Photometr
+This answer is signed out by Dr.N.Adanvar
+Print On 1405/01/30-13:48:08 By 2

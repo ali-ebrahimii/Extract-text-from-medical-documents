@@ -1,0 +1,329 @@
+{
+  "document": {
+    "index": 9,
+    "filename": "۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.jpg",
+    "file_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.jpg",
+    "file_ext": ".jpg",
+    "mime_type": "image/jpeg",
+    "file_size_kb": 56.83,
+    "status": "needs_manual_review",
+    "warnings": [
+      "few_common_fields"
+    ],
+    "document_type": "lab",
+    "document_type_confidence": 0.4,
+    "medical_ok": true,
+    "relevance_score": 0.75,
+    "medical_hits": [
+      "lab",
+      "hormone",
+      "glucose"
+    ],
+    "document_signals": [
+      "lab",
+      "glucose"
+    ]
+  },
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.77,
+    "issues": [],
+    "width": 765,
+    "height": 1020,
+    "brightness_mean": 126.74,
+    "contrast_std": 50.47,
+    "laplacian_variance": 366.04
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.4453333333333333,
+    "text_length": 1013,
+    "source": "image_ocr_variants",
+    "best_variant": "light_sharpen",
+    "best_psm": 11,
+    "best_lang": "eng+fas",
+    "candidate_count": 84,
+    "candidate_scores": [
+      {
+        "variant": "light_sharpen",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 31.2,
+        "len": 1015,
+        "conf": 0.445,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 11,
+        "lang": "eng",
+        "score": 30.4,
+        "len": 1082,
+        "conf": 0.379,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 29.34,
+        "len": 841,
+        "conf": 0.411,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 11,
+        "lang": "eng",
+        "score": 28.2,
+        "len": 945,
+        "conf": 0.453,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 4,
+        "lang": "eng",
+        "score": 27.75,
+        "len": 843,
+        "conf": 0.37,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 11,
+        "lang": "eng",
+        "score": 27.38,
+        "len": 946,
+        "conf": 0.443,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 27.19,
+        "len": 648,
+        "conf": 0.48,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 26.93,
+        "len": 904,
+        "conf": 0.544,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 4,
+        "lang": "eng",
+        "score": 26.78,
+        "len": 642,
+        "conf": 0.456,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 26.61,
+        "len": 923,
+        "conf": 0.439,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 4,
+        "lang": "eng",
+        "score": 26.04,
+        "len": 659,
+        "conf": 0.452,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 25.9,
+        "len": 670,
+        "conf": 0.492,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 25.85,
+        "len": 853,
+        "conf": 0.491,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 4,
+        "lang": "eng",
+        "score": 25.3,
+        "len": 676,
+        "conf": 0.424,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 24.91,
+        "len": 591,
+        "conf": 0.493,
+        "error": null
+      }
+    ],
+    "text_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/notebook_outputs/selected_samples_v5/texts/0009_۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.txt"
+  },
+  "common_fields": {
+    "tracking_number": {
+      "value": "igh",
+      "confidence": 0.85,
+      "source_text": "شماره\nigh"
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "T4",
+        "test_name_raw": "T4",
+        "result_value": "4",
+        "result_numeric": 4.0,
+        "unit": null,
+        "reference_range": "16-30",
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "T4\n17\nFIA مس\ngilt\nofnot tot dny yaad\nUnfnnt S08 days Wald\nait 16-30 day as\nUnfanc Iota\nwouthit\n119 Ye\n30\n0\n1 Foucen| AnibodyEL.PA) instument\n{i this Lab Hormone ess performed هار1 "
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "T4",
+        "test_name_raw": "Thyroxine",
+        "result_value": "80",
+        "result_numeric": 80.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Thyroxine Stimulating\n80 Yours 4\n3\n1 Day = 29 Daye 0:76\none\nun\nHHA HLA\non\nMoun\n1 Years ns\n82\nSenta 14 Vents 061\n6.9\nMul 46.39\nFree T4\n17\nFIA مس\ngilt\nofnot tot dny yaad\nUnfnnt S08 d"
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "Free T4",
+        "test_name_raw": "Free T4",
+        "result_value": "4",
+        "result_numeric": 4.0,
+        "unit": null,
+        "reference_range": "16-30",
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Free T4\n17\nFIA مس\ngilt\nofnot tot dny yaad\nUnfnnt S08 days Wald\nait 16-30 day as\nUnfanc Iota\nwouthit\n119 Ye\n30\n0\n1 Foucen| AnibodyEL.PA) instument\n{i this Lab Hormone ess performed "
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Color",
+        "test_name_raw": "Color",
+        "result_value": "1",
+        "result_numeric": 1.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Color\nYellow\nwane\nApp\nranee\nClear\nRue\n1\nSp, Gravity\n1021\nEpithe\n7\n24\nPH\nAcid\nacterla\nLook at eutturw\nProtein\nNegative\nMucus\nNot seon\nGlucose\nNegative\nCast Lh\nNot seen\nBilirubin\nNe\n"
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Protein",
+        "test_name_raw": "Protein",
+        "result_value": "7",
+        "result_numeric": 7.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "protein (CR)\n‘Method\nale\nReference Range\nseat\n24\n1\n1\nws\n| dist\n| TH iodothyra\n‘ewe\nفلا\nسا\neT)\nاسر دای\n7 WAI; HA\n1\n18\nnwt\nGo\nYours! 48194\niN\navian\n30\n1\"\n19 Yours (08\n11\n|\n80 Yours ("
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Color",
+        "test_name_raw": "Color",
+        "result_value": "Yellow",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Lab Hormone ess performed هار1 Links acrosconle Mlceasconic Color Yellow wane App ranee Clear Rue 1 Sp, Gravity 1021 Epithe 7 24 PH "
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "pH",
+        "test_name_raw": "pH",
+        "result_value": null,
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "low wane App ranee Clear Rue 1 Sp, Gravity 1021 Epithe 7 24 PH Acid acterla Look at eutturw Protein Negative Mucus Not seo"
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Protein",
+        "test_name_raw": "Protein",
+        "result_value": "Negative",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "p, Gravity 1021 Epithe 7 24 PH Acid acterla Look at eutturw Protein Negative Mucus Not seon Glucose Negative Cast Lh Not seen Bilirubin "
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Urine Glucose",
+        "test_name_raw": "Urine Glucose",
+        "result_value": "Negative",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "cid acterla Look at eutturw Protein Negative Mucus Not seon Glucose Negative Cast Lh Not seen Bilirubin Ne ive Crystal Urobilinogen Not "
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Blood/Hb",
+        "test_name_raw": "Blood/Hb",
+        "result_value": "Negative",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": " Normal Ketone Neative Nitrite Newative lemoglobin Newutive Blood Negative = ="
+      }
+    ],
+    "radiology": null,
+    "other_parts": []
+  },
+  "extracted_text": "وحدت درمالگاه گام\nزماپش\nree.\nITSP pap\nتین\nCot myst\n5 سوم خیاپان\nین شماره\nigh\nوخ yy \n13\n03137\n:\n\"\nدکذر آفای tse ماج\nبرش ی تار\n=\nwy\nUe\n0\n7\nhoe\n=i\nسس\n—\nAlaa\nom\nSoil\n0\n00\njae\n111/3\nhh\nesi\n6\nReactive protein (CR)\n‘Method\nale\nReference Range\nseat\n24\n1\n1\nws\n| dist\n| TH iodothyra\n‘ewe\nفلا\nسا\neT)\nاسر دای\n7 WAI; HA\n1\n18\nnwt\nGo\nYours! 48194\niN\navian\n30\n1\"\n19 Yours (08\n11\n|\n80 Yours (6\n‘|\n‘Thyroxine Stimulating\n80 Yours 4\n3\n1 Day = 29 Daye 0:76\none\nun\nHHA HLA\non\nMoun\n1 Years ns\n82\nSenta 14 Vents 061\n6.9\nMul 46.39\nFree T4\n17\nFIA مس \ngilt\nofnot tot dny yaad\nUnfnnt S08 days Wald\nait 16-30 day as\nUnfanc Iota\nwouthit\n119 Ye\n30\n0\n1 Foucen| AnibodyEL.PA) instument\n{i this Lab Hormone ess performed هار1 Links\nacrosconle\nMlceasconic\nColor\nYellow\nwane\nApp\nranee\nClear\nRue\n1\nSp, Gravity\n1021\nEpithe\n7\n24\nPH\nAcid\nacterla\nLook at eutturw\nProtein\nNegative\nMucus\nNot seon\nGlucose\nNegative\nCast Lh\nNot seen\nBilirubin\nNe\nive\nCrystal\nUrobilinogen\nNot seen\nNormal\nKetone\nNeative\nNitrite\nNewative\nlemoglobin\nNewutive\nBlood\nNegative\n=\n="
+}

@@ -1,0 +1,393 @@
+{
+  "document": {
+    "index": 13,
+    "filename": "-2147483648_-210193.jpg",
+    "file_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/-2147483648_-210193.jpg",
+    "file_ext": ".jpg",
+    "mime_type": "image/jpeg",
+    "file_size_kb": 77.79,
+    "status": "needs_manual_review",
+    "warnings": [
+      "few_common_fields"
+    ],
+    "document_type": "lab",
+    "document_type_confidence": 0.4,
+    "medical_ok": true,
+    "relevance_score": 1.0,
+    "medical_hits": [
+      "hormone",
+      "urine",
+      "hemoglobin",
+      "glucose",
+      "ferritin"
+    ],
+    "document_signals": [
+      "urine",
+      "glucose"
+    ]
+  },
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.633,
+    "issues": [
+      "too_bright",
+      "possible_rotation_or_sideways"
+    ],
+    "width": 544,
+    "height": 1280,
+    "brightness_mean": 238.49,
+    "contrast_std": 38.17,
+    "laplacian_variance": 4870.83
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.4298395721925134,
+    "text_length": 1136,
+    "source": "image_ocr_variants",
+    "best_variant": "original_oriented",
+    "best_psm": 11,
+    "best_lang": "eng",
+    "candidate_count": 84,
+    "candidate_scores": [
+      {
+        "variant": "original_oriented",
+        "psm": 11,
+        "lang": "eng",
+        "score": 33.89,
+        "len": 1136,
+        "conf": 0.43,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 11,
+        "lang": "eng",
+        "score": 33.83,
+        "len": 1140,
+        "conf": 0.433,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 32.96,
+        "len": 1015,
+        "conf": 0.484,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 32.7,
+        "len": 1011,
+        "conf": 0.479,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 6,
+        "lang": "eng",
+        "score": 32.63,
+        "len": 1361,
+        "conf": 0.372,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 11,
+        "lang": "eng",
+        "score": 31.48,
+        "len": 1150,
+        "conf": 0.45,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 11,
+        "lang": "eng",
+        "score": 30.78,
+        "len": 1475,
+        "conf": 0.374,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 30.49,
+        "len": 1103,
+        "conf": 0.469,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 4,
+        "lang": "eng",
+        "score": 30.48,
+        "len": 1194,
+        "conf": 0.439,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 30.42,
+        "len": 1104,
+        "conf": 0.47,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 4,
+        "lang": "eng",
+        "score": 30.38,
+        "len": 1192,
+        "conf": 0.434,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 29.78,
+        "len": 1201,
+        "conf": 0.403,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 29.67,
+        "len": 1050,
+        "conf": 0.483,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 28.86,
+        "len": 1328,
+        "conf": 0.405,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 4,
+        "lang": "eng",
+        "score": 28.36,
+        "len": 1157,
+        "conf": 0.42,
+        "error": null
+      }
+    ],
+    "text_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/notebook_outputs/selected_samples_v5/texts/0013_-2147483648_-210193.txt"
+  },
+  "common_fields": {},
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "hematology",
+        "test_name_standard": "HGB",
+        "test_name_raw": "Hemoglobin",
+        "result_value": "30",
+        "result_numeric": 30.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Hemoglobin Ate\n30\nne\nstated Average Glucose (EAS)\n”\nmya\n_25:2ydrovy Vieamin Ds\ngmt\nj1339\ncua\n‘Botentiatoxiigy2400\nstow\nNormal ranges are according to the patients sex and age.\nsero"
+      },
+      {
+        "section": "biochemistry",
+        "test_name_standard": "FBS",
+        "test_name_raw": "Glucose",
+        "result_value": "25",
+        "result_numeric": 25.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Glucose (EAS)\n”\nmya\n_25:2ydrovy Vieamin Ds\ngmt\nj1339\ncua\n‘Botentiatoxiigy2400\nstow\nNormal ranges are according to the patients sex and age.\nserotogy |\netc Ye\ncd\nTest\nta\ncae (Quanti"
+      },
+      {
+        "section": "biochemistry",
+        "test_name_standard": "AST",
+        "test_name_raw": "AST",
+        "result_value": "24",
+        "result_numeric": 24.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "ast\nUrine (cutture & Sensitivity)\nNo growth after 24 hours\ncute\nSag"
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "Ferritin",
+        "test_name_raw": "Ferritin",
+        "result_value": "4970",
+        "result_numeric": 4970.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Ferritin\n4970\ngmt\ncus\ntow\nurine analysis |\nacorn\nesoscope\nUrine Analyste\nolor\nYeon\nwae.\n12\n‘Appearance\nRac.\non\n‘Specie Gravity\n101s\nplthetal cells\not\nPH\nacterta\nNegative\nProtein\nNe"
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "FSH",
+        "test_name_raw": "FSH",
+        "result_value": "09",
+        "result_numeric": 9.0,
+        "unit": null,
+        "reference_range": "23-1288",
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "FSH\n09\nmitt\nan\n‘Postmenopausal 23-1288\nProtactin\ngmt\nwoss\ncua\nngimt\nTestosterone\nos\nHA\n20st\nFree Testosterone\na\nga\n‘ollicular phase (12(0-1days):.\n25442\nMddgute ia days 8.\ntent pha"
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "Testosterone",
+        "test_name_raw": "Testosterone",
+        "result_value": "20",
+        "result_numeric": 20.0,
+        "unit": null,
+        "reference_range": "0-1",
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Testosterone\nos\nHA\n20st\nFree Testosterone\na\nga\n‘ollicular phase (12(0-1days):.\n25442\nMddgute ia days 8.\ntent phases4 =12da3).\nEstradiot\nemt\n2009\nan\nSaas:\nfees\npirasos\nwae\now-Proges"
+      },
+      {
+        "section": "special_biochemistry_or_hormone",
+        "test_name_standard": "Free Testosterone",
+        "test_name_raw": "Free Testosterone",
+        "result_value": "12",
+        "result_numeric": 12.0,
+        "unit": null,
+        "reference_range": "0-1",
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Free Testosterone\na\nga\n‘ollicular phase (12(0-1days):.\n25442\nMddgute ia days 8.\ntent phases4 =12da3).\nEstradiot\nemt\n2009\nan\nSaas:\nfees\npirasos\nwae\now-Progesterone\nLs\nHormone |\nrnc "
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Appearance",
+        "test_name_raw": "Appearance",
+        "result_value": "101",
+        "result_numeric": 101.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Appearance\nRac.\non\n‘Specie Gravity\n101s\nplthetal cells\not\nPH\nacterta\nNegative\nProtein\nNegative\nMucus\nNegative\n‘oheose\nNegative\nNegative\ncasts\nKetone\nNegative\ncrystals\nNegative\nrin\n"
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Urine Glucose",
+        "test_name_raw": "Glucose",
+        "result_value": "25",
+        "result_numeric": 25.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Glucose (EAS)\n”\nmya\n_25:2ydrovy Vieamin Ds\ngmt\nj1339\ncua\n‘Botentiatoxiigy2400\nstow\nNormal ranges are according to the patients sex and age.\nserotogy |\netc Ye\ncd\nTest\nta\ncae (Quanti"
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Blood/Hb",
+        "test_name_raw": "Hemoglobin",
+        "result_value": "30",
+        "result_numeric": 30.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "Hemoglobin Ate\n30\nne\nstated Average Glucose (EAS)\n”\nmya\n_25:2ydrovy Vieamin Ds\ngmt\nj1339\ncua\n‘Botentiatoxiigy2400\nstow\nNormal ranges are according to the patients sex and age.\nsero"
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "pH",
+        "test_name_raw": "pH",
+        "result_value": null,
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": " ‘Appearance Rac. on ‘Specie Gravity 101s plthetal cells ot PH acterta Negative Protein Negative Mucus Negative ‘oheose Ne"
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Protein",
+        "test_name_raw": "Protein",
+        "result_value": "Negative",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": " ‘Specie Gravity 101s plthetal cells ot PH acterta Negative Protein Negative Mucus Negative ‘oheose Negative Negative casts Ketone Negat"
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Ketone",
+        "test_name_raw": "Ketone",
+        "result_value": "Negative",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "ein Negative Mucus Negative ‘oheose Negative Negative casts Ketone Negative crystals Negative rin Negative Uobinogen Noma! Blooato Yeos"
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Mucus",
+        "test_name_raw": "Mucus",
+        "result_value": "Negative",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "101s plthetal cells ot PH acterta Negative Protein Negative Mucus Negative ‘oheose Negative Negative casts Ketone Negative crystals Ne"
+      },
+      {
+        "section": "urine_analysis",
+        "test_name_standard": "Crystals",
+        "test_name_raw": "Crystals",
+        "result_value": "Negative",
+        "result_numeric": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.65,
+        "source_text": "us Negative ‘oheose Negative Negative casts Ketone Negative crystals Negative rin Negative Uobinogen Noma! Blooato Yeoste. ‘Negative Nega"
+      }
+    ],
+    "radiology": null,
+    "other_parts": []
+  },
+  "extracted_text": "rence vate\nTe\nont\nees\nHemoglobin Ate\n30\nne\nstated Average Glucose (EAS)\n”\nmya\n_25:2ydrovy Vieamin Ds\ngmt\nj1339\ncua\n‘Botentiatoxiigy2400\nstow\nNormal ranges are according to the patients sex and age.\nserotogy |\netc Ye\ncd\nTest\nta\ncae (Quantitative)\nmgt.\nred by Repented Ansys 1a\nrnc ae\nter\nfeat\nated\nn\noot\ngmt\ncua\noz\n1”\n9.50\n1s\n239\ntn\npeua\n33.28\nImmunoassays-Endoerinology |\nrane vate\neves\nTer\nesa\n‘Midcvele Phase: 8.7-70.3\nsors\nma\naun\nregnant <01-.3\nFSH\n09\nmitt\nan\n‘Postmenopausal 23-1288\nProtactin\ngmt\nwoss\ncua\nngimt\nTestosterone\nos\nHA\n20st\nFree Testosterone\na\nga\n‘ollicular phase (12(0-1days):.\n25442\nMddgute ia days 8.\ntent phases4 =12da3).\nEstradiot\nemt\n2009\nan\nSaas:\nfees\npirasos\nwae\now-Progesterone\nLs\nHormone |\nrnc ae\nter\nent\nMeied\nFerritin\n4970\ngmt\ncus\ntow\nurine analysis |\nacorn\nesoscope\nUrine Analyste\nolor\nYeon\nwae.\n12\n‘Appearance\nRac.\non\n‘Specie Gravity\n101s\nplthetal cells\not\nPH\nacterta\nNegative\nProtein\nNegative\nMucus\nNegative\n‘oheose\nNegative\nNegative\ncasts\nKetone\nNegative\ncrystals\nNegative\nrin\nNegative\nUobinogen\nNoma!\nBlooato\nYeoste.\n‘Negative\nNegative\nast\nUrine (cutture & Sensitivity)\nNo growth after 24 hours\ncute\nSag"
+}
