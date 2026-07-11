@@ -1,0 +1,193 @@
+{
+  "request_id": "notebook-selected-0014-3b739e",
+  "document_id": "20260427_181554.jpg",
+  "status": "low_confidence",
+  "document_type": "lab",
+  "confidence": 0.329,
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.7449510676357926,
+    "is_acceptable": true,
+    "issues": [],
+    "metrics": {
+      "width": 765,
+      "height": 1020,
+      "brightness_mean": 152.19461232859157,
+      "contrast_std": 26.49697902425003,
+      "laplacian_variance": 493.9493757616957
+    },
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": 1
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.6833333333333332,
+    "text_length": 140,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "آزمایشگاه پزشکی آالیز جنت OUT‏ مر کزی - ۳۵ متری stints‏ (مخبری)- شماره yor‏ تلفن ۳۳۴۹۲۹۰۷-۴۴۳۹۲۸۰۵ Refrence Range 10*3/uL 4-1 10*6۷ 41-1 gid",
+        "confidence": 0.6833333333333332,
+        "text_length": 140,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/20260427_181554.jpg"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "print_date": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "center_name": {
+      "value": "آزمایشگاه پزشکی آالیز جنت OUT‏ مر کزی - 35 متری stints‏ (مخبری)- شماره yor‏ تلفن 33492907-44392805 Refrence Range 10*3/u",
+      "hash": null,
+      "confidence": 0.7,
+      "source_text": "آزمایشگاه پزشکی آالیز جنت OUT‏ مر کزی - 35 متری stints‏ (مخبری)- شماره yor‏ تلفن 33492907-44392805 Refrence Range 10*3/uL 4-1 10*67 41-1 gid",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": "ی آالیز جنت OUT‏ مر کزی - 35 متری stints‏ (مخبری)- شماره yor‏ تلفن 33492907-44392805 Refrence Range 10*3/uL 4-1 10*67 41-1 gid",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "آزمایشگاه پزشکی آالیز جنت OUT‏ مر کزی - 35 متری stints‏ (مخبری)- شماره yor‏ تلفن 33492907-44392805 Refrence Range 10*3/uL 4-1 10*67 41-1 gid",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": []
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "MISSING_LAB_ROWS",
+      "message": "No lab result rows were extracted",
+      "field": "lab_results"
+    },
+    {
+      "code": "MISSING_PATIENT_NAME",
+      "message": "Patient name was not found",
+      "field": "patient_name"
+    },
+    {
+      "code": "MISSING_REPORT_DATE",
+      "message": "Report date was not found",
+      "field": "date_of_test_or_report"
+    },
+    {
+      "code": "LOW_EXTRACTION_CONFIDENCE",
+      "message": "Overall extraction confidence is low",
+      "field": null
+    }
+  ],
+  "debug": {
+    "ocr_text": "آزمایشگاه پزشکی آالیز جنت OUT‏ مر کزی - ۳۵ متری stints‏ (مخبری)- شماره yor‏ تلفن ۳۳۴۹۲۹۰۷-۴۴۳۹۲۸۰۵ Refrence Range 10*3/uL 4-1 10*6۷ 41-1 gid",
+    "page_text": [
+      "آزمایشگاه پزشکی آالیز جنت OUT‏ مر کزی - ۳۵ متری stints‏ (مخبری)- شماره yor‏ تلفن ۳۳۴۹۲۹۰۷-۴۴۳۹۲۸۰۵ Refrence Range 10*3/uL 4-1 10*6۷ 41-1 gid"
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 0.2,
+      "matched_signals": [
+        "آزمایشگاه"
+      ],
+      "reason": "Matched 1 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 1.0,
+      "detected_keywords": [
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "پزشک",
+        "پزشك"
+      ],
+      "detected_document_signals": [
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "پزشک",
+        "پزشك"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "20260427_181554.jpg\nآزمایشگاه پزشکی آالیز جنت OUT‏ مر کزی - ۳۵ متری stints‏ (مخبری)- شماره yor‏ تلفن ۳۳۴۹۲۹۰۷-۴۴۳۹۲۸۰۵ Refrence Range 10*3/uL 4-1 10*6۷ 41-1 gid",
+      "reason": "Detected 4 medical keyword(s)"
+    }
+  }
+}

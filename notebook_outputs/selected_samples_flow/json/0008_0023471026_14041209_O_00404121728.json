@@ -1,0 +1,206 @@
+{
+  "request_id": "notebook-selected-0008-f17a0a",
+  "document_id": "0023471026_14041209_O_00404121728.pdf",
+  "status": "success",
+  "document_type": "lab",
+  "confidence": 0.809,
+  "quality": {
+    "status": null,
+    "overall_quality_score": null,
+    "is_acceptable": null,
+    "issues": [],
+    "metrics": {},
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": null
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.95,
+    "text_length": 407,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1728\n: ﭘﺰﺷﻚ\n اﻧﺒﺎز- ﺧﺎﻧﻢ ﻧﯿﻠﻮﻓﺮ- دﻛﺘﺮ25 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0023471026\n - ﺳﺎلFemale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:12:48\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2\n",
+        "confidence": 0.95,
+        "text_length": 407,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/0023471026_14041209_O_00404121728.pdf"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": "نیلوفر انباز",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "انباز- خانم نیلوفر- دکتر25 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": "7b2b950d246b21b2c88874f16875bd7aef6c8c011d707f637db2f177b634e44e",
+      "confidence": 0.9,
+      "source_text": "کد ملی :**********",
+      "source_line_index": 8,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": "1404/12/09",
+      "hash": null,
+      "confidence": 0.9,
+      "source_text": ": تاریخ پذیرش1404/12/09 - 14:12:48",
+      "source_line_index": 10,
+      "inferred": false,
+      "calendar": "jalali"
+    },
+    "print_date": {
+      "value": "1405/01/30",
+      "hash": null,
+      "confidence": 0.8,
+      "source_text": "Print On 1405/01/30-13:48:59 By 2",
+      "source_line_index": 24,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": "Lab Report",
+      "hash": null,
+      "confidence": 0.5,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": true,
+      "calendar": null
+    },
+    "center_name": {
+      "value": "آزمایشگاه پاتوبیولوژی تاو",
+      "hash": null,
+      "confidence": 0.7,
+      "source_text": "# آزمایشگاه پاتوبیولوژی تاو#",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": 25,
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "انباز- خانم نیلوفر- دکتر25 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": "female",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "انباز- خانم نیلوفر- دکتر25 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": "O-40412-1728",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "O-40412-1728",
+      "source_line_index": 3,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "category": null,
+        "test_name_raw": "Fasting blood sugar",
+        "test_name_standard": "FBS",
+        "result_value": "110",
+        "result_numeric": 110.0,
+        "unit": "mg/dL",
+        "reference_range": "70-115",
+        "abnormal_flag": null,
+        "method": "Photometr",
+        "sample_type": null,
+        "page_number": 1,
+        "raw_row_text": "Fasting blood sugar | 110 | mg/dL | 70-115 | Photometr",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "INFERRED_REPORT_NAME",
+      "message": "Inferred lab report name from extracted lab rows",
+      "field": "test_or_report_name"
+    }
+  ],
+  "debug": {
+    "ocr_text": "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1728\n: ﭘﺰﺷﻚ\n اﻧﺒﺎز- ﺧﺎﻧﻢ ﻧﯿﻠﻮﻓﺮ- دﻛﺘﺮ25 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0023471026\n - ﺳﺎلFemale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:12:48\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2\n",
+    "page_text": [
+      "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1728\n: ﭘﺰﺷﻚ\n اﻧﺒﺎز- ﺧﺎﻧﻢ ﻧﯿﻠﻮﻓﺮ- دﻛﺘﺮ25 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0023471026\n - ﺳﺎلFemale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:12:48\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2\n"
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 1.0,
+      "matched_signals": [
+        "AST",
+        "Biochemistry",
+        "Result",
+        "Unit",
+        "Normal Range"
+      ],
+      "reason": "Matched 5 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 1.0,
+      "detected_keywords": [
+        "Biochemistry",
+        "AST",
+        "Normal Range",
+        "Result",
+        "Unit",
+        "Method",
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "پاتوبیولوژی",
+        "پاتوبیولوژي",
+        "کد ملی",
+        "کد ملي",
+        "كد ملي",
+        "پزشک",
+        "پزشك",
+        "تاریخ پذیرش",
+        "تاريخ پذيرش"
+      ],
+      "detected_document_signals": [
+        "Biochemistry",
+        "AST",
+        "Normal Range",
+        "Result",
+        "Unit"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "0023471026_14041209_O_00404121728.pdf\n#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1728\n: ﭘﺰﺷﻚ\n اﻧﺒﺎز- ﺧﺎﻧﻢ ﻧﯿﻠﻮﻓﺮ- دﻛﺘﺮ25 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0023471026\n - ﺳﺎلFemale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:12:48\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2\n",
+      "reason": "Detected 17 medical keyword(s)"
+    }
+  }
+}

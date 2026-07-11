@@ -1,0 +1,187 @@
+{
+  "request_id": "notebook-selected-0011-8e661c",
+  "document_id": "۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.jpg",
+  "status": "low_confidence",
+  "document_type": "lab",
+  "confidence": 0.189,
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.848533066479034,
+    "is_acceptable": true,
+    "issues": [],
+    "metrics": {
+      "width": 1020,
+      "height": 765,
+      "brightness_mean": 114.6543803665257,
+      "contrast_std": 51.81279589173464,
+      "laplacian_variance": 669.0778577372974
+    },
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": 1
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.39642857142857146,
+    "text_length": 46,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "2, 65*105 72 رت‎ - x08 7 HL 2 =--.- x87 eL RBC",
+        "confidence": 0.39642857142857146,
+        "text_length": 46,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.jpg"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "print_date": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "center_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": []
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "MISSING_LAB_ROWS",
+      "message": "No lab result rows were extracted",
+      "field": "lab_results"
+    },
+    {
+      "code": "MISSING_PATIENT_NAME",
+      "message": "Patient name was not found",
+      "field": "patient_name"
+    },
+    {
+      "code": "MISSING_REPORT_DATE",
+      "message": "Report date was not found",
+      "field": "date_of_test_or_report"
+    },
+    {
+      "code": "LOW_EXTRACTION_CONFIDENCE",
+      "message": "Overall extraction confidence is low",
+      "field": null
+    }
+  ],
+  "debug": {
+    "ocr_text": "2, 65*105 72 رت‎ - x08 7 HL 2 =--.- x87 eL RBC",
+    "page_text": [
+      "2, 65*105 72 رت‎ - x08 7 HL 2 =--.- x87 eL RBC"
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 0.2,
+      "matched_signals": [
+        "RBC"
+      ],
+      "reason": "Matched 1 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 0.25,
+      "detected_keywords": [
+        "RBC"
+      ],
+      "detected_document_signals": [
+        "RBC"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.jpg\n2, 65*105 72 رت‎ - x08 7 HL 2 =--.- x87 eL RBC",
+      "reason": "Detected 1 medical keyword(s)"
+    }
+  }
+}

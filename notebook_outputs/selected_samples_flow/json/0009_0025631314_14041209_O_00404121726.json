@@ -1,0 +1,242 @@
+{
+  "request_id": "notebook-selected-0009-fc1207",
+  "document_id": "0025631314_14041209_O_00404121726.pdf",
+  "status": "success",
+  "document_type": "lab",
+  "confidence": 0.943,
+  "quality": {
+    "status": null,
+    "overall_quality_score": null,
+    "is_acceptable": null,
+    "issues": [],
+    "metrics": {},
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": null
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.95,
+    "text_length": 472,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1726\n: ﭘﺰﺷﻚ\n ﻣﯿﺮﻋﺎﺑﺪي- آﻗﺎي ﺳﯿﺪﺟﻮاد- دﻛﺘﺮ21 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0025631314\n - ﺳﺎلMale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:12:29\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n101\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n18\nU/L\n<37\nPhotometr\nSGPT(ALT)\n14\nU/L\n< 40\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:45 By 2\n",
+        "confidence": 0.95,
+        "text_length": 472,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/0025631314_14041209_O_00404121726.pdf"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": "سیدجواد میرعابدی",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "میرعابدی- آقای سیدجواد- دکتر21 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": "e26aef3be603bdbe746d4b31dac73c903fa8a69e56620e440afaa6c36ca47332",
+      "confidence": 0.9,
+      "source_text": "کد ملی :**********",
+      "source_line_index": 8,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": "1404/12/09",
+      "hash": null,
+      "confidence": 0.9,
+      "source_text": ": تاریخ پذیرش1404/12/09 - 14:12:29",
+      "source_line_index": 10,
+      "inferred": false,
+      "calendar": "jalali"
+    },
+    "print_date": {
+      "value": "1405/01/30",
+      "hash": null,
+      "confidence": 0.8,
+      "source_text": "Print On 1405/01/30-13:48:45 By 2",
+      "source_line_index": 34,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": "Lab Report",
+      "hash": null,
+      "confidence": 0.5,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": true,
+      "calendar": null
+    },
+    "center_name": {
+      "value": "آزمایشگاه پاتوبیولوژی تاو",
+      "hash": null,
+      "confidence": 0.7,
+      "source_text": "# آزمایشگاه پاتوبیولوژی تاو#",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": 21,
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "میرعابدی- آقای سیدجواد- دکتر21 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": "male",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "میرعابدی- آقای سیدجواد- دکتر21 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": "O-40412-1726",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "O-40412-1726",
+      "source_line_index": 3,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "category": null,
+        "test_name_raw": "Fasting blood sugar",
+        "test_name_standard": "FBS",
+        "result_value": "101",
+        "result_numeric": 101.0,
+        "unit": "mg/dL",
+        "reference_range": "70-115",
+        "abnormal_flag": null,
+        "method": "Photometr",
+        "sample_type": null,
+        "page_number": 1,
+        "raw_row_text": "Fasting blood sugar | 101 | mg/dL | 70-115 | Photometr",
+        "confidence": 0.95
+      },
+      {
+        "category": null,
+        "test_name_raw": "SGOT(AST)",
+        "test_name_standard": "AST",
+        "result_value": "18",
+        "result_numeric": 18.0,
+        "unit": "U/L",
+        "reference_range": "<37",
+        "abnormal_flag": null,
+        "method": "Photometr",
+        "sample_type": null,
+        "page_number": 1,
+        "raw_row_text": "SGOT(AST) | 18 | U/L | <37 | Photometr",
+        "confidence": 0.95
+      },
+      {
+        "category": null,
+        "test_name_raw": "SGPT(ALT)",
+        "test_name_standard": "ALT",
+        "result_value": "14",
+        "result_numeric": 14.0,
+        "unit": "U/L",
+        "reference_range": "< 40",
+        "abnormal_flag": null,
+        "method": "Photometr",
+        "sample_type": null,
+        "page_number": 1,
+        "raw_row_text": "SGPT(ALT) | 14 | U/L | < 40 | Photometr",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "INFERRED_REPORT_NAME",
+      "message": "Inferred lab report name from extracted lab rows",
+      "field": "test_or_report_name"
+    }
+  ],
+  "debug": {
+    "ocr_text": "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1726\n: ﭘﺰﺷﻚ\n ﻣﯿﺮﻋﺎﺑﺪي- آﻗﺎي ﺳﯿﺪﺟﻮاد- دﻛﺘﺮ21 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0025631314\n - ﺳﺎلMale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:12:29\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n101\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n18\nU/L\n<37\nPhotometr\nSGPT(ALT)\n14\nU/L\n< 40\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:45 By 2\n",
+    "page_text": [
+      "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1726\n: ﭘﺰﺷﻚ\n ﻣﯿﺮﻋﺎﺑﺪي- آﻗﺎي ﺳﯿﺪﺟﻮاد- دﻛﺘﺮ21 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0025631314\n - ﺳﺎلMale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:12:29\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n101\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n18\nU/L\n<37\nPhotometr\nSGPT(ALT)\n14\nU/L\n< 40\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:45 By 2\n"
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 1.0,
+      "matched_signals": [
+        "SGOT",
+        "SGPT",
+        "AST",
+        "ALT",
+        "Biochemistry",
+        "Result",
+        "Unit",
+        "Normal Range"
+      ],
+      "reason": "Matched 8 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 1.0,
+      "detected_keywords": [
+        "Biochemistry",
+        "SGOT",
+        "SGPT",
+        "AST",
+        "ALT",
+        "Normal Range",
+        "Result",
+        "Unit",
+        "Method",
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "پاتوبیولوژی",
+        "پاتوبیولوژي",
+        "کد ملی",
+        "کد ملي",
+        "كد ملي",
+        "پزشک",
+        "پزشك",
+        "تاریخ پذیرش",
+        "تاريخ پذيرش"
+      ],
+      "detected_document_signals": [
+        "Biochemistry",
+        "SGOT",
+        "SGPT",
+        "AST",
+        "ALT"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "0025631314_14041209_O_00404121726.pdf\n#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1726\n: ﭘﺰﺷﻚ\n ﻣﯿﺮﻋﺎﺑﺪي- آﻗﺎي ﺳﯿﺪﺟﻮاد- دﻛﺘﺮ21 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0025631314\n - ﺳﺎلMale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:12:29\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n101\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n18\nU/L\n<37\nPhotometr\nSGPT(ALT)\n14\nU/L\n< 40\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:45 By 2\n",
+      "reason": "Detected 20 medical keyword(s)"
+    }
+  }
+}

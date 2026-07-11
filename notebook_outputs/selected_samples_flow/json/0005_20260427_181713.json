@@ -1,0 +1,196 @@
+{
+  "request_id": "notebook-selected-0005-411da3",
+  "document_id": "20260427_181713.jpg",
+  "status": "low_confidence",
+  "document_type": "lab",
+  "confidence": 0.408,
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.7705629598859831,
+    "is_acceptable": true,
+    "issues": [],
+    "metrics": {
+      "width": 765,
+      "height": 1020,
+      "brightness_mean": 146.7590221709599,
+      "contrast_std": 30.598249674864444,
+      "laplacian_variance": 933.1732135863368
+    },
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": 1
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.7661764705882353,
+    "text_length": 151,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "A oe آزمایشگاه پزشکی‎ جنت آباد م رکزی - ۳۵ متری طلسنان (مخبری) تلفن ۳۲۴۹۲۹۰۷-۴۳۴۹۲۸۰۵ نام مراجه کننده زخانم فرزانه خازنی Result No growth after 48 hrs.",
+        "confidence": 0.7661764705882353,
+        "text_length": 151,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/20260427_181713.jpg"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "print_date": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "center_name": {
+      "value": "A oe آزمایشگاه پزشکی‎ جنت آباد م رکزی - 35 متری طلسنان (مخبری) تلفن 32492907-43492805 نام مراجه کننده زخانم فرزانه خازنی",
+      "hash": null,
+      "confidence": 0.7,
+      "source_text": "A oe آزمایشگاه پزشکی‎ جنت آباد م رکزی - 35 متری طلسنان (مخبری) تلفن 32492907-43492805 نام مراجه کننده زخانم فرزانه خازنی Result No growth after 48 hrs.",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": "ی‎ جنت آباد م رکزی - 35 متری طلسنان (مخبری) تلفن 32492907-43492805 نام مراجه کننده زخانم فرزانه خازنی Result No growth after 48 hrs.",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "A oe آزمایشگاه پزشکی‎ جنت آباد م رکزی - 35 متری طلسنان (مخبری) تلفن 32492907-43492805 نام مراجه کننده زخانم فرزانه خازنی Result No growth after 48 hrs.",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": []
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "MISSING_LAB_ROWS",
+      "message": "No lab result rows were extracted",
+      "field": "lab_results"
+    },
+    {
+      "code": "MISSING_PATIENT_NAME",
+      "message": "Patient name was not found",
+      "field": "patient_name"
+    },
+    {
+      "code": "MISSING_REPORT_DATE",
+      "message": "Report date was not found",
+      "field": "date_of_test_or_report"
+    },
+    {
+      "code": "LOW_EXTRACTION_CONFIDENCE",
+      "message": "Overall extraction confidence is low",
+      "field": null
+    }
+  ],
+  "debug": {
+    "ocr_text": "A oe آزمایشگاه پزشکی‎ جنت آباد م رکزی - ۳۵ متری طلسنان (مخبری) تلفن ۳۲۴۹۲۹۰۷-۴۳۴۹۲۸۰۵ نام مراجه کننده زخانم فرزانه خازنی Result No growth after 48 hrs.",
+    "page_text": [
+      "A oe آزمایشگاه پزشکی‎ جنت آباد م رکزی - ۳۵ متری طلسنان (مخبری) تلفن ۳۲۴۹۲۹۰۷-۴۳۴۹۲۸۰۵ نام مراجه کننده زخانم فرزانه خازنی Result No growth after 48 hrs."
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 0.4,
+      "matched_signals": [
+        "Result",
+        "آزمایشگاه"
+      ],
+      "reason": "Matched 2 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 1.0,
+      "detected_keywords": [
+        "Result",
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "پزشک",
+        "پزشك"
+      ],
+      "detected_document_signals": [
+        "Result",
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "پزشک",
+        "پزشك"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "20260427_181713.jpg\nA oe آزمایشگاه پزشکی‎ جنت آباد م رکزی - ۳۵ متری طلسنان (مخبری) تلفن ۳۲۴۹۲۹۰۷-۴۳۴۹۲۸۰۵ نام مراجه کننده زخانم فرزانه خازنی Result No growth after 48 hrs.",
+      "reason": "Detected 5 medical keyword(s)"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "request_id": "notebook-selected-0017-3f6d1e",
+  "document_id": "۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.jpg",
+  "status": "unrelated_document",
+  "document_type": "unrelated_document",
+  "confidence": 0.0,
+  "quality": {
+    "status": "needs_preprocessing",
+    "overall_quality_score": 0.5230415556099113,
+    "is_acceptable": true,
+    "issues": [
+      "severe_blur"
+    ],
+    "metrics": {
+      "width": 765,
+      "height": 1020,
+      "brightness_mean": 128.76765090349866,
+      "contrast_std": 47.69893139999475,
+      "laplacian_variance": 29.580138850231087
+    },
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": 1
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.725,
+    "text_length": 1,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "t",
+        "confidence": 0.725,
+        "text_length": 1,
+        "source_path": "/var/folders/tl/7tsg6vvj6995sz9dl5mdcrlc0000gn/T/extract_pipeline_rilyx4q4/page_001.png"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {},
+  "extracted_data": {},
+  "errors": [
+    {
+      "code": "UNRELATED_DOCUMENT",
+      "message": "No medical document signals detected in extracted text",
+      "field": null
+    }
+  ],
+  "warnings": [
+    {
+      "code": "QUALITY_PREPROCESSING_APPLIED",
+      "message": "Preprocessing was applied before OCR",
+      "field": null
+    }
+  ],
+  "debug": {
+    "ocr_text": "t",
+    "relevance": {
+      "is_medical_document": false,
+      "relevance_score": 0.0,
+      "detected_keywords": [],
+      "detected_document_signals": [],
+      "rejection_reason": "No medical document signals detected in extracted text",
+      "text_used_for_relevance": "۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.jpg\nt",
+      "reason": "No medical document signals detected in extracted text"
+    }
+  }
+}

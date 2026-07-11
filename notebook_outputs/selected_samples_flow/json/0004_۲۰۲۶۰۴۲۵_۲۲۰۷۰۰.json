@@ -1,0 +1,201 @@
+{
+  "request_id": "notebook-selected-0004-7fe778",
+  "document_id": "۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.jpg",
+  "status": "low_confidence",
+  "document_type": "lab",
+  "confidence": 0.604,
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.7860705140182378,
+    "is_acceptable": true,
+    "issues": [
+      "possible_rotation"
+    ],
+    "metrics": {
+      "width": 1042,
+      "height": 1523,
+      "brightness_mean": 156.94356526856907,
+      "contrast_std": 26.632235172359128,
+      "laplacian_variance": 573.6280729887692
+    },
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": 1
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.7260687022900764,
+    "text_length": 1156,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "۳ Specialized and ‘ubspecialized Laboratory ۰ Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی ۷ -- ۲۱۶۵۵۹۶۱۸۰ ۰ ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش ۰ ۳۸۳۳۹ تاریخ پذیرش ۰ ۱۴۰۴/۱۰/۲۳ و Test ۷ تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 0۲ 80-100 | MCHC 283 ۶ 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 ۳ 37 20.0-51.1 Monocyte 2% 210 ۴ Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/۳04 Platelet 125 257 207 04/10/23 1/0۱ 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae ۳ i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+        "confidence": 0.7260687022900764,
+        "text_length": 1156,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.jpg"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": ", خانم سیده معصومه اولیائی پذیرش 0 38339 تاریخ پذیرش 0 1404/10/23 و Test 7 تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 02 80-100 | MCHC 283 6 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 3 37 20.0-51.1 Monocyte 2% 210 4 Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/304 Platelet 125 257 207 04/10/23 1/01 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae 3 i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "3 Specialized and ‘ubspecialized Laboratory 0 Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی 7 -- 2165596180 0 ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش 0 38339 تاریخ پذیرش 0 1404/10/23 و Test 7 تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 02 80-100 | MCHC 283 6 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 3 37 20.0-51.1 Monocyte 2% 210 4 Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/304 Platelet 125 257 207 04/10/23 1/01 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae 3 i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": "d69829286a8bdd94b4470326b1bae0a4c738bf4fad63e7db4e64c27fcdb73a6e",
+      "confidence": 0.9,
+      "source_text": "3 Specialized and ‘ubspecialized Laboratory 0 Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی 7 -- ********** 0 ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش 0 38339 تاریخ پذیرش 0 1404/10/23 و Test 7 تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 02 80-100 | MCHC 283 6 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 3 37 20.0-51.1 Monocyte 2% 210 4 Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/304 Platelet 125 257 207 04/10/23 1/01 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae 3 i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": "1404/10/23",
+      "hash": null,
+      "confidence": 0.9,
+      "source_text": "3 Specialized and ‘ubspecialized Laboratory 0 Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی 7 -- 2165596180 0 ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش 0 38339 تاریخ پذیرش 0 1404/10/23 و Test 7 تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 02 80-100 | MCHC 283 6 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 3 37 20.0-51.1 Monocyte 2% 210 4 Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/304 Platelet 125 257 207 04/10/23 1/01 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae 3 i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": "jalali"
+    },
+    "print_date": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "center_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": "1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش 0 38339 تاریخ پذیرش 0 1404/10/23 و Test 7 تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 02 80-100 | MCHC 283 6 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 3 37 20.0-51.1 Monocyte 2% 210 4 Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/304 Platelet 125 257 207 04/10/23 1/01 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae 3 i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "3 Specialized and ‘ubspecialized Laboratory 0 Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی 7 -- 2165596180 0 ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش 0 38339 تاریخ پذیرش 0 1404/10/23 و Test 7 تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 02 80-100 | MCHC 283 6 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 3 37 20.0-51.1 Monocyte 2% 210 4 Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/304 Platelet 125 257 207 04/10/23 1/01 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae 3 i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": 39,
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "3 Specialized and ‘ubspecialized Laboratory 0 Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی 7 -- 2165596180 0 ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش 0 38339 تاریخ پذیرش 0 1404/10/23 و Test 7 تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 02 80-100 | MCHC 283 6 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 3 37 20.0-51.1 Monocyte 2% 210 4 Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/304 Platelet 125 257 207 04/10/23 1/01 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae 3 i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": "male",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "3 Specialized and ‘ubspecialized Laboratory 0 Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی 7 -- 2165596180 0 ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش 0 38339 تاریخ پذیرش 0 1404/10/23 و Test 7 تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 02 80-100 | MCHC 283 6 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 3 37 20.0-51.1 Monocyte 2% 210 4 Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/304 Platelet 125 257 207 04/10/23 1/01 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae 3 i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": []
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "MISSING_LAB_ROWS",
+      "message": "No lab result rows were extracted",
+      "field": "lab_results"
+    },
+    {
+      "code": "LOW_EXTRACTION_CONFIDENCE",
+      "message": "Overall extraction confidence is low",
+      "field": null
+    }
+  ],
+  "debug": {
+    "ocr_text": "۳ Specialized and ‘ubspecialized Laboratory ۰ Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی ۷ -- ۲۱۶۵۵۹۶۱۸۰ ۰ ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش ۰ ۳۸۳۳۹ تاریخ پذیرش ۰ ۱۴۰۴/۱۰/۲۳ و Test ۷ تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 0۲ 80-100 | MCHC 283 ۶ 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 ۳ 37 20.0-51.1 Monocyte 2% 210 ۴ Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/۳04 Platelet 125 257 207 04/10/23 1/0۱ 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae ۳ i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+    "page_text": [
+      "۳ Specialized and ‘ubspecialized Laboratory ۰ Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی ۷ -- ۲۱۶۵۵۹۶۱۸۰ ۰ ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش ۰ ۳۸۳۳۹ تاریخ پذیرش ۰ ۱۴۰۴/۱۰/۲۳ و Test ۷ تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 0۲ 80-100 | MCHC 283 ۶ 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 ۳ 37 20.0-51.1 Monocyte 2% 210 ۴ Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/۳04 Platelet 125 257 207 04/10/23 1/0۱ 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae ۳ i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160"
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 1.0,
+      "matched_signals": [
+        "CBC",
+        "WBC",
+        "RBC",
+        "AST",
+        "Result"
+      ],
+      "reason": "Matched 5 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 1.0,
+      "detected_keywords": [
+        "Laboratory",
+        "Lab",
+        "CBC",
+        "WBC",
+        "RBC",
+        "Glucose",
+        "AST",
+        "Result",
+        "Method",
+        "نام بیمار",
+        "نام بيمار",
+        "پزشک",
+        "پزشك",
+        "تاریخ پذیرش",
+        "تاريخ پذيرش"
+      ],
+      "detected_document_signals": [
+        "Laboratory",
+        "Lab",
+        "CBC",
+        "WBC",
+        "RBC"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.jpg\n۳ Specialized and ‘ubspecialized Laboratory ۰ Dr. Héssabi Street, before Imam آزهایشگاه تخصصی و فوق تخصصی نوبین ارد. خیایان دکتر حسایی. نیش خیایان امام خمینی ۷ -- ۲۱۶۵۵۹۶۱۸۰ ۰ ©21-65596180 - 0216552237 TYATTPP AAA Leas سن : 39 سال‎ نام پزشک 1 آقای دکتر be ple‏ مهرابی نام بیمار , خانم سیده معصومه اولیائی پذیرش ۰ ۳۸۳۳۹ تاریخ پذیرش ۰ ۱۴۰۴/۱۰/۲۳ و Test ۷ تمس‎ en پل‎ Risk Result Method Reference( Based on Sex/Age) cBc om 73 10h erat ae 442 Million/pL, 3.661 9 as eal 14155 res) 0 33-54 aes 87.1 0۲ 80-100 | MCHC 283 ۶ 265-5 | Ee 32.5 g/dL 31.535 Au 13.6 % nsa4s تس‎ 272 10%pL 130-400 | Differential دصر‎ 60 % 40-80 ۳ 37 20.0-51.1 Monocyte 2% 210 ۴ Eosinophil 1% os __ WBC 1 RBC Oe 0304/14 ات‎ (4 04/10/23 O207/12 O14 «10/2 930/۳04 Platelet 125 257 207 04/10/23 1/0۱ 020414 3 04/10/23 e272 03/11/04 Result Method Reference( Based on Sex/Age) 70-115 Fasting Blood Glucose 91 mg/dL — jemoglobine Alc 4.72 % Mae ۳ i 115 mg/dL 20-SOyears:7.0-18.6 Blood Urea nitrogen ee 33 0.16 اوه‎ - High >400 L-Cholestrol 59.5 mg/dl. High risk women:<AS با‎ Normal risk women:45-60 Normal risk men:35-50 Low risk men:>S0 High risk مه‎ normal<=130 101 mg/dL Border Line:130-160",
+      "reason": "Detected 15 medical keyword(s)"
+    }
+  }
+}

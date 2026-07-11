@@ -1,0 +1,242 @@
+{
+  "request_id": "notebook-selected-0015-b4cfb5",
+  "document_id": "0025692283_14041209_O_00404121730.pdf",
+  "status": "success",
+  "document_type": "lab",
+  "confidence": 0.943,
+  "quality": {
+    "status": null,
+    "overall_quality_score": null,
+    "is_acceptable": null,
+    "issues": [],
+    "metrics": {},
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": null
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.95,
+    "text_length": 468,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1730\n: ﭘﺰﺷﻚ\n ﺷﻤﺲ ﻓﻼح- ﺧﺎﻧﻢ ﺣﺴﻨﻲ- دﻛﺘﺮ21 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0025692283\n - ﺳﺎلFemale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:13:07\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n95\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n14\nU/L\n<31\nPhotometr\nSGPT(ALT)\n15\nU/L\n<32\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:13 By 2\n",
+        "confidence": 0.95,
+        "text_length": 468,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/0025692283_14041209_O_00404121730.pdf"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": "حسنی شمس فلاح",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "شمس فلاح- خانم حسنی- دکتر21 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": "38299c368146feae42d0c657633d7906cc4ecfeda16d0b7f6cd31dea17ba87f6",
+      "confidence": 0.9,
+      "source_text": "کد ملی :**********",
+      "source_line_index": 8,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": "1404/12/09",
+      "hash": null,
+      "confidence": 0.9,
+      "source_text": ": تاریخ پذیرش1404/12/09 - 14:13:07",
+      "source_line_index": 10,
+      "inferred": false,
+      "calendar": "jalali"
+    },
+    "print_date": {
+      "value": "1405/01/30",
+      "hash": null,
+      "confidence": 0.8,
+      "source_text": "Print On 1405/01/30-13:49:13 By 2",
+      "source_line_index": 34,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": "Lab Report",
+      "hash": null,
+      "confidence": 0.5,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": true,
+      "calendar": null
+    },
+    "center_name": {
+      "value": "آزمایشگاه پاتوبیولوژی تاو",
+      "hash": null,
+      "confidence": 0.7,
+      "source_text": "# آزمایشگاه پاتوبیولوژی تاو#",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": 21,
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "شمس فلاح- خانم حسنی- دکتر21 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": "female",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "شمس فلاح- خانم حسنی- دکتر21 : سن",
+      "source_line_index": 5,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": "O-40412-1730",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "O-40412-1730",
+      "source_line_index": 3,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "category": null,
+        "test_name_raw": "Fasting blood sugar",
+        "test_name_standard": "FBS",
+        "result_value": "95",
+        "result_numeric": 95.0,
+        "unit": "mg/dL",
+        "reference_range": "70-115",
+        "abnormal_flag": null,
+        "method": "Photometr",
+        "sample_type": null,
+        "page_number": 1,
+        "raw_row_text": "Fasting blood sugar | 95 | mg/dL | 70-115 | Photometr",
+        "confidence": 0.95
+      },
+      {
+        "category": null,
+        "test_name_raw": "SGOT(AST)",
+        "test_name_standard": "AST",
+        "result_value": "14",
+        "result_numeric": 14.0,
+        "unit": "U/L",
+        "reference_range": "<31",
+        "abnormal_flag": null,
+        "method": "Photometr",
+        "sample_type": null,
+        "page_number": 1,
+        "raw_row_text": "SGOT(AST) | 14 | U/L | <31 | Photometr",
+        "confidence": 0.95
+      },
+      {
+        "category": null,
+        "test_name_raw": "SGPT(ALT)",
+        "test_name_standard": "ALT",
+        "result_value": "15",
+        "result_numeric": 15.0,
+        "unit": "U/L",
+        "reference_range": "<32",
+        "abnormal_flag": null,
+        "method": "Photometr",
+        "sample_type": null,
+        "page_number": 1,
+        "raw_row_text": "SGPT(ALT) | 15 | U/L | <32 | Photometr",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "INFERRED_REPORT_NAME",
+      "message": "Inferred lab report name from extracted lab rows",
+      "field": "test_or_report_name"
+    }
+  ],
+  "debug": {
+    "ocr_text": "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1730\n: ﭘﺰﺷﻚ\n ﺷﻤﺲ ﻓﻼح- ﺧﺎﻧﻢ ﺣﺴﻨﻲ- دﻛﺘﺮ21 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0025692283\n - ﺳﺎلFemale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:13:07\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n95\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n14\nU/L\n<31\nPhotometr\nSGPT(ALT)\n15\nU/L\n<32\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:13 By 2\n",
+    "page_text": [
+      "#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1730\n: ﭘﺰﺷﻚ\n ﺷﻤﺲ ﻓﻼح- ﺧﺎﻧﻢ ﺣﺴﻨﻲ- دﻛﺘﺮ21 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0025692283\n - ﺳﺎلFemale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:13:07\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n95\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n14\nU/L\n<31\nPhotometr\nSGPT(ALT)\n15\nU/L\n<32\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:13 By 2\n"
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 1.0,
+      "matched_signals": [
+        "SGOT",
+        "SGPT",
+        "AST",
+        "ALT",
+        "Biochemistry",
+        "Result",
+        "Unit",
+        "Normal Range"
+      ],
+      "reason": "Matched 8 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 1.0,
+      "detected_keywords": [
+        "Biochemistry",
+        "SGOT",
+        "SGPT",
+        "AST",
+        "ALT",
+        "Normal Range",
+        "Result",
+        "Unit",
+        "Method",
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "پاتوبیولوژی",
+        "پاتوبیولوژي",
+        "کد ملی",
+        "کد ملي",
+        "كد ملي",
+        "پزشک",
+        "پزشك",
+        "تاریخ پذیرش",
+        "تاريخ پذيرش"
+      ],
+      "detected_document_signals": [
+        "Biochemistry",
+        "SGOT",
+        "SGPT",
+        "AST",
+        "ALT"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "0025692283_14041209_O_00404121730.pdf\n#  آزﻣﺎﻳﺸﮕﺎه ﭘﺎﺗﻮﺑﯿﻮﻟﻮژي ﺗﺎو#\n ﺗﮫﺮان، ﺷﮫﺮک ﻏﺮب، ﺑﻠﻮار درﻳﺎ،ﻧﺒﺶ ﭼﮫﺎرراه ﻗﺪس، ﭘﻼک20\n021-91012828\nO-40412-1730\n: ﭘﺰﺷﻚ\n ﺷﻤﺲ ﻓﻼح- ﺧﺎﻧﻢ ﺣﺴﻨﻲ- دﻛﺘﺮ21 : ﺳﻦ\nﺷﻤﺎره :\nﻧﺎم :\nﮐﺪ ﻣﻠﻲ :0025692283\n - ﺳﺎلFemale\n: ﺗﺎرﻳﺦ ﭘﺬﻳﺮش1404/12/09 - 14:13:07\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n95\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n14\nU/L\n<31\nPhotometr\nSGPT(ALT)\n15\nU/L\n<32\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:13 By 2\n",
+      "reason": "Detected 20 medical keyword(s)"
+    }
+  }
+}

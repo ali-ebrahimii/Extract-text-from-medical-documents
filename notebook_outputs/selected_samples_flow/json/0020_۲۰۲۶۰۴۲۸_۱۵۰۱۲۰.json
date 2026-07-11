@@ -1,0 +1,194 @@
+{
+  "request_id": "notebook-selected-0020-715d66",
+  "document_id": "۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.jpg",
+  "status": "low_confidence",
+  "document_type": "lab",
+  "confidence": 0.41,
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.8491225517649138,
+    "is_acceptable": true,
+    "issues": [],
+    "metrics": {
+      "width": 765,
+      "height": 1020,
+      "brightness_mean": 134.9999846212995,
+      "contrast_std": 49.811504877868245,
+      "laplacian_variance": 611.5264373943639
+    },
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": 1
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.7415492957746479,
+    "text_length": 331,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: ۱۳۱۶ Bae‏ شمارهبیمه: ۴۳۹ نام + خانمزهرا معمودیان سل تاریخ پذیرش :۱۴۰۴/۱۱/۰۷ پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : ۸٩۰۵۷‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+        "confidence": 0.7415492957746479,
+        "text_length": 331,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.jpg"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": "1404/11/07",
+      "hash": null,
+      "confidence": 0.9,
+      "source_text": "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: 1316 Bae‏ شمارهبیمه: 439 نام + خانمزهرا معمودیان سل تاریخ پذیرش :1404/11/07 پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : 89057‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": "jalali"
+    },
+    "print_date": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "center_name": {
+      "value": "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: 1316 Bae‏ شمارهبیمه: 439 نام + خانمزهرا م",
+      "hash": null,
+      "confidence": 0.7,
+      "source_text": "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: 1316 Bae‏ شمارهبیمه: 439 نام + خانمزهرا معمودیان سل تاریخ پذیرش :1404/11/07 پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : 89057‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": "معالج : جناب آقای دکتر ولیشی شماره پذیرش : 89057‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: 1316 Bae‏ شمارهبیمه: 439 نام + خانمزهرا معمودیان سل تاریخ پذیرش :1404/11/07 پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : 89057‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": "male",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: 1316 Bae‏ شمارهبیمه: 439 نام + خانمزهرا معمودیان سل تاریخ پذیرش :1404/11/07 پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : 89057‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": "1404",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: 1316 Bae‏ شمارهبیمه: 439 نام + خانمزهرا معمودیان سل تاریخ پذیرش :1404/11/07 پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : 89057‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": []
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "MISSING_LAB_ROWS",
+      "message": "No lab result rows were extracted",
+      "field": "lab_results"
+    },
+    {
+      "code": "MISSING_PATIENT_NAME",
+      "message": "Patient name was not found",
+      "field": "patient_name"
+    },
+    {
+      "code": "LOW_EXTRACTION_CONFIDENCE",
+      "message": "Overall extraction confidence is low",
+      "field": null
+    }
+  ],
+  "debug": {
+    "ocr_text": "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: ۱۳۱۶ Bae‏ شمارهبیمه: ۴۳۹ نام + خانمزهرا معمودیان سل تاریخ پذیرش :۱۴۰۴/۱۱/۰۷ پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : ۸٩۰۵۷‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+    "page_text": [
+      "آزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: ۱۳۱۶ Bae‏ شمارهبیمه: ۴۳۹ نام + خانمزهرا معمودیان سل تاریخ پذیرش :۱۴۰۴/۱۱/۰۷ پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : ۸٩۰۵۷‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP."
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 0.2,
+      "matched_signals": [
+        "آزمایشگاه"
+      ],
+      "reason": "Matched 1 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 1.0,
+      "detected_keywords": [
+        "Lab",
+        "CT",
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "درمانگاه",
+        "پزشک",
+        "پزشك",
+        "تاریخ پذیرش",
+        "تاريخ پذيرش"
+      ],
+      "detected_document_signals": [
+        "Lab",
+        "CT",
+        "آزمایشگاه",
+        "آزمايشگاه",
+        "درمانگاه"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.jpg\nآزمایشگاه درمانگاه وحدت 3 آدرس: کرج - شهرک وحدت- خیابان سوم غربی - پلاک( تلفن: ۱۳۱۶ Bae‏ شمارهبیمه: ۴۳۹ نام + خانمزهرا معمودیان سل تاریخ پذیرش :۱۴۰۴/۱۱/۰۷ پزشک معالج : جناب آقای دکتر ولیشی شماره پذیرش : ۸٩۰۵۷‏ NK‏ ام پم :مین اجتماعی Microbiol. |‏ | \\ Culture No bacteria growth after 48 hrs. Lab.Director : Dr.A.Mohtasham,MD,AP,CP.",
+      "reason": "Detected 9 medical keyword(s)"
+    }
+  }
+}

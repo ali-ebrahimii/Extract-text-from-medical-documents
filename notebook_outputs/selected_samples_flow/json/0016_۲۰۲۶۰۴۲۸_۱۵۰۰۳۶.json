@@ -1,0 +1,197 @@
+{
+  "request_id": "notebook-selected-0016-1e0341",
+  "document_id": "۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.jpg",
+  "status": "low_confidence",
+  "document_type": "lab",
+  "confidence": 0.485,
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.8398265288273908,
+    "is_acceptable": true,
+    "issues": [],
+    "metrics": {
+      "width": 765,
+      "height": 1020,
+      "brightness_mean": 131.86607714981417,
+      "contrast_std": 45.25748558372653,
+      "laplacian_variance": 672.1651371407476
+    },
+    "page_scores": [],
+    "page_issues": [],
+    "worst_page_number": null,
+    "average_quality_score": null,
+    "min_quality_score": null,
+    "num_pages": 1
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.6426859504132232,
+    "text_length": 909,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "۱ آزسایشگاه درمانگاه وحدت ۱ ig ۳۶۶۱۶۰۲۳۰۳۶۶۱۶۰۱ سوم غربی- 14 لفن:‎ oleh - درس: کرج - شهرک وحدبت‎ 1 ۳۷۲۳۹۰ پذبرش ۱۳۰۲/۱۷/۰۷۲ \" شمارهبعه‎ Gad der toe آقای دکنرولیشی‎ hie | پزشک معالج‎ لام یمه | تمین اچشمامی avs‏ “he‏ 7 42-84 ند هد Lymphocyte 1۳‏ فد هام مومس نا Hematocrit aes ۳ 0 Monocyte 2 یت pil‏ اد ۱ ۳ RDW-cy‏ | مور سس رجا Erythrocyte Sediment Rate(Ihe) mma 20-30 | | 1 Reference Range See eu | PT Controt 130 See ۱ | INR 1 Ratio | Activated PT Ey Sec 25-42 | Result Method Fasting blood segar (FBS) 102+ 70-110 Urea n Men: > 50 years 19-44 > 50 years: 18 - $5 Women: <50 years: 15-40 > 50 yours: 21-43, Creatinine 095 gia % Uric Acid 37 gid 23-64 Cholesterol 159 gia Norm : <200 Prognose : 200 - 240 Abnormal :> 240 | Triglycerides 161 g/t Norm : < 200) | Progmose : 200-400 Abnormal : > 400 fe 9 mg/l Low ris و‎ risk :<45 ‘LDL - Cholesterol (Direct) 1 Norm: < 130‏ اوه Doubtful : 130 160‏ Abnormal : >160,",
+        "confidence": 0.6426859504132232,
+        "text_length": 909,
+        "source_path": "/Users/aliebrahimi/Documents/Saman Salamat/Extract text from files/Extract-text-from-medical-documents/samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.jpg"
+      }
+    ],
+    "warnings": [],
+    "errors": []
+  },
+  "common_fields": {
+    "patient_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "national_id": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "date_of_test_or_report": {
+      "value": "1302/17/07",
+      "hash": null,
+      "confidence": 0.9,
+      "source_text": "1 آزسایشگاه درمانگاه وحدت 1 ig 3661602303661601 سوم غربی- 14 لفن:‎ oleh - درس: کرج - شهرک وحدبت‎ 1 372390 پذبرش 1302/17/072 \" شمارهبعه‎ Gad der toe آقای دکنرولیشی‎ hie | پزشک معالج‎ لام یمه | تمین اچشمامی avs‏ “he‏ 7 42-84 ند هد Lymphocyte 13‏ فد هام مومس نا Hematocrit aes 3 0 Monocyte 2 یت pil‏ اد 1 3 RDW-cy‏ | مور سس رجا Erythrocyte Sediment Rate(Ihe) mma 20-30 | | 1 Reference Range See eu | PT Controt 130 See 1 | INR 1 Ratio | Activated PT Ey Sec 25-42 | Result Method Fasting blood segar (FBS) 102+ 70-110 Urea n Men: > 50 years 19-44 > 50 years: 18 - $5 Women: <50 years: 15-40 > 50 yours: 21-43, Creatinine 095 gia % Uric Acid 37 gid 23-64 Cholesterol 159 gia Norm : <200 Prognose : 200 - 240 Abnormal :> 240 | Triglycerides 161 g/t Norm : < 200) | Progmose : 200-400 Abnormal : > 400 fe 9 mg/l Low ris و‎ risk :<45 ‘LDL - Cholesterol (Direct) 1 Norm: < 130‏ اوه Doubtful : 130 160‏ Abnormal : >160,",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": "gregorian"
+    },
+    "print_date": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "test_or_report_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "center_name": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "doctor_name": {
+      "value": "معالج‎ لام یمه | تمین اچشمامی avs‏ “he‏ 7 42-84 ند هد Lymphocyte 13‏ فد هام مومس نا Hematocrit aes 3 0 Monocyte 2 یت pil‏ اد 1 3 RDW-cy‏ | مور سس رجا Erythrocyte Sediment Rate(Ihe) mma 20-30 | | 1 Reference Range See eu | PT Controt 130 See 1 | INR 1 Ratio | Activated PT Ey Sec 25-42 | Result Method Fasting blood segar (FBS) 102+ 70-110 Urea n Men: > 50 years 19-44 > 50 years: 18 - $5 Women: <50 years: 15-40 > 50 yours: 21-43, Creatinine 095 gia % Uric Acid 37 gid 23-64 Cholesterol 159 gia Norm : <200 Prognose : 200 - 240 Abnormal :> 240 | Triglycerides 161 g/t Norm : < 200) | Progmose : 200-400 Abnormal : > 400 fe 9 mg/l Low ris و‎ risk :<45 ‘LDL - Cholesterol (Direct) 1 Norm: < 130‏ اوه Doubtful : 130 160‏ Abnormal : >160,",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "1 آزسایشگاه درمانگاه وحدت 1 ig 3661602303661601 سوم غربی- 14 لفن:‎ oleh - درس: کرج - شهرک وحدبت‎ 1 372390 پذبرش 1302/17/072 \" شمارهبعه‎ Gad der toe آقای دکنرولیشی‎ hie | پزشک معالج‎ لام یمه | تمین اچشمامی avs‏ “he‏ 7 42-84 ند هد Lymphocyte 13‏ فد هام مومس نا Hematocrit aes 3 0 Monocyte 2 یت pil‏ اد 1 3 RDW-cy‏ | مور سس رجا Erythrocyte Sediment Rate(Ihe) mma 20-30 | | 1 Reference Range See eu | PT Controt 130 See 1 | INR 1 Ratio | Activated PT Ey Sec 25-42 | Result Method Fasting blood segar (FBS) 102+ 70-110 Urea n Men: > 50 years 19-44 > 50 years: 18 - $5 Women: <50 years: 15-40 > 50 yours: 21-43, Creatinine 095 gia % Uric Acid 37 gid 23-64 Cholesterol 159 gia Norm : <200 Prognose : 200 - 240 Abnormal :> 240 | Triglycerides 161 g/t Norm : < 200) | Progmose : 200-400 Abnormal : > 400 fe 9 mg/l Low ris و‎ risk :<45 ‘LDL - Cholesterol (Direct) 1 Norm: < 130‏ اوه Doubtful : 130 160‏ Abnormal : >160,",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "age": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    },
+    "sex": {
+      "value": "male",
+      "hash": null,
+      "confidence": 0.85,
+      "source_text": "1 آزسایشگاه درمانگاه وحدت 1 ig 3661602303661601 سوم غربی- 14 لفن:‎ oleh - درس: کرج - شهرک وحدبت‎ 1 372390 پذبرش 1302/17/072 \" شمارهبعه‎ Gad der toe آقای دکنرولیشی‎ hie | پزشک معالج‎ لام یمه | تمین اچشمامی avs‏ “he‏ 7 42-84 ند هد Lymphocyte 13‏ فد هام مومس نا Hematocrit aes 3 0 Monocyte 2 یت pil‏ اد 1 3 RDW-cy‏ | مور سس رجا Erythrocyte Sediment Rate(Ihe) mma 20-30 | | 1 Reference Range See eu | PT Controt 130 See 1 | INR 1 Ratio | Activated PT Ey Sec 25-42 | Result Method Fasting blood segar (FBS) 102+ 70-110 Urea n Men: > 50 years 19-44 > 50 years: 18 - $5 Women: <50 years: 15-40 > 50 yours: 21-43, Creatinine 095 gia % Uric Acid 37 gid 23-64 Cholesterol 159 gia Norm : <200 Prognose : 200 - 240 Abnormal :> 240 | Triglycerides 161 g/t Norm : < 200) | Progmose : 200-400 Abnormal : > 400 fe 9 mg/l Low ris و‎ risk :<45 ‘LDL - Cholesterol (Direct) 1 Norm: < 130‏ اوه Doubtful : 130 160‏ Abnormal : >160,",
+      "source_line_index": 0,
+      "inferred": false,
+      "calendar": null
+    },
+    "tracking_number": {
+      "value": null,
+      "hash": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_line_index": null,
+      "inferred": false,
+      "calendar": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": []
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "MISSING_LAB_ROWS",
+      "message": "No lab result rows were extracted",
+      "field": "lab_results"
+    },
+    {
+      "code": "MISSING_PATIENT_NAME",
+      "message": "Patient name was not found",
+      "field": "patient_name"
+    },
+    {
+      "code": "LOW_EXTRACTION_CONFIDENCE",
+      "message": "Overall extraction confidence is low",
+      "field": null
+    }
+  ],
+  "debug": {
+    "ocr_text": "۱ آزسایشگاه درمانگاه وحدت ۱ ig ۳۶۶۱۶۰۲۳۰۳۶۶۱۶۰۱ سوم غربی- 14 لفن:‎ oleh - درس: کرج - شهرک وحدبت‎ 1 ۳۷۲۳۹۰ پذبرش ۱۳۰۲/۱۷/۰۷۲ \" شمارهبعه‎ Gad der toe آقای دکنرولیشی‎ hie | پزشک معالج‎ لام یمه | تمین اچشمامی avs‏ “he‏ 7 42-84 ند هد Lymphocyte 1۳‏ فد هام مومس نا Hematocrit aes ۳ 0 Monocyte 2 یت pil‏ اد ۱ ۳ RDW-cy‏ | مور سس رجا Erythrocyte Sediment Rate(Ihe) mma 20-30 | | 1 Reference Range See eu | PT Controt 130 See ۱ | INR 1 Ratio | Activated PT Ey Sec 25-42 | Result Method Fasting blood segar (FBS) 102+ 70-110 Urea n Men: > 50 years 19-44 > 50 years: 18 - $5 Women: <50 years: 15-40 > 50 yours: 21-43, Creatinine 095 gia % Uric Acid 37 gid 23-64 Cholesterol 159 gia Norm : <200 Prognose : 200 - 240 Abnormal :> 240 | Triglycerides 161 g/t Norm : < 200) | Progmose : 200-400 Abnormal : > 400 fe 9 mg/l Low ris و‎ risk :<45 ‘LDL - Cholesterol (Direct) 1 Norm: < 130‏ اوه Doubtful : 130 160‏ Abnormal : >160,",
+    "page_text": [
+      "۱ آزسایشگاه درمانگاه وحدت ۱ ig ۳۶۶۱۶۰۲۳۰۳۶۶۱۶۰۱ سوم غربی- 14 لفن:‎ oleh - درس: کرج - شهرک وحدبت‎ 1 ۳۷۲۳۹۰ پذبرش ۱۳۰۲/۱۷/۰۷۲ \" شمارهبعه‎ Gad der toe آقای دکنرولیشی‎ hie | پزشک معالج‎ لام یمه | تمین اچشمامی avs‏ “he‏ 7 42-84 ند هد Lymphocyte 1۳‏ فد هام مومس نا Hematocrit aes ۳ 0 Monocyte 2 یت pil‏ اد ۱ ۳ RDW-cy‏ | مور سس رجا Erythrocyte Sediment Rate(Ihe) mma 20-30 | | 1 Reference Range See eu | PT Controt 130 See ۱ | INR 1 Ratio | Activated PT Ey Sec 25-42 | Result Method Fasting blood segar (FBS) 102+ 70-110 Urea n Men: > 50 years 19-44 > 50 years: 18 - $5 Women: <50 years: 15-40 > 50 yours: 21-43, Creatinine 095 gia % Uric Acid 37 gid 23-64 Cholesterol 159 gia Norm : <200 Prognose : 200 - 240 Abnormal :> 240 | Triglycerides 161 g/t Norm : < 200) | Progmose : 200-400 Abnormal : > 400 fe 9 mg/l Low ris و‎ risk :<45 ‘LDL - Cholesterol (Direct) 1 Norm: < 130‏ اوه Doubtful : 130 160‏ Abnormal : >160,"
+    ],
+    "classification": {
+      "document_type": "lab",
+      "confidence": 0.8,
+      "matched_signals": [
+        "FBS",
+        "AST",
+        "Result",
+        "Reference Range"
+      ],
+      "reason": "Matched 4 lab signal(s)"
+    },
+    "relevance": {
+      "is_medical_document": true,
+      "relevance_score": 1.0,
+      "detected_keywords": [
+        "FBS",
+        "AST",
+        "Reference Range",
+        "Result",
+        "Method",
+        "CT",
+        "درمانگاه",
+        "پزشک",
+        "پزشك"
+      ],
+      "detected_document_signals": [
+        "FBS",
+        "AST",
+        "Reference Range",
+        "Result",
+        "Method"
+      ],
+      "rejection_reason": null,
+      "text_used_for_relevance": "۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.jpg\n۱ آزسایشگاه درمانگاه وحدت ۱ ig ۳۶۶۱۶۰۲۳۰۳۶۶۱۶۰۱ سوم غربی- 14 لفن:‎ oleh - درس: کرج - شهرک وحدبت‎ 1 ۳۷۲۳۹۰ پذبرش ۱۳۰۲/۱۷/۰۷۲ \" شمارهبعه‎ Gad der toe آقای دکنرولیشی‎ hie | پزشک معالج‎ لام یمه | تمین اچشمامی avs‏ “he‏ 7 42-84 ند هد Lymphocyte 1۳‏ فد هام مومس نا Hematocrit aes ۳ 0 Monocyte 2 یت pil‏ اد ۱ ۳ RDW-cy‏ | مور سس رجا Erythrocyte Sediment Rate(Ihe) mma 20-30 | | 1 Reference Range See eu | PT Controt 130 See ۱ | INR 1 Ratio | Activated PT Ey Sec 25-42 | Result Method Fasting blood segar (FBS) 102+ 70-110 Urea n Men: > 50 years 19-44 > 50 years: 18 - $5 Women: <50 years: 15-40 > 50 yours: 21-43, Creatinine 095 gia % Uric Acid 37 gid 23-64 Cholesterol 159 gia Norm : <200 Prognose : 200 - 240 Abnormal :> 240 | Triglycerides 161 g/t Norm : < 200) | Progmose : 200-400 Abnormal : > 400 fe 9 mg/l Low ris و‎ risk :<45 ‘LDL - Cholesterol (Direct) 1 Norm: < 130‏ اوه Doubtful : 130 160‏ Abnormal : >160,",
+      "reason": "Detected 9 medical keyword(s)"
+    }
+  }
+}
