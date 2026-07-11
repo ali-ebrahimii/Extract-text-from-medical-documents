@@ -1,0 +1,305 @@
+{
+  "document": {
+    "index": 9,
+    "filename": "0025692283_14041209_O_00404121730.pdf",
+    "source_relative_path": "samples/selected samples/0025692283_14041209_O_00404121730.pdf",
+    "file_ext": ".pdf",
+    "mime_type": "application/pdf",
+    "file_size_kb": 42.4,
+    "status": "extracted_good",
+    "warnings": [],
+    "document_type": "lab",
+    "document_type_confidence": 0.6,
+    "relevance_score": 1.0,
+    "medical_hits": [
+      "biochemistry",
+      "pt",
+      "method",
+      "آزمایشگاه",
+      "آزمايشگاه",
+      "پاتوبیولوژی",
+      "پاتوبيولوژی",
+      "پزشک",
+      "پذیرش"
+    ],
+    "source_preview": "notebook_outputs/selected_samples_v6/source_previews/0009_0025692283_14041209_O_00404121730.png"
+  },
+  "quality": {
+    "status": "pdf_quality_not_assessed_here",
+    "overall_quality_score": null,
+    "issues": [],
+    "width": null,
+    "height": null
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.95,
+    "text_length": 468,
+    "source": "pdf_text_layer",
+    "best_variant": "pdf_text_layer",
+    "best_psm": null,
+    "best_lang": null,
+    "text_quality": {
+      "score": 0.559,
+      "status": "good_text",
+      "alias_hits": 14,
+      "medical_hits": 9,
+      "numeric_hits": 27,
+      "line_count": 35,
+      "token_count": 86,
+      "gibberish_ratio": 0.0
+    },
+    "candidate_count": 0,
+    "candidate_scores": []
+  },
+  "common_fields": {
+    "center_name": {
+      "value": "آزمایشگاه پاتوبیولوژی تاو",
+      "confidence": 0.7,
+      "source_text": "# آزمایشگاه پاتوبیولوژی تاو#"
+    },
+    "national_id": {
+      "value": "38299c368146feae42d0c657633d7906cc4ecfeda16d0b7f6cd31dea17ba87f6",
+      "confidence": 0.9,
+      "source_text": "کد ملی :**********"
+    },
+    "tracking_number": {
+      "value": "O-40412-1730",
+      "confidence": 0.85,
+      "source_text": "O-40412-1730"
+    },
+    "date_of_test_or_report": {
+      "value": "1404/12/09",
+      "confidence": 0.9,
+      "source_text": "تاریخ پذیرش1404/12/09",
+      "calendar": "jalali"
+    },
+    "patient_name": {
+      "value": "حسنی شمس فلاح",
+      "confidence": 0.88,
+      "source_text": " شمس فلاح- خانم حسنی- دکتر21 : سن"
+    },
+    "sex": {
+      "value": "female",
+      "confidence": 0.85,
+      "source_text": " شمس فلاح- خانم حسنی- دکتر21 : سن"
+    },
+    "age": {
+      "value": 21,
+      "confidence": 0.85,
+      "source_text": " شمس فلاح- خانم حسنی- دکتر21 : سن"
+    },
+    "doctor_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "biochemistry",
+        "test_name_standard": "FBS",
+        "test_name_raw": "Fasting blood sugar",
+        "result_value": "95",
+        "result_numeric": 95.0,
+        "unit": "mg/dL",
+        "reference_range": "70-115",
+        "flag": null,
+        "method": "Photometr",
+        "confidence": 0.82,
+        "source_text": "Fasting blood sugar\n95\nmg/dL\n70-115\nPhotometr"
+      },
+      {
+        "section": "biochemistry",
+        "test_name_standard": "AST",
+        "test_name_raw": "SGOT(AST)",
+        "result_value": "14",
+        "result_numeric": 14.0,
+        "unit": "U/L",
+        "reference_range": "<31",
+        "flag": "Low",
+        "method": "Photometr",
+        "confidence": 0.82,
+        "source_text": "SGOT(AST)\n14\nU/L\n<31\nPhotometr"
+      },
+      {
+        "section": "biochemistry",
+        "test_name_standard": "ALT",
+        "test_name_raw": "SGPT(ALT)",
+        "result_value": "15",
+        "result_numeric": 15.0,
+        "unit": "U/L",
+        "reference_range": "<32",
+        "flag": "Low",
+        "method": "Photometr",
+        "confidence": 0.82,
+        "source_text": "SGPT(ALT)\n15\nU/L\n<32\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:13 By 2"
+      },
+      {
+        "section": "urine_or_microbiology",
+        "test_name_standard": "Blood/Hb",
+        "test_name_raw": "Blood",
+        "result_value": "95",
+        "result_numeric": 95.0,
+        "unit": "mg/dL",
+        "reference_range": "70-115",
+        "flag": null,
+        "method": "Photometr",
+        "confidence": 0.58,
+        "source_text": "blood sugar 95 mg/dL 70-115 Photometr"
+      }
+    ],
+    "radiology": []
+  },
+  "extracted_parts": [
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "center_name",
+      "value": "آزمایشگاه پاتوبیولوژی تاو",
+      "result_numeric": null,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.7,
+      "source_text": "# آزمایشگاه پاتوبیولوژی تاو#"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "national_id",
+      "value": "38299c368146feae42d0c657633d7906cc4ecfeda16d0b7f6cd31dea17ba87f6",
+      "result_numeric": null,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.9,
+      "source_text": "کد ملی :**********"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "tracking_number",
+      "value": "O-40412-1730",
+      "result_numeric": null,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.85,
+      "source_text": "O-40412-1730"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "date_of_test_or_report",
+      "value": "1404/12/09",
+      "result_numeric": null,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.9,
+      "source_text": "تاریخ پذیرش1404/12/09"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "patient_name",
+      "value": "حسنی شمس فلاح",
+      "result_numeric": null,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.88,
+      "source_text": " شمس فلاح- خانم حسنی- دکتر21 : سن"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "sex",
+      "value": "female",
+      "result_numeric": null,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.85,
+      "source_text": " شمس فلاح- خانم حسنی- دکتر21 : سن"
+    },
+    {
+      "part_type": "common_field",
+      "section": "header",
+      "field_name": "age",
+      "value": 21,
+      "result_numeric": null,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.85,
+      "source_text": " شمس فلاح- خانم حسنی- دکتر21 : سن"
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "FBS",
+      "value": "95",
+      "result_numeric": 95.0,
+      "unit": "mg/dL",
+      "reference_range": "70-115",
+      "flag": null,
+      "method": "Photometr",
+      "confidence": 0.82,
+      "source_text": "Fasting blood sugar\n95\nmg/dL\n70-115\nPhotometr",
+      "test_name_raw": "Fasting blood sugar"
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "AST",
+      "value": "14",
+      "result_numeric": 14.0,
+      "unit": "U/L",
+      "reference_range": "<31",
+      "flag": "Low",
+      "method": "Photometr",
+      "confidence": 0.82,
+      "source_text": "SGOT(AST)\n14\nU/L\n<31\nPhotometr",
+      "test_name_raw": "SGOT(AST)"
+    },
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "ALT",
+      "value": "15",
+      "result_numeric": 15.0,
+      "unit": "U/L",
+      "reference_range": "<32",
+      "flag": "Low",
+      "method": "Photometr",
+      "confidence": 0.82,
+      "source_text": "SGPT(ALT)\n15\nU/L\n<32\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:13 By 2",
+      "test_name_raw": "SGPT(ALT)"
+    },
+    {
+      "part_type": "lab_result",
+      "section": "urine_or_microbiology",
+      "field_name": "Blood/Hb",
+      "value": "95",
+      "result_numeric": 95.0,
+      "unit": "mg/dL",
+      "reference_range": "70-115",
+      "flag": null,
+      "method": "Photometr",
+      "confidence": 0.58,
+      "source_text": "blood sugar 95 mg/dL 70-115 Photometr",
+      "test_name_raw": "Blood"
+    }
+  ],
+  "extracted_text": "# آزمایشگاه پاتوبیولوژی تاو#\n تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20\n021-91012828\nO-40412-1730\n: پزشک\n شمس فلاح- خانم حسنی- دکتر21 : سن\nشماره :\nنام :\nکد ملی :0025692283\n - سالFemale\n: تاریخ پذیرش1404/12/09 - 14:13:07\nTest\nResult\nBiochemistry\nUnit\nNormal Range\nFlag\nMethod\nFasting blood sugar\n95\nmg/dL\n70-115\nPhotometr\nSGOT(AST)\n14\nU/L\n<31\nPhotometr\nSGPT(ALT)\n15\nU/L\n<32\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:13 By 2"
+}

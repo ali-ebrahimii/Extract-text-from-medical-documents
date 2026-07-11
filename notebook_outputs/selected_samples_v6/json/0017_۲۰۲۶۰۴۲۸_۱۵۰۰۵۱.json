@@ -1,0 +1,223 @@
+{
+  "document": {
+    "index": 17,
+    "filename": "۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.jpg",
+    "source_relative_path": "samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.jpg",
+    "file_ext": ".jpg",
+    "mime_type": "image/jpeg",
+    "file_size_kb": 41.77,
+    "status": "needs_manual_review",
+    "warnings": [
+      "unknown_document_type"
+    ],
+    "document_type": "unknown_medical",
+    "document_type_confidence": 0.0,
+    "relevance_score": 0.25,
+    "medical_hits": [
+      "pt"
+    ],
+    "source_preview": "notebook_outputs/selected_samples_v6/source_previews/0017_۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.png"
+  },
+  "quality": {
+    "status": "needs_preprocessing",
+    "overall_quality_score": 0.523,
+    "issues": [
+      "severe_blur"
+    ],
+    "width": 765,
+    "height": 1020,
+    "brightness_mean": 128.77,
+    "contrast_std": 47.7,
+    "laplacian_variance": 29.77
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.2610472972972973,
+    "text_length": 1147,
+    "source": "image_ocr_variants",
+    "best_variant": "threshold_fallback",
+    "best_psm": 6,
+    "best_lang": "eng",
+    "text_quality": {
+      "score": 0.345,
+      "status": "usable_noisy_text",
+      "alias_hits": 7,
+      "medical_hits": 1,
+      "numeric_hits": 22,
+      "line_count": 60,
+      "token_count": 251,
+      "gibberish_ratio": 0.0
+    },
+    "candidate_count": 102,
+    "candidate_scores": [
+      {
+        "variant": "threshold_fallback",
+        "psm": 6,
+        "lang": "eng",
+        "score": 35.65,
+        "len": 1147,
+        "conf": 0.261,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 35.18,
+        "len": 877,
+        "conf": 0.315,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 34.27,
+        "len": 1070,
+        "conf": 0.337,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 11,
+        "lang": "eng",
+        "score": 32.44,
+        "len": 937,
+        "conf": 0.257,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 4,
+        "lang": "eng",
+        "score": 13.89,
+        "len": 194,
+        "conf": 0.298,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 13.67,
+        "len": 166,
+        "conf": 0.298,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 11,
+        "lang": "eng",
+        "score": 13.32,
+        "len": 116,
+        "conf": 0.25,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 12.19,
+        "len": 90,
+        "conf": 0.383,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot180",
+        "psm": 11,
+        "lang": "eng",
+        "score": 11.91,
+        "len": 108,
+        "conf": 0.337,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen_rot180",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 10.5,
+        "len": 99,
+        "conf": 0.337,
+        "error": null
+      }
+    ]
+  },
+  "common_fields": {
+    "center_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "national_id": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "tracking_number": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "date_of_test_or_report": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "calendar": null
+    },
+    "patient_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "sex": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "age": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "doctor_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "biochemistry",
+        "test_name_standard": "Iron",
+        "test_name_raw": "Fe",
+        "result_value": "6",
+        "result_numeric": 6.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "fe Tet rasag moe reer | earn anty ” +A teem era » 6 vewe | Atatioe Phevponee (417) ws as 4 \" arebie o ow ery smremattnret} “ one tpmes leat es . Sn tates ot ha Berdeeten 47 4a wey ae nL eerste peti Aud nan TAC"
+      }
+    ],
+    "radiology": []
+  },
+  "extracted_parts": [
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "Iron",
+      "value": "6",
+      "result_numeric": 6.0,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "fe Tet rasag moe reer | earn anty ” +A teem era » 6 vewe | Atatioe Phevponee (417) ws as 4 \" arebie o ow ery smremattnret} “ one tpmes leat es . Sn tates ot ha Berdeeten 47 4a wey ae nL eerste peti Aud nan TAC",
+      "test_name_raw": "Fe"
+    }
+  ],
+  "extracted_text": "* set Mr 7 a\nc ay . so\nws oa,\n‘ - wk enc :\nArne ght pp oihebele,t <_<\"\n- a6 .\nSee eh ot ree ed eee tak OF oat T .\na me 2 oe ye rece nee\nON Ae gn ade ear\nbeset oe ot me trirees\nBIDS chemi ine \\\nrateable rf - dened :\n: coment\ni See oe\nRecon heen “ rn foam 4h aa H\nwoot 1\n: Sie et\ni peutae are :\npapers’\nvan ” ~~ on\n(ee ory we some\neverson “ we dean\n[Peeters 1 —t as\neines ne west ete\nee Nowe ot ” ~~ rite\n| Few tone eating perp wa ~ vee\nfe Tet rasag moe reer\n| earn anty ” +A teem\nera » 6 vewe\n| Atatioe Phevponee (417) ws as 4\n\" arebie o ow ery\nsmremattnret} “ one tpmes\nleat es . Sn tates ot ha\nBerdeeten 47 4a\nwey ae\nnL eerste peti Aud nan TAC Be tee\n— ert ae Sree tne ree\nMou Lae tame (ae Pai Fouamaw Auras Re Nana tomo\ni x, Lili Tyg i een\n7” Sieh det ett fae Mederine Banas, :\n_— ry Mean teat Mate 18 380\nFamete. :\nYe 0e poset tes ’\nsen arent ;\nintone ar\nO14 tore lt foe ‘\nWi apt et ene tate ”\n. tebe A sath tree 8 8 8\nchal FD pear iee, a\nfill 64 ewan TF 4\n} Dern tn pour te at\nSemen 00d paced vranareees\nPate ond sal bal nw Leal\nvee ue ches a ame\n; | Ae ee hated eV EAL ALD: nance,\nana\nv\n|\na ’ Pe pene ee reer yeep rere i\nboo eewy {on , fy * a"
+}

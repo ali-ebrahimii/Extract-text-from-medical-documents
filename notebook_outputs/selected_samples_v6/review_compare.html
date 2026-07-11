@@ -1,0 +1,4543 @@
+<!doctype html><html><head><meta charset="utf-8"/><title>Selected Samples Extraction Review v6</title><style>body{font-family:Arial,sans-serif;margin:24px;line-height:1.4}table{border-collapse:collapse;font-size:13px;width:100%;background:white}td,th{border:1px solid #ddd;padding:6px;vertical-align:top}th{background:#f2f2f2}pre{direction:ltr}</style></head><body><h1>Selected Samples Extraction Review v6</h1><p>Generated from notebook. Paths are relative to repository.</p><h2>Summary</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>index</th>
+      <th>filename</th>
+      <th>source_relative_path</th>
+      <th>file_ext</th>
+      <th>mime_type</th>
+      <th>file_size_kb</th>
+      <th>status</th>
+      <th>warnings</th>
+      <th>quality_status</th>
+      <th>quality_score</th>
+      <th>quality_issues</th>
+      <th>ocr_success</th>
+      <th>ocr_confidence</th>
+      <th>ocr_text_length</th>
+      <th>ocr_text_quality_status</th>
+      <th>ocr_text_quality_score</th>
+      <th>ocr_source</th>
+      <th>best_ocr_variant</th>
+      <th>best_psm</th>
+      <th>medical_ok</th>
+      <th>relevance_score</th>
+      <th>document_type</th>
+      <th>document_type_confidence</th>
+      <th>common_field_count</th>
+      <th>lab_result_count</th>
+      <th>patient_name_found</th>
+      <th>date_found</th>
+      <th>age_found</th>
+      <th>sex_found</th>
+      <th>doctor_found</th>
+      <th>text_relative_path</th>
+      <th>json_relative_path</th>
+      <th>source_preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>-2147483648_-210193.jpg</td>
+      <td>samples/selected samples/-2147483648_-210193.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>77.79</td>
+      <td>needs_manual_review</td>
+      <td>missing_or_weak_common_fields</td>
+      <td>good_quality</td>
+      <td>0.633</td>
+      <td>too_bright;possible_rotation_or_sideways</td>
+      <td>True</td>
+      <td>0.374</td>
+      <td>1475</td>
+      <td>good_text</td>
+      <td>0.639</td>
+      <td>image_ocr_variants</td>
+      <td>light_sharpen</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.4</td>
+      <td>0</td>
+      <td>11</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0001_-2147483648_-210193.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0001_-2147483648_-210193.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0001_-2147483648_-210193.png</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>-2147483648_-210195.jpg</td>
+      <td>samples/selected samples/-2147483648_-210195.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>42.00</td>
+      <td>partial_extraction</td>
+      <td>no_lab_rows_extracted</td>
+      <td>good_quality</td>
+      <td>0.612</td>
+      <td>too_bright;possible_rotation_or_sideways</td>
+      <td>True</td>
+      <td>0.628</td>
+      <td>424</td>
+      <td>usable_noisy_text</td>
+      <td>0.315</td>
+      <td>image_ocr_variants</td>
+      <td>light_autocontrast</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0002_-2147483648_-210195.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0002_-2147483648_-210195.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0002_-2147483648_-210195.png</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0014161672_14041209_O_00404121721.pdf</td>
+      <td>samples/selected samples/0014161672_14041209_O_00404121721.pdf</td>
+      <td>.pdf</td>
+      <td>application/pdf</td>
+      <td>44.22</td>
+      <td>extracted_good</td>
+      <td></td>
+      <td>pdf_quality_not_assessed_here</td>
+      <td>NaN</td>
+      <td></td>
+      <td>True</td>
+      <td>0.950</td>
+      <td>960</td>
+      <td>good_text</td>
+      <td>0.819</td>
+      <td>pdf_text_layer</td>
+      <td>pdf_text_layer</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.8</td>
+      <td>7</td>
+      <td>22</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0003_0014161672_14041209_O_00404121721.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0003_0014161672_14041209_O_00404121721.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0003_0014161672_14041209_O_00404121721.png</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0020139871_14041209_O_00404121714.pdf</td>
+      <td>samples/selected samples/0020139871_14041209_O_00404121714.pdf</td>
+      <td>.pdf</td>
+      <td>application/pdf</td>
+      <td>41.35</td>
+      <td>extracted_good</td>
+      <td></td>
+      <td>pdf_quality_not_assessed_here</td>
+      <td>NaN</td>
+      <td></td>
+      <td>True</td>
+      <td>0.950</td>
+      <td>492</td>
+      <td>good_text</td>
+      <td>0.573</td>
+      <td>pdf_text_layer</td>
+      <td>pdf_text_layer</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.6</td>
+      <td>7</td>
+      <td>4</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0004_0020139871_14041209_O_00404121714.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0004_0020139871_14041209_O_00404121714.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0004_0020139871_14041209_O_00404121714.png</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0021858845_14041209_O_00404121731.pdf</td>
+      <td>samples/selected samples/0021858845_14041209_O_00404121731.pdf</td>
+      <td>.pdf</td>
+      <td>application/pdf</td>
+      <td>42.88</td>
+      <td>extracted_good</td>
+      <td></td>
+      <td>pdf_quality_not_assessed_here</td>
+      <td>NaN</td>
+      <td></td>
+      <td>True</td>
+      <td>0.950</td>
+      <td>768</td>
+      <td>good_text</td>
+      <td>0.763</td>
+      <td>pdf_text_layer</td>
+      <td>pdf_text_layer</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.6</td>
+      <td>7</td>
+      <td>17</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0005_0021858845_14041209_O_00404121731.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0005_0021858845_14041209_O_00404121731.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0005_0021858845_14041209_O_00404121731.png</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0023471026_14041209_O_00404121728.pdf</td>
+      <td>samples/selected samples/0023471026_14041209_O_00404121728.pdf</td>
+      <td>.pdf</td>
+      <td>application/pdf</td>
+      <td>40.79</td>
+      <td>needs_manual_review</td>
+      <td>low_structured_data</td>
+      <td>pdf_quality_not_assessed_here</td>
+      <td>NaN</td>
+      <td></td>
+      <td>True</td>
+      <td>0.950</td>
+      <td>406</td>
+      <td>usable_noisy_text</td>
+      <td>0.434</td>
+      <td>pdf_text_layer</td>
+      <td>pdf_text_layer</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.6</td>
+      <td>7</td>
+      <td>2</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0006_0023471026_14041209_O_00404121728.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0006_0023471026_14041209_O_00404121728.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0006_0023471026_14041209_O_00404121728.png</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0024150010_14041209_O_00404121722.pdf</td>
+      <td>samples/selected samples/0024150010_14041209_O_00404121722.pdf</td>
+      <td>.pdf</td>
+      <td>application/pdf</td>
+      <td>44.13</td>
+      <td>extracted_good</td>
+      <td></td>
+      <td>pdf_quality_not_assessed_here</td>
+      <td>NaN</td>
+      <td></td>
+      <td>True</td>
+      <td>0.950</td>
+      <td>958</td>
+      <td>good_text</td>
+      <td>0.819</td>
+      <td>pdf_text_layer</td>
+      <td>pdf_text_layer</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.8</td>
+      <td>7</td>
+      <td>22</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0007_0024150010_14041209_O_00404121722.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0007_0024150010_14041209_O_00404121722.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0007_0024150010_14041209_O_00404121722.png</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>0025631314_14041209_O_00404121726.pdf</td>
+      <td>samples/selected samples/0025631314_14041209_O_00404121726.pdf</td>
+      <td>.pdf</td>
+      <td>application/pdf</td>
+      <td>41.18</td>
+      <td>extracted_good</td>
+      <td></td>
+      <td>pdf_quality_not_assessed_here</td>
+      <td>NaN</td>
+      <td></td>
+      <td>True</td>
+      <td>0.950</td>
+      <td>471</td>
+      <td>usable_noisy_text</td>
+      <td>0.547</td>
+      <td>pdf_text_layer</td>
+      <td>pdf_text_layer</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.6</td>
+      <td>7</td>
+      <td>4</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0008_0025631314_14041209_O_00404121726.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0008_0025631314_14041209_O_00404121726.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0008_0025631314_14041209_O_00404121726.png</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>0025692283_14041209_O_00404121730.pdf</td>
+      <td>samples/selected samples/0025692283_14041209_O_00404121730.pdf</td>
+      <td>.pdf</td>
+      <td>application/pdf</td>
+      <td>42.40</td>
+      <td>extracted_good</td>
+      <td></td>
+      <td>pdf_quality_not_assessed_here</td>
+      <td>NaN</td>
+      <td></td>
+      <td>True</td>
+      <td>0.950</td>
+      <td>468</td>
+      <td>good_text</td>
+      <td>0.559</td>
+      <td>pdf_text_layer</td>
+      <td>pdf_text_layer</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.6</td>
+      <td>7</td>
+      <td>4</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0009_0025692283_14041209_O_00404121730.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0009_0025692283_14041209_O_00404121730.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0009_0025692283_14041209_O_00404121730.png</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>20260427_181554.jpg</td>
+      <td>samples/selected samples/20260427_181554.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>42.47</td>
+      <td>needs_manual_review</td>
+      <td>missing_or_weak_common_fields</td>
+      <td>good_quality</td>
+      <td>0.746</td>
+      <td></td>
+      <td>True</td>
+      <td>0.673</td>
+      <td>344</td>
+      <td>usable_noisy_text</td>
+      <td>0.435</td>
+      <td>image_ocr_variants</td>
+      <td>light_autocontrast_rot90</td>
+      <td>6.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>1.0</td>
+      <td>2</td>
+      <td>6</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0010_20260427_181554.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0010_20260427_181554.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0010_20260427_181554.png</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>20260427_181636.jpg</td>
+      <td>samples/selected samples/20260427_181636.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>38.70</td>
+      <td>needs_manual_review</td>
+      <td>missing_or_weak_common_fields</td>
+      <td>good_quality</td>
+      <td>0.638</td>
+      <td></td>
+      <td>True</td>
+      <td>0.641</td>
+      <td>310</td>
+      <td>usable_noisy_text</td>
+      <td>0.327</td>
+      <td>image_ocr_variants</td>
+      <td>mild_contrast_rot90</td>
+      <td>6.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.6</td>
+      <td>2</td>
+      <td>4</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0011_20260427_181636.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0011_20260427_181636.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0011_20260427_181636.png</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>20260427_181654.jpg</td>
+      <td>samples/selected samples/20260427_181654.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>36.80</td>
+      <td>needs_manual_review</td>
+      <td>low_structured_data</td>
+      <td>needs_preprocessing</td>
+      <td>0.490</td>
+      <td></td>
+      <td>True</td>
+      <td>0.634</td>
+      <td>296</td>
+      <td>usable_noisy_text</td>
+      <td>0.343</td>
+      <td>image_ocr_variants</td>
+      <td>mild_contrast_rot90</td>
+      <td>6.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>1.0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0012_20260427_181654.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0012_20260427_181654.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0012_20260427_181654.png</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>20260427_181713.jpg</td>
+      <td>samples/selected samples/20260427_181713.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>44.24</td>
+      <td>ocr_unreliable_needs_reupload</td>
+      <td>ocr_text_quality=gibberish_text</td>
+      <td>good_quality</td>
+      <td>0.771</td>
+      <td></td>
+      <td>True</td>
+      <td>0.710</td>
+      <td>199</td>
+      <td>gibberish_text</td>
+      <td>0.202</td>
+      <td>image_ocr_variants</td>
+      <td>original_oriented_rot90</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.4</td>
+      <td>2</td>
+      <td>2</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0013_20260427_181713.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0013_20260427_181713.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0013_20260427_181713.png</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>20260427_181919.jpg</td>
+      <td>samples/selected samples/20260427_181919.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>58.18</td>
+      <td>needs_manual_review</td>
+      <td>missing_or_weak_common_fields</td>
+      <td>good_quality</td>
+      <td>0.765</td>
+      <td></td>
+      <td>True</td>
+      <td>0.740</td>
+      <td>437</td>
+      <td>good_text</td>
+      <td>0.598</td>
+      <td>image_ocr_variants</td>
+      <td>original_oriented_rot90</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.8</td>
+      <td>3</td>
+      <td>6</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0014_20260427_181919.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0014_20260427_181919.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0014_20260427_181919.png</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.jpg</td>
+      <td>samples/selected samples/۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>148.64</td>
+      <td>extracted_good</td>
+      <td></td>
+      <td>good_quality</td>
+      <td>0.786</td>
+      <td>possible_rotation_or_sideways</td>
+      <td>True</td>
+      <td>0.713</td>
+      <td>1586</td>
+      <td>good_text</td>
+      <td>0.877</td>
+      <td>image_ocr_variants</td>
+      <td>light_sharpen</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>27</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0015_۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0015_۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0015_۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.png</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.jpg</td>
+      <td>samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>67.78</td>
+      <td>needs_manual_review</td>
+      <td>missing_or_weak_common_fields</td>
+      <td>good_quality</td>
+      <td>0.840</td>
+      <td></td>
+      <td>True</td>
+      <td>0.562</td>
+      <td>1210</td>
+      <td>good_text</td>
+      <td>0.824</td>
+      <td>image_ocr_variants</td>
+      <td>mild_contrast</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>1.0</td>
+      <td>2</td>
+      <td>15</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0016_۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0016_۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0016_۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.png</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.jpg</td>
+      <td>samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>41.77</td>
+      <td>needs_manual_review</td>
+      <td>unknown_document_type</td>
+      <td>needs_preprocessing</td>
+      <td>0.523</td>
+      <td>severe_blur</td>
+      <td>True</td>
+      <td>0.261</td>
+      <td>1147</td>
+      <td>usable_noisy_text</td>
+      <td>0.345</td>
+      <td>image_ocr_variants</td>
+      <td>threshold_fallback</td>
+      <td>6.0</td>
+      <td>True</td>
+      <td>0.25</td>
+      <td>unknown_medical</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0017_۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0017_۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0017_۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.png</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.jpg</td>
+      <td>samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>56.83</td>
+      <td>needs_manual_review</td>
+      <td>missing_or_weak_common_fields</td>
+      <td>good_quality</td>
+      <td>0.770</td>
+      <td></td>
+      <td>True</td>
+      <td>0.445</td>
+      <td>1015</td>
+      <td>good_text</td>
+      <td>0.624</td>
+      <td>image_ocr_variants</td>
+      <td>light_sharpen</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>1.00</td>
+      <td>lab</td>
+      <td>0.4</td>
+      <td>1</td>
+      <td>8</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0018_۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0018_۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0018_۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.png</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.jpg</td>
+      <td>samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>53.32</td>
+      <td>needs_manual_review</td>
+      <td>low_structured_data</td>
+      <td>good_quality</td>
+      <td>0.849</td>
+      <td></td>
+      <td>True</td>
+      <td>0.481</td>
+      <td>536</td>
+      <td>usable_noisy_text</td>
+      <td>0.321</td>
+      <td>image_ocr_variants</td>
+      <td>threshold_fallback</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>0.75</td>
+      <td>lab</td>
+      <td>0.4</td>
+      <td>0</td>
+      <td>1</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0019_۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0019_۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0019_۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.png</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.jpg</td>
+      <td>samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.jpg</td>
+      <td>.jpg</td>
+      <td>image/jpeg</td>
+      <td>123.56</td>
+      <td>needs_manual_review</td>
+      <td>missing_or_weak_common_fields</td>
+      <td>good_quality</td>
+      <td>0.849</td>
+      <td></td>
+      <td>True</td>
+      <td>0.480</td>
+      <td>587</td>
+      <td>usable_noisy_text</td>
+      <td>0.450</td>
+      <td>image_ocr_variants</td>
+      <td>original_oriented_rot90</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>0.25</td>
+      <td>lab</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>4</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>notebook_outputs/selected_samples_v6/texts/0020_۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.txt</td>
+      <td>notebook_outputs/selected_samples_v6/json/0020_۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.json</td>
+      <td>notebook_outputs/selected_samples_v6/source_previews/0020_۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.png</td>
+    </tr>
+  </tbody>
+</table><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>1. -2147483648_-210193.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 1475 | <b>Lab rows:</b> 11</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0001_-2147483648_-210193.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><p><em>No rows.</em></p></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AST</td>
+      <td>9.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>ast\ngit\ncua\nzz\nnH\n9.0\n1s\n255</td>
+    </tr>
+    <tr>
+      <td>Testosterone</td>
+      <td>020.93</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Testosterone\nas\nHA\n020.93</td>
+    </tr>
+    <tr>
+      <td>Free Testosterone</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Free Testosterone\na\npa\nza.\narly fellctar 30-100\nFollicular phase (12 (o-t.days):\nphase (12 o-tdays):\nra</td>
+    </tr>
+    <tr>
+      <td>Estradiol</td>
+      <td>209</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Estradiol\nppt\n209\naes:\nostmenoeasal untrente\npias\n‘Eceguant Upto s3000\nmeasos</td>
+    </tr>
+    <tr>
+      <td>Ferritin</td>
+      <td>4970</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Ferritin\n4970\ngmt\ncua\ndoze\nbetow\nurine analysts |\nernie</td>
+    </tr>
+    <tr>
+      <td>pH</td>
+      <td>6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>PH\nacter\n6\nNegative</td>
+    </tr>
+    <tr>
+      <td>EAG</td>
+      <td>7</td>
+      <td>fl</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>EAS) 7 mat flies Ansufcenti20.22 _2s:nyidrowy Vieamin D3, gmt 41339 aun ‘Sufi. ‘otential toxiieya00 eto Normal ranges are according to the patients sex and age. serotoay | esa ont ete Yao Test Avgatlve: opto 0</td>
+    </tr>
+    <tr>
+      <td>Testosterone</td>
+      <td>30</td>
+      <td>NaN</td>
+      <td>210-2</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Testosterone a pa za. arly fellctar 30-100 Follicular phase (12 (o-t.days): phase (12 o-tdays): ra re ‘ldeyete (210-2 dave 3.8. 3862</td>
+    </tr>
+    <tr>
+      <td>Appearance</td>
+      <td>1015</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Appearance lar hac on 1015 ‘Specie Gay plehelal celts 2</td>
+    </tr>
+    <tr>
+      <td>Urine Culture</td>
+      <td>No growth after 24 hours</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.88</td>
+      <td>en Noma! loca Negative Yeast Negative rte Negi ont Urine (Cutture&amp; Sensitivity) No growth after 24 hours Catre ee</td>
+    </tr>
+    <tr>
+      <td>Protein</td>
+      <td>Negative</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.66</td>
+      <td>1 ‘Appearance lar hac on 1015 ‘Specie Gay plehelal celts 2 PH acter 6 Negative Protein Negative cs Negative heose Negative Negative casts Ketone esa coystats ‘Negative tin Neg</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">Tet
+ost
+ot
+ees
+ance ve
+‘Good. diabetic conceae
+Eniedlabeticcontral 27-9
+enogtobin Ate
+ooridlabetic controler,
+30
+J
+me
+ane
+eegnant tera
+Estimated Average Glvcose (EAS)
+7
+mat
+flies
+Ansufcenti20.22
+_2s:nyidrowy Vieamin D3,
+gmt
+41339
+aun
+‘Sufi.
+‘otential toxiieya00
+eto
+Normal ranges are according to the patients sex and age.
+serotoay |
+esa
+ont
+ete Yao
+Test
+Avgatlve: opto 0
+can (Quanttat
+)
+tar
+mgt
+Carne by Hopeted anys ah
+re
+feat
+ot
+ete
+ance ve
+n
+ast
+git
+cua
+zz
+nH
+9.0
+1s
+255
+er
+reusa
+sss.28
+Imnunoassays-Endoerinatogy |
+ees
+Te
+est
+on
+ance Ve
+Aollicular Phaser
+‘Mldevele phases 87-70.3
+Eostmenopausat- 15.08
+E
+78
+mt
+aun
+5
+Ecemmants 01-15
+‘Oral conmmaceatves: 07.6
+ollicular Phase: 2,510.2
+Mide
+Luutead Phase: 13.21
+oH
+miuimt
+cua
+809
+osimenonausal 21062
+ecrpuantc 02.
+Protactin
+git
+sas
+a
+git
+Testosterone
+as
+HA
+020.93
+Free Testosterone
+a
+pa
+za.
+arly fellctar 30-100
+Follicular phase (12 (o-t.days):
+phase (12 o-tdays):
+ra
+re
+‘ldeyete (210-2 dave 3.8.
+3862
+Estradiol
+ppt
+209
+aes:
+ostmenoeasal untrente
+pias
+‘Eceguant Upto s3000
+measos
+wa.
+vow
+Progesterone
+4s
+tea
+ecu
+it
+tied
+onc ae
+Ferritin
+4970
+gmt
+cua
+doze
+betow
+urine analysts |
+ernie
+roseope
+rine Anatyats
+Corr
+Yellow
+wane
+1
+‘Appearance
+lar
+hac
+on
+1015
+‘Specie Gay
+plehelal celts
+2
+PH
+acter
+6
+Negative
+Protein
+Negative
+cs
+Negative
+heose
+Negative
+Negative
+casts
+Ketone
+esa
+coystats
+‘Negative
+tin
+Negative
+obitnogen
+Noma!
+loca
+Negative
+Yeast
+Negative
+rte
+Negi
+ont
+Urine (Cutture&amp; Sensitivity)
+No growth after 24 hours
+Catre
+ee</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>2. -2147483648_-210195.jpg</h2><p><b>Status:</b> partial_extraction | <b>Type:</b> lab | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 424 | <b>Lab rows:</b> 0</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0002_-2147483648_-210195.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>امروز باتوبیولوژک آزمایشگاه</td>
+      <td>0.7</td>
+      <td>امروز باتوبیولوژک آزمایشگاه</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><p><em>No rows.</em></p></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">بازگشت
+جواب
+دریا
+امروز باتوبیولوژک آزمایشگاه
+امروز
+را (زکریای بات متری 34 خیابان ابتدای شهرری, lat‏
+4 پلاک تاجیک: بست بن زی):
+www.Emroozlab.com @Emrooslab
+3
+551287702
+آبنیکی خامزهرا
+Jere
+از
+13
+زاجم
+3
+شادمان one‏ دک آفای جخاب
+Ke:
+38585328 eS
+Immunoassays-Endocrinology |
+Result
+Method
+Reference Value
+Test
+Unit
+Perimenopausal 39-275
+DHT
+209
+ELA
+Postmenopausal 15-145
+Dr. Ahmad Forouzesh, MD-AP-CP
+فروز aS‏
+بای aseptic‏
+ewe ed</pre></details></section><section style="background:#e8f5e9;padding:16px;margin:20px 0;border-radius:8px"><h2>3. 0014161672_14041209_O_00404121721.pdf</h2><p><b>Status:</b> extracted_good | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 960 | <b>Lab rows:</b> 22</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0003_0014161672_14041209_O_00404121721.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>آزمایشگاه پاتوبیولوژی تاو</td>
+      <td>0.70</td>
+      <td># آزمایشگاه پاتوبیولوژی تاو#</td>
+    </tr>
+    <tr>
+      <td>national_id</td>
+      <td>6f7b8e1c3f733b32eaf2a037ee257d451f9423ceb96b2e95426f83929403d282</td>
+      <td>0.90</td>
+      <td>کد ملی :**********</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>O-40412-1721</td>
+      <td>0.85</td>
+      <td>O-40412-1721</td>
+    </tr>
+    <tr>
+      <td>date_of_test_or_report</td>
+      <td>1404/12/09</td>
+      <td>0.90</td>
+      <td>تاریخ پذیرش1404/12/09</td>
+    </tr>
+    <tr>
+      <td>patient_name</td>
+      <td>کورش امینی طھران</td>
+      <td>0.88</td>
+      <td>امینی طھران- آقای کورش- دکتر34 : سن</td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td>male</td>
+      <td>0.85</td>
+      <td>امینی طھران- آقای کورش- دکتر34 : سن</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>34</td>
+      <td>0.85</td>
+      <td>امینی طھران- آقای کورش- دکتر34 : سن</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WBC</td>
+      <td>7.24</td>
+      <td>10^3/uL</td>
+      <td>3.5-10.5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>W.B.C\n7.24\n10^3/uL\n3.5-10.5</td>
+    </tr>
+    <tr>
+      <td>RBC</td>
+      <td>4.9</td>
+      <td>10^6/uL</td>
+      <td>4.32-5.72</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>R.B.C\n4.9\n10^6/uL\n4.32 - 5.72</td>
+    </tr>
+    <tr>
+      <td>HGB</td>
+      <td>15.0</td>
+      <td>g/dL</td>
+      <td>13.5-17.5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Hemoglobin\n15.0\ng/dL\n13.5 - 17.5</td>
+    </tr>
+    <tr>
+      <td>HCT</td>
+      <td>45.0</td>
+      <td>%</td>
+      <td>38.8-50</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>H.C.T\n45.0\n%\n38.8-50 %</td>
+    </tr>
+    <tr>
+      <td>MCV</td>
+      <td>91.8</td>
+      <td>fL</td>
+      <td>81.2-95.1</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.V\n91.8\nfL\n81.2-95.1 fl</td>
+    </tr>
+    <tr>
+      <td>MCH</td>
+      <td>30.6</td>
+      <td>pg</td>
+      <td>25.8-33.1</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.H\n30.6\npg\n25.8-33.1 pg</td>
+    </tr>
+    <tr>
+      <td>MCHC</td>
+      <td>33.3</td>
+      <td>g/dL</td>
+      <td>32-36</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.H.C\n33.3\ng/dL\n32-36 g/dl</td>
+    </tr>
+    <tr>
+      <td>PLT</td>
+      <td>265</td>
+      <td>10^3 /uL</td>
+      <td>150-450</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Platelets\n265\n10^3 /uL\n150 - 450</td>
+    </tr>
+    <tr>
+      <td>RDW-CV</td>
+      <td>12.6</td>
+      <td>%</td>
+      <td>11.8-15.6</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RDW-CV\n12.6\n%\n11.8-15.6 %</td>
+    </tr>
+    <tr>
+      <td>RDW-SD</td>
+      <td>40.7</td>
+      <td>fl</td>
+      <td>36-54</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RDW-SD\n40.7\nfl\n36 - 54</td>
+    </tr>
+    <tr>
+      <td>PDW</td>
+      <td>14.3</td>
+      <td>fL</td>
+      <td>9-17</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>PDW\n14.3\nfL\n9-17 fl</td>
+    </tr>
+    <tr>
+      <td>NEUT%</td>
+      <td>49.7</td>
+      <td>%</td>
+      <td>40-80</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Neutrophils\n49.7\n%\n40 - 80</td>
+    </tr>
+    <tr>
+      <td>LYMPH%</td>
+      <td>43</td>
+      <td>%</td>
+      <td>20-40</td>
+      <td>High</td>
+      <td>0.82</td>
+      <td>Lymphocytes\n43\n%\n20 - 40\nHigh</td>
+    </tr>
+    <tr>
+      <td>MONO%</td>
+      <td>5.5</td>
+      <td>%</td>
+      <td>4.1-12.4</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Monocytes\n5.5\n%\n4.1-12.4 %</td>
+    </tr>
+    <tr>
+      <td>EO%</td>
+      <td>1.7</td>
+      <td>%</td>
+      <td>0.4-6.7</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Eosinophils\n1.7\n%\n0.4-6.7 %</td>
+    </tr>
+    <tr>
+      <td>BASO%</td>
+      <td>0.1</td>
+      <td>%</td>
+      <td>0.3-1.4</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Basophils\n0.1\n%\n0.3-1.4 %</td>
+    </tr>
+    <tr>
+      <td>FBS</td>
+      <td>91</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Fasting blood sugar\n91\nmg/dL\n70-115\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>AST</td>
+      <td>19</td>
+      <td>U/L</td>
+      <td>&lt;37</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>SGOT(AST)\n19\nU/L\n&lt;37\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>ALT</td>
+      <td>21</td>
+      <td>U/L</td>
+      <td>&lt;40</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>SGPT(ALT)\n21\nU/L\n&lt; 40\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:08 By 2</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>15.0</td>
+      <td>g/dL</td>
+      <td>13.5-17.5</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Hemoglobin 15.0 g/dL 13.5 - 17.5</td>
+    </tr>
+    <tr>
+      <td>MCH</td>
+      <td>33.3</td>
+      <td>g/dL</td>
+      <td>32-36</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>M.C.H.C 33.3 g/dL 32-36 g/dl</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>91</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>blood sugar 91 mg/dL 70-115 Photometr</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd"># آزمایشگاه پاتوبیولوژی تاو#
+ تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20
+021-91012828
+O-40412-1721
+: پزشک
+ امینی طھران- آقای کورش- دکتر34 : سن
+شماره :
+نام :
+کد ملی :0014161672
+ - سالMale
+: تاریخ پذیرش1404/12/09 - 14:11:34
+Test
+Result
+Hematology
+Unit
+Normal Range
+Flag
+Method
+W.B.C
+7.24
+10^3/uL
+3.5-10.5
+R.B.C
+4.9
+10^6/uL
+4.32 - 5.72
+Hemoglobin
+15.0
+g/dL
+13.5 - 17.5
+H.C.T
+45.0
+%
+38.8-50 %
+M.C.V
+91.8
+fL
+81.2-95.1 fl
+M.C.H
+30.6
+pg
+25.8-33.1 pg
+M.C.H.C
+33.3
+g/dL
+32-36 g/dl
+Platelets
+265
+10^3 /uL
+150 - 450
+RDW-CV
+12.6
+%
+11.8-15.6 %
+RDW-SD
+40.7
+fl
+36 - 54
+PDW
+14.3
+fL
+9-17 fl
+Neutrophils
+49.7
+%
+40 - 80
+Lymphocytes
+43
+%
+20 - 40
+High
+Monocytes
+5.5
+%
+4.1-12.4 %
+Eosinophils
+1.7
+%
+0.4-6.7 %
+Basophils
+0.1
+%
+0.3-1.4 %
+Test
+Result
+Biochemistry
+Unit
+Normal Range
+Flag
+Method
+Fasting blood sugar
+91
+mg/dL
+70-115
+Photometr
+SGOT(AST)
+19
+U/L
+&lt;37
+Photometr
+SGPT(ALT)
+21
+U/L
+&lt; 40
+Photometr
+This answer is signed out by Dr.N.Adanvar
+Print On 1405/01/30-13:48:08 By 2</pre></details></section><section style="background:#e8f5e9;padding:16px;margin:20px 0;border-radius:8px"><h2>4. 0020139871_14041209_O_00404121714.pdf</h2><p><b>Status:</b> extracted_good | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 492 | <b>Lab rows:</b> 4</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0004_0020139871_14041209_O_00404121714.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>آزمایشگاه پاتوبیولوژی تاو</td>
+      <td>0.70</td>
+      <td># آزمایشگاه پاتوبیولوژی تاو#</td>
+    </tr>
+    <tr>
+      <td>national_id</td>
+      <td>fbc8e348901327c7b744fe7894f2a6cd85a9666dc57991b9cacb30997db46d2e</td>
+      <td>0.90</td>
+      <td>کد ملی :**********</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>O-40412-1714</td>
+      <td>0.85</td>
+      <td>O-40412-1714</td>
+    </tr>
+    <tr>
+      <td>date_of_test_or_report</td>
+      <td>1404/12/09</td>
+      <td>0.90</td>
+      <td>تاریخ پذیرش1404/12/09</td>
+    </tr>
+    <tr>
+      <td>patient_name</td>
+      <td>سعید عابد</td>
+      <td>0.88</td>
+      <td>عابد- آقای سعید- دکتر28 : سن</td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td>male</td>
+      <td>0.85</td>
+      <td>عابد- آقای سعید- دکتر28 : سن</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>28</td>
+      <td>0.85</td>
+      <td>عابد- آقای سعید- دکتر28 : سن</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FBS</td>
+      <td>101</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Fasting blood sugar\n101\nmg/dL\n70-115\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>AST</td>
+      <td>47</td>
+      <td>U/L</td>
+      <td>&lt;37</td>
+      <td>High</td>
+      <td>0.82</td>
+      <td>SGOT(AST)\n47\nU/L\n&lt;37\nHigh\n*\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>ALT</td>
+      <td>46</td>
+      <td>U/L</td>
+      <td>&lt;40</td>
+      <td>High</td>
+      <td>0.82</td>
+      <td>SGPT(ALT)\n46\nU/L\n&lt; 40\nHigh\n*\nPhotometr\nThis answer is signed out by Dr.N.Adanvar</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>101</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>blood sugar 101 mg/dL 70-115 Photometr</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd"># آزمایشگاه پاتوبیولوژی تاو#
+ تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20
+021-91012828
+O-40412-1714
+: پزشک
+ عابد- آقای سعید- دکتر28 : سن
+شماره :
+نام :
+کد ملی :0020139871
+ - سالMale
+: تاریخ پذیرش1404/12/09 - 14:10:19
+Test
+Result
+Biochemistry
+Unit
+Normal Range
+Flag
+Method
+Fasting blood sugar
+101
+mg/dL
+70-115
+Photometr
+SGOT(AST)
+47
+U/L
+&lt;37
+High
+*
+Photometr
+SGPT(ALT)
+46
+U/L
+&lt; 40
+High
+*
+Photometr
+This answer is signed out by Dr.N.Adanvar
+* : Rechecked
+Print On 1405/01/30-13:47:26 By 2</pre></details></section><section style="background:#e8f5e9;padding:16px;margin:20px 0;border-radius:8px"><h2>5. 0021858845_14041209_O_00404121731.pdf</h2><p><b>Status:</b> extracted_good | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 768 | <b>Lab rows:</b> 17</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0005_0021858845_14041209_O_00404121731.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>آزمایشگاه پاتوبیولوژی تاو</td>
+      <td>0.70</td>
+      <td># آزمایشگاه پاتوبیولوژی تاو#</td>
+    </tr>
+    <tr>
+      <td>national_id</td>
+      <td>993bd7f6f5888804e4bef523c060a0159f93915ad216bfd00ee1ff0808e8fe97</td>
+      <td>0.90</td>
+      <td>کد ملی :**********</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>O-40412-1731</td>
+      <td>0.85</td>
+      <td>O-40412-1731</td>
+    </tr>
+    <tr>
+      <td>date_of_test_or_report</td>
+      <td>1404/12/09</td>
+      <td>0.90</td>
+      <td>تاریخ پذیرش1404/12/09</td>
+    </tr>
+    <tr>
+      <td>patient_name</td>
+      <td>مھلا روشن</td>
+      <td>0.88</td>
+      <td>روشن- خانم مھلا- دکتر27 : سن</td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td>female</td>
+      <td>0.85</td>
+      <td>روشن- خانم مھلا- دکتر27 : سن</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>27</td>
+      <td>0.85</td>
+      <td>روشن- خانم مھلا- دکتر27 : سن</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WBC</td>
+      <td>8.65</td>
+      <td>10^3/uL</td>
+      <td>3.5-10.5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>W.B.C\n8.65\n10^3/uL\n3.5-10.5</td>
+    </tr>
+    <tr>
+      <td>RBC</td>
+      <td>4.86</td>
+      <td>10^6/uL</td>
+      <td>3.9-5.03</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>R.B.C\n4.86\n10^6/uL\n3.9 - 5.03</td>
+    </tr>
+    <tr>
+      <td>HGB</td>
+      <td>13.4</td>
+      <td>g/dL</td>
+      <td>12.0-16.0</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Hemoglobin\n13.4\ng/dL\n12.0 - 16.0</td>
+    </tr>
+    <tr>
+      <td>HCT</td>
+      <td>40.2</td>
+      <td>%</td>
+      <td>34.9-44.5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>H.C.T\n40.2\n%\n34.9-44.5 %</td>
+    </tr>
+    <tr>
+      <td>MCV</td>
+      <td>82.7</td>
+      <td>fL</td>
+      <td>81.6-98.3</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.V\n82.7\nfL\n81.6-98.3 fl</td>
+    </tr>
+    <tr>
+      <td>MCH</td>
+      <td>27.6</td>
+      <td>pg</td>
+      <td>25.8-33.1</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.H\n27.6\npg\n25.8-33.1 pg</td>
+    </tr>
+    <tr>
+      <td>MCHC</td>
+      <td>33.3</td>
+      <td>g/dL</td>
+      <td>32-36</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.H.C\n33.3\ng/dL\n32-36 g/dl</td>
+    </tr>
+    <tr>
+      <td>PLT</td>
+      <td>262</td>
+      <td>10^3 /uL</td>
+      <td>150-450</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Platelets\n262\n10^3 /uL\n150 - 450</td>
+    </tr>
+    <tr>
+      <td>RDW-CV</td>
+      <td>13.4</td>
+      <td>%</td>
+      <td>11.9-15.5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RDW-CV\n13.4\n%\n11.9-15.5 %</td>
+    </tr>
+    <tr>
+      <td>RDW-SD</td>
+      <td>37.5</td>
+      <td>fl</td>
+      <td>36-54</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RDW-SD\n37.5\nfl\n36 - 54</td>
+    </tr>
+    <tr>
+      <td>PDW</td>
+      <td>12.2</td>
+      <td>fL</td>
+      <td>9-17</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>PDW\n12.2\nfL\n9-17 fl</td>
+    </tr>
+    <tr>
+      <td>NEUT%</td>
+      <td>77.0</td>
+      <td>%</td>
+      <td>40-80</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Neutrophils\n77.0\n%\n40 - 80</td>
+    </tr>
+    <tr>
+      <td>LYMPH%</td>
+      <td>17.7</td>
+      <td>%</td>
+      <td>20-40</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>Lymphocytes\n17.7\n%\n20 - 40\nLow</td>
+    </tr>
+    <tr>
+      <td>MONO%</td>
+      <td>4.6</td>
+      <td>%</td>
+      <td>4.1-12.4</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Monocytes\n4.6\n%\n4.1-12.4 %</td>
+    </tr>
+    <tr>
+      <td>EO%</td>
+      <td>0.7</td>
+      <td>%</td>
+      <td>0.4-6.7</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Eosinophils\n0.7\n%\n0.4-6.7 %\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:20 By 2</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>13.4</td>
+      <td>g/dL</td>
+      <td>12.0-16.0</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Hemoglobin 13.4 g/dL 12.0 - 16.0</td>
+    </tr>
+    <tr>
+      <td>MCH</td>
+      <td>33.3</td>
+      <td>g/dL</td>
+      <td>32-36</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>M.C.H.C 33.3 g/dL 32-36 g/dl</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd"># آزمایشگاه پاتوبیولوژی تاو#
+ تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20
+021-91012828
+O-40412-1731
+: پزشک
+ روشن- خانم مھلا- دکتر27 : سن
+شماره :
+نام :
+کد ملی :0021858845
+ - سالFemale
+: تاریخ پذیرش1404/12/09 - 14:13:17
+Test
+Result
+Hematology
+Unit
+Normal Range
+Flag
+Method
+W.B.C
+8.65
+10^3/uL
+3.5-10.5
+R.B.C
+4.86
+10^6/uL
+3.9 - 5.03
+Hemoglobin
+13.4
+g/dL
+12.0 - 16.0
+H.C.T
+40.2
+%
+34.9-44.5 %
+M.C.V
+82.7
+fL
+81.6-98.3 fl
+M.C.H
+27.6
+pg
+25.8-33.1 pg
+M.C.H.C
+33.3
+g/dL
+32-36 g/dl
+Platelets
+262
+10^3 /uL
+150 - 450
+RDW-CV
+13.4
+%
+11.9-15.5 %
+RDW-SD
+37.5
+fl
+36 - 54
+PDW
+12.2
+fL
+9-17 fl
+Neutrophils
+77.0
+%
+40 - 80
+Lymphocytes
+17.7
+%
+20 - 40
+Low
+Monocytes
+4.6
+%
+4.1-12.4 %
+Eosinophils
+0.7
+%
+0.4-6.7 %
+This answer is signed out by Dr.N.Adanvar
+Print On 1405/01/30-13:49:20 By 2</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>6. 0023471026_14041209_O_00404121728.pdf</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 406 | <b>Lab rows:</b> 2</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0006_0023471026_14041209_O_00404121728.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>آزمایشگاه پاتوبیولوژی تاو</td>
+      <td>0.70</td>
+      <td># آزمایشگاه پاتوبیولوژی تاو#</td>
+    </tr>
+    <tr>
+      <td>national_id</td>
+      <td>7b2b950d246b21b2c88874f16875bd7aef6c8c011d707f637db2f177b634e44e</td>
+      <td>0.90</td>
+      <td>کد ملی :**********</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>O-40412-1728</td>
+      <td>0.85</td>
+      <td>O-40412-1728</td>
+    </tr>
+    <tr>
+      <td>date_of_test_or_report</td>
+      <td>1404/12/09</td>
+      <td>0.90</td>
+      <td>تاریخ پذیرش1404/12/09</td>
+    </tr>
+    <tr>
+      <td>patient_name</td>
+      <td>نیلوفر انباز</td>
+      <td>0.88</td>
+      <td>انباز- خانم نیلوفر- دکتر25 : سن</td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td>female</td>
+      <td>0.85</td>
+      <td>انباز- خانم نیلوفر- دکتر25 : سن</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>25</td>
+      <td>0.85</td>
+      <td>انباز- خانم نیلوفر- دکتر25 : سن</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FBS</td>
+      <td>110</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Fasting blood sugar\n110\nmg/dL\n70-115\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:59 By 2</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>110</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>blood sugar 110 mg/dL 70-115 Photometr This answer is signed out by Dr.N.Adanvar Print On 1405/01/30-13:48:59 By 2</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd"># آزمایشگاه پاتوبیولوژی تاو#
+ تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20
+021-91012828
+O-40412-1728
+: پزشک
+ انباز- خانم نیلوفر- دکتر25 : سن
+شماره :
+نام :
+کد ملی :0023471026
+ - سالFemale
+: تاریخ پذیرش1404/12/09 - 14:12:48
+Test
+Result
+Biochemistry
+Unit
+Normal Range
+Flag
+Method
+Fasting blood sugar
+110
+mg/dL
+70-115
+Photometr
+This answer is signed out by Dr.N.Adanvar
+Print On 1405/01/30-13:48:59 By 2</pre></details></section><section style="background:#e8f5e9;padding:16px;margin:20px 0;border-radius:8px"><h2>7. 0024150010_14041209_O_00404121722.pdf</h2><p><b>Status:</b> extracted_good | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 958 | <b>Lab rows:</b> 22</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0007_0024150010_14041209_O_00404121722.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>آزمایشگاه پاتوبیولوژی تاو</td>
+      <td>0.70</td>
+      <td># آزمایشگاه پاتوبیولوژی تاو#</td>
+    </tr>
+    <tr>
+      <td>national_id</td>
+      <td>9fbdf80cbdfdd3843262589002d46203186a1c22c6e2db27107ba18e62b1f33f</td>
+      <td>0.90</td>
+      <td>کد ملی :**********</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>O-40412-1722</td>
+      <td>0.85</td>
+      <td>O-40412-1722</td>
+    </tr>
+    <tr>
+      <td>date_of_test_or_report</td>
+      <td>1404/12/09</td>
+      <td>0.90</td>
+      <td>تاریخ پذیرش1404/12/09</td>
+    </tr>
+    <tr>
+      <td>patient_name</td>
+      <td>مجید حسن کریمی</td>
+      <td>0.88</td>
+      <td>حسن کریمی- آقای مجید- دکتر26 : سن</td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td>male</td>
+      <td>0.85</td>
+      <td>حسن کریمی- آقای مجید- دکتر26 : سن</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>26</td>
+      <td>0.85</td>
+      <td>حسن کریمی- آقای مجید- دکتر26 : سن</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WBC</td>
+      <td>10.34</td>
+      <td>10^3/uL</td>
+      <td>3.5-10.5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>W.B.C\n10.34\n10^3/uL\n3.5-10.5</td>
+    </tr>
+    <tr>
+      <td>RBC</td>
+      <td>5.42</td>
+      <td>10^6/uL</td>
+      <td>4.32-5.72</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>R.B.C\n5.42\n10^6/uL\n4.32 - 5.72</td>
+    </tr>
+    <tr>
+      <td>HGB</td>
+      <td>15.3</td>
+      <td>g/dL</td>
+      <td>13.5-17.5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Hemoglobin\n15.3\ng/dL\n13.5 - 17.5</td>
+    </tr>
+    <tr>
+      <td>HCT</td>
+      <td>45.9</td>
+      <td>%</td>
+      <td>38.8-50</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>H.C.T\n45.9\n%\n38.8-50 %</td>
+    </tr>
+    <tr>
+      <td>MCV</td>
+      <td>84.7</td>
+      <td>fL</td>
+      <td>81.2-95.1</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.V\n84.7\nfL\n81.2-95.1 fl</td>
+    </tr>
+    <tr>
+      <td>MCH</td>
+      <td>28.2</td>
+      <td>pg</td>
+      <td>25.8-33.1</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.H\n28.2\npg\n25.8-33.1 pg</td>
+    </tr>
+    <tr>
+      <td>MCHC</td>
+      <td>33.3</td>
+      <td>g/dL</td>
+      <td>32-36</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>M.C.H.C\n33.3\ng/dL\n32-36 g/dl</td>
+    </tr>
+    <tr>
+      <td>PLT</td>
+      <td>302</td>
+      <td>10^3 /uL</td>
+      <td>150-450</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Platelets\n302\n10^3 /uL\n150 - 450</td>
+    </tr>
+    <tr>
+      <td>RDW-CV</td>
+      <td>13.8</td>
+      <td>%</td>
+      <td>11.8-15.6</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RDW-CV\n13.8\n%\n11.8-15.6 %</td>
+    </tr>
+    <tr>
+      <td>RDW-SD</td>
+      <td>39.9</td>
+      <td>fl</td>
+      <td>36-54</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RDW-SD\n39.9\nfl\n36 - 54</td>
+    </tr>
+    <tr>
+      <td>PDW</td>
+      <td>11.4</td>
+      <td>fL</td>
+      <td>9-17</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>PDW\n11.4\nfL\n9-17 fl</td>
+    </tr>
+    <tr>
+      <td>NEUT%</td>
+      <td>57.5</td>
+      <td>%</td>
+      <td>40-80</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Neutrophils\n57.5\n%\n40 - 80</td>
+    </tr>
+    <tr>
+      <td>LYMPH%</td>
+      <td>32.8</td>
+      <td>%</td>
+      <td>20-40</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Lymphocytes\n32.8\n%\n20 - 40</td>
+    </tr>
+    <tr>
+      <td>MONO%</td>
+      <td>7.4</td>
+      <td>%</td>
+      <td>4.1-12.4</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Monocytes\n7.4\n%\n4.1-12.4 %</td>
+    </tr>
+    <tr>
+      <td>EO%</td>
+      <td>2.1</td>
+      <td>%</td>
+      <td>0.4-6.7</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Eosinophils\n2.1\n%\n0.4-6.7 %</td>
+    </tr>
+    <tr>
+      <td>BASO%</td>
+      <td>0.2</td>
+      <td>%</td>
+      <td>0.3-1.4</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Basophils\n0.2\n%\n0.3-1.4 %</td>
+    </tr>
+    <tr>
+      <td>FBS</td>
+      <td>105</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Fasting blood sugar\n105\nmg/dL\n70-115\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>AST</td>
+      <td>20</td>
+      <td>U/L</td>
+      <td>&lt;37</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>SGOT(AST)\n20\nU/L\n&lt;37\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>ALT</td>
+      <td>22</td>
+      <td>U/L</td>
+      <td>&lt;40</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>SGPT(ALT)\n22\nU/L\n&lt; 40\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:16 By 2</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>15.3</td>
+      <td>g/dL</td>
+      <td>13.5-17.5</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Hemoglobin 15.3 g/dL 13.5 - 17.5</td>
+    </tr>
+    <tr>
+      <td>MCH</td>
+      <td>33.3</td>
+      <td>g/dL</td>
+      <td>32-36</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>M.C.H.C 33.3 g/dL 32-36 g/dl</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>105</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>blood sugar 105 mg/dL 70-115 Photometr</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd"># آزمایشگاه پاتوبیولوژی تاو#
+ تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20
+021-91012828
+O-40412-1722
+: پزشک
+ حسن کریمی- آقای مجید- دکتر26 : سن
+شماره :
+نام :
+کد ملی :0024150010
+ - سالMale
+: تاریخ پذیرش1404/12/09 - 14:11:44
+Test
+Result
+Hematology
+Unit
+Normal Range
+Flag
+Method
+W.B.C
+10.34
+10^3/uL
+3.5-10.5
+R.B.C
+5.42
+10^6/uL
+4.32 - 5.72
+Hemoglobin
+15.3
+g/dL
+13.5 - 17.5
+H.C.T
+45.9
+%
+38.8-50 %
+M.C.V
+84.7
+fL
+81.2-95.1 fl
+M.C.H
+28.2
+pg
+25.8-33.1 pg
+M.C.H.C
+33.3
+g/dL
+32-36 g/dl
+Platelets
+302
+10^3 /uL
+150 - 450
+RDW-CV
+13.8
+%
+11.8-15.6 %
+RDW-SD
+39.9
+fl
+36 - 54
+PDW
+11.4
+fL
+9-17 fl
+Neutrophils
+57.5
+%
+40 - 80
+Lymphocytes
+32.8
+%
+20 - 40
+Monocytes
+7.4
+%
+4.1-12.4 %
+Eosinophils
+2.1
+%
+0.4-6.7 %
+Basophils
+0.2
+%
+0.3-1.4 %
+Test
+Result
+Biochemistry
+Unit
+Normal Range
+Flag
+Method
+Fasting blood sugar
+105
+mg/dL
+70-115
+Photometr
+SGOT(AST)
+20
+U/L
+&lt;37
+Photometr
+SGPT(ALT)
+22
+U/L
+&lt; 40
+Photometr
+This answer is signed out by Dr.N.Adanvar
+Print On 1405/01/30-13:48:16 By 2</pre></details></section><section style="background:#e8f5e9;padding:16px;margin:20px 0;border-radius:8px"><h2>8. 0025631314_14041209_O_00404121726.pdf</h2><p><b>Status:</b> extracted_good | <b>Type:</b> lab | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 471 | <b>Lab rows:</b> 4</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0008_0025631314_14041209_O_00404121726.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>آزمایشگاه پاتوبیولوژی تاو</td>
+      <td>0.70</td>
+      <td># آزمایشگاه پاتوبیولوژی تاو#</td>
+    </tr>
+    <tr>
+      <td>national_id</td>
+      <td>e26aef3be603bdbe746d4b31dac73c903fa8a69e56620e440afaa6c36ca47332</td>
+      <td>0.90</td>
+      <td>کد ملی :**********</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>O-40412-1726</td>
+      <td>0.85</td>
+      <td>O-40412-1726</td>
+    </tr>
+    <tr>
+      <td>date_of_test_or_report</td>
+      <td>1404/12/09</td>
+      <td>0.90</td>
+      <td>تاریخ پذیرش1404/12/09</td>
+    </tr>
+    <tr>
+      <td>patient_name</td>
+      <td>سیدجواد میرعابدی</td>
+      <td>0.88</td>
+      <td>میرعابدی- آقای سیدجواد- دکتر21 : سن</td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td>male</td>
+      <td>0.85</td>
+      <td>میرعابدی- آقای سیدجواد- دکتر21 : سن</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>21</td>
+      <td>0.85</td>
+      <td>میرعابدی- آقای سیدجواد- دکتر21 : سن</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FBS</td>
+      <td>101</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Fasting blood sugar\n101\nmg/dL\n70-115\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>AST</td>
+      <td>18</td>
+      <td>U/L</td>
+      <td>&lt;37</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>SGOT(AST)\n18\nU/L\n&lt;37\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>ALT</td>
+      <td>14</td>
+      <td>U/L</td>
+      <td>&lt;40</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>SGPT(ALT)\n14\nU/L\n&lt; 40\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:48:45 By 2</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>101</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>blood sugar 101 mg/dL 70-115 Photometr</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd"># آزمایشگاه پاتوبیولوژی تاو#
+ تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20
+021-91012828
+O-40412-1726
+: پزشک
+ میرعابدی- آقای سیدجواد- دکتر21 : سن
+شماره :
+نام :
+کد ملی :0025631314
+ - سالMale
+: تاریخ پذیرش1404/12/09 - 14:12:29
+Test
+Result
+Biochemistry
+Unit
+Normal Range
+Flag
+Method
+Fasting blood sugar
+101
+mg/dL
+70-115
+Photometr
+SGOT(AST)
+18
+U/L
+&lt;37
+Photometr
+SGPT(ALT)
+14
+U/L
+&lt; 40
+Photometr
+This answer is signed out by Dr.N.Adanvar
+Print On 1405/01/30-13:48:45 By 2</pre></details></section><section style="background:#e8f5e9;padding:16px;margin:20px 0;border-radius:8px"><h2>9. 0025692283_14041209_O_00404121730.pdf</h2><p><b>Status:</b> extracted_good | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 468 | <b>Lab rows:</b> 4</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0009_0025692283_14041209_O_00404121730.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>آزمایشگاه پاتوبیولوژی تاو</td>
+      <td>0.70</td>
+      <td># آزمایشگاه پاتوبیولوژی تاو#</td>
+    </tr>
+    <tr>
+      <td>national_id</td>
+      <td>38299c368146feae42d0c657633d7906cc4ecfeda16d0b7f6cd31dea17ba87f6</td>
+      <td>0.90</td>
+      <td>کد ملی :**********</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>O-40412-1730</td>
+      <td>0.85</td>
+      <td>O-40412-1730</td>
+    </tr>
+    <tr>
+      <td>date_of_test_or_report</td>
+      <td>1404/12/09</td>
+      <td>0.90</td>
+      <td>تاریخ پذیرش1404/12/09</td>
+    </tr>
+    <tr>
+      <td>patient_name</td>
+      <td>حسنی شمس فلاح</td>
+      <td>0.88</td>
+      <td>شمس فلاح- خانم حسنی- دکتر21 : سن</td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td>female</td>
+      <td>0.85</td>
+      <td>شمس فلاح- خانم حسنی- دکتر21 : سن</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>21</td>
+      <td>0.85</td>
+      <td>شمس فلاح- خانم حسنی- دکتر21 : سن</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FBS</td>
+      <td>95</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Fasting blood sugar\n95\nmg/dL\n70-115\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>AST</td>
+      <td>14</td>
+      <td>U/L</td>
+      <td>&lt;31</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>SGOT(AST)\n14\nU/L\n&lt;31\nPhotometr</td>
+    </tr>
+    <tr>
+      <td>ALT</td>
+      <td>15</td>
+      <td>U/L</td>
+      <td>&lt;32</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>SGPT(ALT)\n15\nU/L\n&lt;32\nPhotometr\nThis answer is signed out by Dr.N.Adanvar\nPrint On 1405/01/30-13:49:13 By 2</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>95</td>
+      <td>mg/dL</td>
+      <td>70-115</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>blood sugar 95 mg/dL 70-115 Photometr</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd"># آزمایشگاه پاتوبیولوژی تاو#
+ تھران، شھرک غرب، بلوار دریا،نبش چھارراه قدس، پلاک20
+021-91012828
+O-40412-1730
+: پزشک
+ شمس فلاح- خانم حسنی- دکتر21 : سن
+شماره :
+نام :
+کد ملی :0025692283
+ - سالFemale
+: تاریخ پذیرش1404/12/09 - 14:13:07
+Test
+Result
+Biochemistry
+Unit
+Normal Range
+Flag
+Method
+Fasting blood sugar
+95
+mg/dL
+70-115
+Photometr
+SGOT(AST)
+14
+U/L
+&lt;31
+Photometr
+SGPT(ALT)
+15
+U/L
+&lt;32
+Photometr
+This answer is signed out by Dr.N.Adanvar
+Print On 1405/01/30-13:49:13 By 2</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>10. 20260427_181554.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 344 | <b>Lab rows:</b> 6</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0010_20260427_181554.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>1 7 آنالیز پزشکی آزمایشگاه</td>
+      <td>0.70</td>
+      <td>1 7 آنالیز پزشکی آزمایشگاه</td>
+    </tr>
+    <tr>
+      <td>doctor_name</td>
+      <td>ی آزمایشگاه</td>
+      <td>0.75</td>
+      <td>پزشکی آزمایشگاه</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WBC</td>
+      <td>5.1</td>
+      <td>NaN</td>
+      <td>4-1</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>WBC. 5.1 10°3/uL 4-1</td>
+    </tr>
+    <tr>
+      <td>NEUT%</td>
+      <td>55</td>
+      <td>%</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Neutrophils 55% |</td>
+    </tr>
+    <tr>
+      <td>RBC</td>
+      <td>4.60</td>
+      <td>NaN</td>
+      <td>44-54</td>
+      <td>rechecked</td>
+      <td>0.58</td>
+      <td>RBC. 4.60 40*6/uL 44-54</td>
+    </tr>
+    <tr>
+      <td>LYMPH%</td>
+      <td>38</td>
+      <td>%</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Lymphocytes 38% |</td>
+    </tr>
+    <tr>
+      <td>HGB</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>12-6</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>HB 5 148 5و‎ 12-6 _</td>
+    </tr>
+    <tr>
+      <td>MONO%</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Monocytes: a pg — 1</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">1 7 آنالیز پزشکی آزمایشگاه
+154 شماره - (مخبری) عستان متری 35 - کزی مر آباد جنت
+34392907 4392805- تلفن
+7 از 3 می Jet‏ سن: خازنی فرزانه خافم : کننده مراجعه تام Ge‏
+Hematology‏
+[Test Result Unit Reference Range Differential
+‘| WBC. 5.1 10°3/uL 4-1 Neutrophils 55%
+| RBC. 4.60 40*6/uL 44-54 Lymphocytes 38%
+| HB 5 148 5و‎ 12-6 _ Monocytes: a
+pg
+— 1</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>11. 20260427_181636.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 310 | <b>Lab rows:</b> 4</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0011_20260427_181636.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>4 153 شماره‎ HUT ی‎ پزش آزمایشگاه</td>
+      <td>0.70</td>
+      <td>4 153 شماره‎ HUT ی‎ پزش آزمایشگاه</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>Hormone</td>
+      <td>0.85</td>
+      <td>پذیرش\nHormone</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PT</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>052-21</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>pT مراجعه‎ تم 9-13 : شارهپذیرش Hormone es! Result Unit 5 Reference Range 13 102 Gil 052-21 |</td>
+    </tr>
+    <tr>
+      <td>TSH</td>
+      <td>0.98</td>
+      <td>NaN</td>
+      <td>0.30-0</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>TSH 0.98 ...نان‎ هه 0.30 -0 |</td>
+    </tr>
+    <tr>
+      <td>Free T4</td>
+      <td>082</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Free T4 weg ngidL ELISA 082 VES ’ __(231) | =</td>
+    </tr>
+    <tr>
+      <td>T4</td>
+      <td>082</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>T4 weg ngidL ELISA 082 VES ’ __(231) | =</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">4 153 شماره‎ HUT ی‎ پزش آزمایشگاه
+شهار‎ (مخبری)- علستان متری 35 - GF yo UT جنت‎
+2 شماره‎ | 5
+33392907-44492805 قلفن‎
+22 ن:‎
+See خازنی‎ فرژانه pT مراجعه‎ تم 9-13 : شارهپذیرش
+Hormone
+es! Result Unit 5 Reference Range
+13 102 Gil 052-21
+| TSH 0.98 ...نان‎ هه 0.30 -0
+| Free T4 weg ngidL ELISA 082
+VES
+’ __(231) |
+=</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>12. 20260427_181654.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 296 | <b>Lab rows:</b> 2</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0012_20260427_181654.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>153 شماره‎ HIT پزشکی‎ آزمایشگاه</td>
+      <td>0.70</td>
+      <td>153 شماره‎ HIT پزشکی‎ آزمایشگاه</td>
+    </tr>
+    <tr>
+      <td>doctor_name</td>
+      <td>ی‎ آزمایشگاه</td>
+      <td>0.75</td>
+      <td>پزشکی‎ آزمایشگاه</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WBC</td>
+      <td>8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>WBC. 8-10 |</td>
+    </tr>
+    <tr>
+      <td>Color</td>
+      <td>Yellow</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.66</td>
+      <td>شماره ‘Urine Analysis Imacroscopic j 754 Microscopic |Unne Analysis WBC. 8-10 | Color Yellow RBC مو‎ | Semi-Clear Epithelial Cells وه‎</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">“ {
+153 شماره‎ HIT پزشکی‎ آزمایشگاه
+3 WS 8) okie متری‎ 35 - مرکزی آباد جنت
+32392907 -44492805 ن‎
+73 05 تلفن‎
+(gaz: Je o خازنی‎ فرژانه اخانم کنده ol 29-13 پذیرش:‎ شماره
+‘Urine Analysis
+Imacroscopic
+j 754 Microscopic
+|Unne Analysis WBC. 8-10
+| Color Yellow RBC مو‎
+| Semi-Clear Epithelial Cells وه‎</pre></details></section><section style="background:#ffebee;padding:16px;margin:20px 0;border-radius:8px"><h2>13. 20260427_181713.jpg</h2><p><b>Status:</b> ocr_unreliable_needs_reupload | <b>Type:</b> lab | <b>OCR text quality:</b> gibberish_text | <b>OCR len:</b> 199 | <b>Lab rows:</b> 2</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0013_20260427_181713.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>HET‏ پزشکی آزمایشگاه</td>
+      <td>0.70</td>
+      <td>HET‏ پزشکی آزمایشگاه</td>
+    </tr>
+    <tr>
+      <td>doctor_name</td>
+      <td>ی آزمایشگاه</td>
+      <td>0.75</td>
+      <td>پزشکی آزمایشگاه</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HCT</td>
+      <td>153</td>
+      <td>NaN</td>
+      <td>33392907-23492805</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>HET‏ پزشکی آزمایشگاه 153 شماره )- (مخبری گلستان متری 35 - رکزی م OUT‏ جنت 33392907-23492805 تلفن AAT‏ پذیرش (شماره خازنی فرزانه زخانم کننده eel‏ نام 0 oe (5 Result No growth after 48 hrs. رس aa</td>
+    </tr>
+    <tr>
+      <td>Urine Culture</td>
+      <td>No growth after 48 hrs.</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.88</td>
+      <td>3492805 تلفن AAT‏ پذیرش (شماره خازنی فرزانه زخانم کننده eel‏ نام 0 oe (5 Result No growth after 48 hrs. رس aa</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">4
+321
+HET‏ پزشکی آزمایشگاه
+153 شماره )-
+(مخبری گلستان متری 35 - رکزی م OUT‏ جنت
+33392907-23492805 تلفن
+AAT‏ پذیرش (شماره
+خازنی فرزانه زخانم کننده eel‏ نام
+0 oe
+(5
+Result
+No growth after 48 hrs.
+رس
+aa</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>14. 20260427_181919.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 437 | <b>Lab rows:</b> 6</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0014_20260427_181919.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>آنالیز پزشکی آزمایشگاه</td>
+      <td>0.70</td>
+      <td>آنالیز پزشکی آزمایشگاه</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>09-3</td>
+      <td>0.85</td>
+      <td>پذیرش\n09-3</td>
+    </tr>
+    <tr>
+      <td>doctor_name</td>
+      <td>ی آزمایشگاه</td>
+      <td>0.75</td>
+      <td>پزشکی آزمایشگاه</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Urea</td>
+      <td>31</td>
+      <td>mg/dL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Urea\n31\nmg/dL.</td>
+    </tr>
+    <tr>
+      <td>Creatinine</td>
+      <td>0.78</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Creatininee\n0.78\nmg/d\n25</td>
+    </tr>
+    <tr>
+      <td>Uric Acid</td>
+      <td>197</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Uric Acid\nmala\nak\n197</td>
+    </tr>
+    <tr>
+      <td>Total Cholesterol</td>
+      <td>93</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Total Cholesterol\nrderli\n93</td>
+    </tr>
+    <tr>
+      <td>FBS</td>
+      <td>101</td>
+      <td>NaN</td>
+      <td>70-0</td>
+      <td>rechecked</td>
+      <td>0.58</td>
+      <td>Glucose‏ 101* 70-0 mg/d</td>
+    </tr>
+    <tr>
+      <td>Urine Glucose</td>
+      <td>101</td>
+      <td>NaN</td>
+      <td>70-0</td>
+      <td>rechecked</td>
+      <td>0.58</td>
+      <td>Glucose‏ 101* 70-0 mg/d</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">آنالیز پزشکی آزمایشگاه
+153 شماره )-
+(مخبری کلستان متری 35 - کزی مر OUT‏ جنت
+33492 907-34492805 تلفن
+لا Ses‏
+آقازاده دکتر خانم کار :سر معالج پزشک
+1304/09/01 : تاریخ پذیرش
+09-3
+ص17
+مار
+فوانهخازنی خانم : ند برد
+سال 72 سن:
+Biochemistry
+Test
+Result
+Reference Range
+Unit
+Fa:
+و1 Blood Glucose‏
+101*
+70-0
+mg/d
+Urea
+31
+mg/dL.
+Creatininee
+0.78
+mg/d
+25
+Uric Acid
+mala
+ak
+197
+Total Cholesterol
+rderli
+93
+Triglycerides
+HDL Cholesterol
+LDL Cholesterol</pre></details></section><section style="background:#e8f5e9;padding:16px;margin:20px 0;border-radius:8px"><h2>15. ۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.jpg</h2><p><b>Status:</b> extracted_good | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 1586 | <b>Lab rows:</b> 27</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0015_۲۰۲۶۰۴۲۵_۲۲۰۷۰۰.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>Nobin Specialized and</td>
+      <td>0.70</td>
+      <td>Nobin Specialized and</td>
+    </tr>
+    <tr>
+      <td>national_id</td>
+      <td>bd6bf4f2aa616c5699a50393e5e1c568d191c74d3d524a12cb8aae0e66073aa8</td>
+      <td>0.90</td>
+      <td>**********</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>138239</td>
+      <td>0.85</td>
+      <td>پذیرش\n138239</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HGB</td>
+      <td>12.5</td>
+      <td>g/dL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Hb\n12.5 g/dL.\n1</td>
+    </tr>
+    <tr>
+      <td>HCT</td>
+      <td>38.5</td>
+      <td>%</td>
+      <td>33-54</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Het\n38.5 %\n33-54</td>
+    </tr>
+    <tr>
+      <td>MCV</td>
+      <td>87.1</td>
+      <td>fL</td>
+      <td>80-100</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>MCV\n87.1 fL\n80-100\ni</td>
+    </tr>
+    <tr>
+      <td>MCH</td>
+      <td>283</td>
+      <td>pg</td>
+      <td>5-33.5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>MCH\n283 pg\n26,5-33.5</td>
+    </tr>
+    <tr>
+      <td>MCHC</td>
+      <td>31.535</td>
+      <td>g/dL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>MCHC\n31.535\ng/dL</td>
+    </tr>
+    <tr>
+      <td>RDW-CV</td>
+      <td>13.6</td>
+      <td>%</td>
+      <td>115-145</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RDW.\n13.6 %\n115-145</td>
+    </tr>
+    <tr>
+      <td>PLT</td>
+      <td>130</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Platelet\n130-400,\n272 10°/pL\nDifferential</td>
+    </tr>
+    <tr>
+      <td>NEUT%</td>
+      <td>40</td>
+      <td>%</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Neutrophil\n40-80\n%o</td>
+    </tr>
+    <tr>
+      <td>LYMPH%</td>
+      <td>20</td>
+      <td>%</td>
+      <td>0-51.1</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Lympho\n20,0-51.1\n37 %</td>
+    </tr>
+    <tr>
+      <td>MONO%</td>
+      <td>2</td>
+      <td>%</td>
+      <td>0-5</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Monocyte\n2-10\n2%\n0-5</td>
+    </tr>
+    <tr>
+      <td>RBC</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RBC\n2\n475\n1\n04\n01025\n034\nرن</td>
+    </tr>
+    <tr>
+      <td>HGB</td>
+      <td>25</td>
+      <td>NaN</td>
+      <td>7-81</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Hb\n25-7-81 وم 3\n12.5\n136\n131\n128\n112\n01023</td>
+    </tr>
+    <tr>
+      <td>FBS</td>
+      <td>45</td>
+      <td>%</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Fasting Blood Glucose\n45-65\n472 %</td>
+    </tr>
+    <tr>
+      <td>HbA1c</td>
+      <td>20</td>
+      <td>mg/dL</td>
+      <td>7.0-18.6</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Hemoglobin A1c\n20-SOyears:7.0-18.6\n11.5 mg/dL</td>
+    </tr>
+    <tr>
+      <td>BUN</td>
+      <td>06</td>
+      <td>mg/dL</td>
+      <td>&lt;200</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Blood Urea nitrogen\n06-13\n0.76 mg/dL\nتحت\n—\n(Creatininee\n=\n‘Normal&lt;200</td>
+    </tr>
+    <tr>
+      <td>Total Cholesterol</td>
+      <td>240</td>
+      <td>NaN</td>
+      <td>&lt;200</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Total Cholesterol\n“High?240.\nوی\nas\nri\npits\nhte\nNormal &lt;200</td>
+    </tr>
+    <tr>
+      <td>Triglycerides</td>
+      <td>&gt;400</td>
+      <td>mg/dL</td>
+      <td>&gt;60</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Triglycerides\nHigh &gt;400\nLow risk women&gt;60\n59.5 mg/dL\nHigh risk women:&lt;45</td>
+    </tr>
+    <tr>
+      <td>HDL</td>
+      <td>45</td>
+      <td>NaN</td>
+      <td>35-50</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>HDL-Cholesterol\nNormal risk women:45-60\nNormal risk men:35-50\nLow risk men:&gt;50\nHigh risk men-&lt;3S\nnormal&lt;=130\n101 mg/dL\nBorder Line;130-160</td>
+    </tr>
+    <tr>
+      <td>LDL</td>
+      <td>&gt;160</td>
+      <td>U/L</td>
+      <td>NaN</td>
+      <td>Low</td>
+      <td>0.82</td>
+      <td>LDL\nabnormal&gt;160\nFemale: Up to 38\n18.8 U/L\non\nان\nپا</td>
+    </tr>
+    <tr>
+      <td>AST</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>AST(SGOT)\nth\n5\n1\nI\nاز\ni\nPs</td>
+    </tr>
+    <tr>
+      <td>WBC</td>
+      <td>73</td>
+      <td>NaN</td>
+      <td>35-0</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>WBC 73 10/32 35-0 442 Million/pL 3.6461</td>
+    </tr>
+    <tr>
+      <td>Urine Glucose</td>
+      <td>45</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.66</td>
+      <td>Based on Sex/Age) Method Result Risk Test Adult : 70-115 91 mg/dL Fasting Blood Glucose 45-65 472 % Hemoglobin A1c 20-SOyears:7.0-18.6 11.5 mg/dL Blood Urea nitrogen 06-1</td>
+    </tr>
+    <tr>
+      <td>HGB</td>
+      <td>1</td>
+      <td>mg/dL</td>
+      <td>7.0-18.6</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Hemoglobin A1c 20-SOyears:7.0-18.6 11.5 mg/dL</td>
+    </tr>
+    <tr>
+      <td>Blood/Hb</td>
+      <td>1</td>
+      <td>mg/dL</td>
+      <td>7.0-18.6</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Hemoglobin A1c 20-SOyears:7.0-18.6 11.5 mg/dL</td>
+    </tr>
+    <tr>
+      <td>Urea</td>
+      <td>06</td>
+      <td>mg/dL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Urea nitrogen 06-13 0.76 mg/dL تحت — (</td>
+    </tr>
+    <tr>
+      <td>Creatinine</td>
+      <td>&lt;200</td>
+      <td>NaN</td>
+      <td>200-240</td>
+      <td>rechecked</td>
+      <td>0.58</td>
+      <td>Creatininee = ‘Normal&lt;200 0 a 202* Bordreline 200-240</td>
+    </tr>
+    <tr>
+      <td>Total Cholesterol</td>
+      <td>45</td>
+      <td>NaN</td>
+      <td>35-50</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Cholesterol Normal risk women:45-60 Normal risk men:35-50 Low risk men:&gt;50 High risk men-&lt;3S normal&lt;=130 101 mg/dL Border Line;130-160</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">ee تس‎
+1
+[at
+—
+i!
+Nobin Specialized and
+Ubspecialized Laboratory
+نوبین تخصصی .5
+فوز و تخصصی ایشکاه
+© 5
+lard. Dr. Héssabi Street, before Imam
+امام خیایان نیش حسایی. دکتر خیایان ارد.
+jomemi Strect
+©21-65596180 - 0216552237
+- 2165596180 7
+9
++ a
+TVAYTFPAAA Loss
+مهرابی علیرضا دکتر آقای 0 نام پزشک
+اولیاتی معصومه سیده خانم + نام بیمار
+سال 9
+1304/10/23 0 تاریخ پذیرش
+138239 0 پذیرش
+از 1 صفحه:
+Test
+Risk
+Result
+Method
+Reference( Based on Sex/Age)
+‘Complete Blood Count
+CBC
+‘WBC
+73 10/32
+35-0
+442 Million/pL
+3.6461
+Hb
+12.5 g/dL.
+1
+Het
+38.5 %
+33-54
+MCV
+87.1 fL
+80-100
+i
+MCH
+283 pg
+26,5-33.5
+MCHC
+31.535
+g/dL
+RDW.
+13.6 %
+115-145
+Platelet
+130-400,
+272 10°/pL
+Differential
+Neutrophil
+40-80
+%o
+Lympho
+20,0-51.1
+37 %
+Monocyte
+2-10
+2%
+0-5
+Eosinophil
+%
+RBC
+2
+475
+1
+04
+01025
+034
+رن
+003
+1
+0314
+03/11/04
+102
+03/11/04
+02/07/12
+Platelet
+Hb
+25-7-81 وم 3
+12.5
+136
+131
+128
+112
+01023
+04
+01
+011025
+0014
+&quot;011
+03/11/04
+207/12
+03/11/04
+02/07/12
+serological
+Biochemistry &amp;
+Reference( Based on Sex/Age)
+Method
+Result
+Risk
+Test
+Adult : 70-115
+91 mg/dL
+Fasting Blood Glucose
+45-65
+472 %
+Hemoglobin A1c
+20-SOyears:7.0-18.6
+11.5 mg/dL
+Blood Urea nitrogen
+06-13
+0.76 mg/dL
+تحت
+—
+(Creatininee
+=
+‘Normal&lt;200
+0
+a
+202*
+Bordreline 200-240
+Total Cholesterol
+“High?240.
+وی
+as
+ri
+pits
+hte
+Normal &lt;200
+83 7
+Borrderline 200-400
+Triglycerides
+High &gt;400
+Low risk women&gt;60
+59.5 mg/dL
+High risk women:&lt;45
+HDL-Cholesterol
+Normal risk women:45-60
+Normal risk men:35-50
+Low risk men:&gt;50
+High risk men-&lt;3S
+normal&lt;=130
+101 mg/dL
+Border Line;130-160
+LDL
+abnormal&gt;160
+Female: Up to 38
+18.8 U/L
+on
+ان
+پا
+AST(SGOT)
+th
+5
+1
+I
+از
+i
+Ps
+1
+mens g tant</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>16. ۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 1210 | <b>Lab rows:</b> 15</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0016_۲۰۲۶۰۴۲۸_۱۵۰۰۳۶.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>center_name</td>
+      <td>وحدت درمانگاه آزمایشگاه</td>
+      <td>0.70</td>
+      <td>وحدت درمانگاه آزمایشگاه</td>
+    </tr>
+    <tr>
+      <td>tracking_number</td>
+      <td>1302</td>
+      <td>0.85</td>
+      <td>شماره\n1302</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RBC</td>
+      <td>42</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RBC\nau\nMIC.\nwoos\n42-4</td>
+    </tr>
+    <tr>
+      <td>LYMPH%</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Lymphocyte\nas\nAd\n10\n12</td>
+    </tr>
+    <tr>
+      <td>HCT</td>
+      <td>6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Hematocrit\n“6\nane\n17\n6\nss\nMcy</td>
+    </tr>
+    <tr>
+      <td>MONO%</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Monocyte\nکه\nF\n9\n2\nos\nMe\n2</td>
+    </tr>
+    <tr>
+      <td>PLT</td>
+      <td>26</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Platelet\n26\nRDN\nLs-145\nAbssiete\nRete\nConcentrates\nLymph. هی‎</td>
+    </tr>
+    <tr>
+      <td>PT Control</td>
+      <td>10</td>
+      <td>Ratio</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>PT Control\n10\nSee\n30\nDR\nRatio\nActivat\nPrr</td>
+    </tr>
+    <tr>
+      <td>Urea</td>
+      <td>50</td>
+      <td>NaN</td>
+      <td>19-44</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Urea\na\nMen: &gt; 50 years: 19-44\n&lt; 50 years: 18-55\nWomen: &gt; $0 years: 18-40.\n&gt; 50 yenrs: 21\na</td>
+    </tr>
+    <tr>
+      <td>Creatinine</td>
+      <td>095</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Creatininee\n095</td>
+    </tr>
+    <tr>
+      <td>Uric Acid</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Uric Acid\ngilt\n0\nmgiat</td>
+    </tr>
+    <tr>
+      <td>Total Cholesterol</td>
+      <td>23</td>
+      <td>mg/dl</td>
+      <td>00-240</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Cholesterol\n23 61\n159\nmg/dl\nNort\n200\nPro\n00 - 240,</td>
+    </tr>
+    <tr>
+      <td>Triglycerides</td>
+      <td>161</td>
+      <td>NaN</td>
+      <td>&lt;200</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Triglycerides\n161\nmg/d\nN\n$&lt;200\nPrognose : 200. 400\nEDL\n‘Abnormal : &gt; 400,</td>
+    </tr>
+    <tr>
+      <td>ESR</td>
+      <td>20</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Erythrocyte Sediment Rate(thr) Methes Unit nave 20 0 ned by Automated C counter KX21 Nt 7 تا 007 هنم اه 1 ethos Unit Reference Range EnuthrembiaTimePD Pr 130 See 19</td>
+    </tr>
+    <tr>
+      <td>PT</td>
+      <td>10</td>
+      <td>Ratio</td>
+      <td>25-42</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>PT Control 10 See 30 DR Ratio Activat Prr 28 See 25-42 = |: Biochemistry رس a iz Risk سس Method</td>
+    </tr>
+    <tr>
+      <td>FBS</td>
+      <td>102</td>
+      <td>NaN</td>
+      <td>70-110</td>
+      <td>rechecked</td>
+      <td>0.58</td>
+      <td>FBS) : ia 102* a 70-110</td>
+    </tr>
+    <tr>
+      <td>Total Cholesterol</td>
+      <td>45</td>
+      <td>NaN</td>
+      <td>&lt;130</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Cholesterol Direct) oo High risk : &gt; 45 mpd Norm :&lt; 130 30 - 160 Doubsful ‘Abnormal &gt;160 —-</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">وحدت درمانگاه آزمایشگاه
+4
+وحدت. شهرک - کرج
+3
+پلاک1 - فربی سوم خیابان
+3
+39616016 تلفی:
+1
+32239 1 یه شماره
+1302/17072 برش‎ پذ Ba
+#سال
+من
+Pb ATS آقای‎ lie | معالج‎ پزحک
+من
+nov
+اچشمامی تمین | یمه نام
+برش
+131
+عفد
+-
+at
+Complete
+=
+3
+Reh
+mee Val
+0
+2
+i
+7
+2
+wae
+rj
+300 11.0
+رس
+cm
+fd
+its
+io
+RBC
+au
+MIC.
+woos
+42-4
+Hemoglobin
+mat
+Lymphocyte
+as
+Ad
+10
+12
+Hematocrit
+“6
+ane
+17
+6
+ss
+Mcy
+Monocyte
+که
+F
+9
+2
+os
+Me
+2
+21
+Eoslnophi
+oy
+2
+Pe
+2
+CHE
+Me
+2
+%6
+000.Cumm 140 - 480
+Platelet
+26
+RDN
+Ls-145
+Abssiete
+Rete
+Concentrates
+Lymph. هی‎
+اما
+Risk
+Erythrocyte Sediment Rate(thr)
+Methes
+Unit
+nave
+20
+0
+ned by Automated C
+counter KX21 Nt
+7
+تا
+007
+هنم
+اه
+1
+ethos
+Unit
+Reference Range
+EnuthrembiaTimePD
+Pr
+130
+See
+19
+PT Control
+10
+See
+30
+DR
+Ratio
+Activat
+Prr
+28
+See
+25-42
+=
+|: Biochemistry
+رس
+a
+iz
+Risk
+سس
+Method
+Fasting blood sugar (FBS)
+:
+ia
+102*
+a
+70-110
+Urea
+a
+Men: &gt; 50 years: 19-44
+&lt; 50 years: 18-55
+Women: &gt; $0 years: 18-40.
+&gt; 50 yenrs: 21
+a
+Creatininee
+095
+Uric Acid
+gilt
+0
+mgiat
+Cholesterol
+23 61
+159
+mg/dl
+Nort
+200
+Pro
+00 - 240,
+Abnormal :&gt; 240
+Triglycerides
+161
+mg/d
+N
+$&lt;200
+Prognose : 200. 400
+EDL
+‘Abnormal : &gt; 400,
+39
+mg/d
+Low ris
+LDL - Cholesterol Direct)
+oo
+High risk : &gt; 45
+mpd
+Norm :&lt; 130
+30 - 160
+Doubsful
+‘Abnormal
+&gt;160
+—-</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>17. ۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> unknown_medical | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 1147 | <b>Lab rows:</b> 1</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0017_۲۰۲۶۰۴۲۸_۱۵۰۰۵۱.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><p><em>No rows.</em></p></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Iron</td>
+      <td>6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>fe Tet rasag moe reer | earn anty ” +A teem era » 6 vewe | Atatioe Phevponee (417) ws as 4 " arebie o ow ery smremattnret} “ one tpmes leat es . Sn tates ot ha Berdeeten 47 4a wey ae nL eerste peti Aud nan TAC</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">* set Mr 7 a
+c ay . so
+ws oa,
+‘ - wk enc :
+Arne ght pp oihebele,t &lt;_&lt;&quot;
+- a6 .
+See eh ot ree ed eee tak OF oat T .
+a me 2 oe ye rece nee
+ON Ae gn ade ear
+beset oe ot me trirees
+BIDS chemi ine \
+rateable rf - dened :
+: coment
+i See oe
+Recon heen “ rn foam 4h aa H
+woot 1
+: Sie et
+i peutae are :
+papers’
+van ” ~~ on
+(ee ory we some
+everson “ we dean
+[Peeters 1 —t as
+eines ne west ete
+ee Nowe ot ” ~~ rite
+| Few tone eating perp wa ~ vee
+fe Tet rasag moe reer
+| earn anty ” +A teem
+era » 6 vewe
+| Atatioe Phevponee (417) ws as 4
+&quot; arebie o ow ery
+smremattnret} “ one tpmes
+leat es . Sn tates ot ha
+Berdeeten 47 4a
+wey ae
+nL eerste peti Aud nan TAC Be tee
+— ert ae Sree tne ree
+Mou Lae tame (ae Pai Fouamaw Auras Re Nana tomo
+i x, Lili Tyg i een
+7” Sieh det ett fae Mederine Banas, :
+_— ry Mean teat Mate 18 380
+Famete. :
+Ye 0e poset tes ’
+sen arent ;
+intone ar
+O14 tore lt foe ‘
+Wi apt et ene tate ”
+. tebe A sath tree 8 8 8
+chal FD pear iee, a
+fill 64 ewan TF 4
+} Dern tn pour te at
+Semen 00d paced vranareees
+Pate ond sal bal nw Leal
+vee ue ches a ame
+; | Ae ee hated eV EAL ALD: nance,
+ana
+v
+|
+a ’ Pe pene ee reer yeep rere i
+boo eewy {on , fy * a</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>18. ۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> good_text | <b>OCR len:</b> 1015 | <b>Lab rows:</b> 8</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0018_۲۰۲۶۰۴۲۸_۱۵۰۱۰۶.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tracking_number</td>
+      <td>igh</td>
+      <td>0.85</td>
+      <td>شماره\nigh</td>
+    </tr>
+  </tbody>
+</table></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Free T4</td>
+      <td>17</td>
+      <td>NaN</td>
+      <td>16-30</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Free T4\n17\nFIA مس‎\ngilt\nofnot tot dny yaad\nUnfnnt S08 days Wald\nait 16-30 day as\nUnfanc Iota</td>
+    </tr>
+    <tr>
+      <td>Color</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>Color\nYellow\nwane\nApp\nranee\nClear\nRue\n1</td>
+    </tr>
+    <tr>
+      <td>Protein</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>protein (CR) ‘Method ale Reference Range seat 24 1 1 ws | dist | TH iodothyra ‘ewe فلا سا eT) اسر دای 7 WAI; HA 1 18 nwt Go Yours! 48194 iN avian 30 1" 19 Yours (08 11 | 80 Yours (6 ‘| ‘</td>
+    </tr>
+    <tr>
+      <td>T4</td>
+      <td>80</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>Thyroxine Stimulating 80 Yours 4 3 1 Day = 29 Daye 0:76 one un HHA HLA on Moun 1 Years ns 82 Senta 14 Vents 061 6.9 Mul 46.39</td>
+    </tr>
+    <tr>
+      <td>T4</td>
+      <td>17</td>
+      <td>NaN</td>
+      <td>16-30</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>T4 17 FIA مس‎ gilt ofnot tot dny yaad Unfnnt S08 days Wald ait 16-30 day as Unfanc Iota wouthit 119 Ye 30 0 1 Foucen| AnibodyEL.PA) instument {i this Lab Hormone ess performed هار1‎ Links acrosconle Mlceasconic</td>
+    </tr>
+    <tr>
+      <td>Color</td>
+      <td>Yellow</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.66</td>
+      <td>instument {i this Lab Hormone ess performed هار1‎ Links acrosconle Mlceasconic Color Yellow wane App ranee Clear Rue 1 Sp, Gravity 1021 Epithe 7 24 PH Acid acterla Look at</td>
+    </tr>
+    <tr>
+      <td>Protein</td>
+      <td>Negative</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.66</td>
+      <td>ranee Clear Rue 1 Sp, Gravity 1021 Epithe 7 24 PH Acid acterla Look at eutturw Protein Negative Mucus Not seon Glucose Negative Cast Lh Not seen Bilirubin Ne ive Crystal Urobi</td>
+    </tr>
+    <tr>
+      <td>Urine Glucose</td>
+      <td>Negative</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.66</td>
+      <td>021 Epithe 7 24 PH Acid acterla Look at eutturw Protein Negative Mucus Not seon Glucose Negative Cast Lh Not seen Bilirubin Ne ive Crystal Urobilinogen Not seen Normal Ketone N</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">وحدت درمالگاه گام
+زماپش
+ree.
+ITSP pap
+تین
+Cot myst
+5 سوم خیاپان
+ین شماره
+igh
+وخ yy‏
+13
+03137
+:
+&quot;
+دکذر آفای tse‏ ماج
+برش ی تار
+=
+wy
+Ue
+0
+7
+hoe
+=i
+سس
+—
+Alaa
+om
+Soil
+0
+00
+jae
+111/3
+hh
+esi
+6
+Reactive protein (CR)
+‘Method
+ale
+Reference Range
+seat
+24
+1
+1
+ws
+| dist
+| TH iodothyra
+‘ewe
+فلا
+سا
+eT)
+اسر دای
+7 WAI; HA
+1
+18
+nwt
+Go
+Yours! 48194
+iN
+avian
+30
+1&quot;
+19 Yours (08
+11
+|
+80 Yours (6
+‘|
+‘Thyroxine Stimulating
+80 Yours 4
+3
+1 Day = 29 Daye 0:76
+one
+un
+HHA HLA
+on
+Moun
+1 Years ns
+82
+Senta 14 Vents 061
+6.9
+Mul 46.39
+Free T4
+17
+FIA مس‎
+gilt
+ofnot tot dny yaad
+Unfnnt S08 days Wald
+ait 16-30 day as
+Unfanc Iota
+wouthit
+119 Ye
+30
+0
+1 Foucen| AnibodyEL.PA) instument
+{i this Lab Hormone ess performed هار1‎ Links
+acrosconle
+Mlceasconic
+Color
+Yellow
+wane
+App
+ranee
+Clear
+Rue
+1
+Sp, Gravity
+1021
+Epithe
+7
+24
+PH
+Acid
+acterla
+Look at eutturw
+Protein
+Negative
+Mucus
+Not seon
+Glucose
+Negative
+Cast Lh
+Not seen
+Bilirubin
+Ne
+ive
+Crystal
+Urobilinogen
+Not seen
+Normal
+Ketone
+Neative
+Nitrite
+Newative
+lemoglobin
+Newutive
+Blood
+Negative
+=
+=</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>19. ۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 536 | <b>Lab rows:</b> 1</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0019_۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><p><em>No rows.</em></p></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ALT</td>
+      <td>47</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>alt al om Ac a f47. ONE eu Pans ete 3 vee ne 4 wey 32 on وه ره if oy ً و ی ی qe RAS s ety vee wa £4 x oa fee pe ی wk 11 Awa) 3S ae he ws ie PFN 1 ant arn مت کت ~ وحدت درمانگاه oft lesT‏ rie, 1 ووم 13034 3661601</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">alt al
+om
+Ac
+a f47.
+ONE
+eu
+Pans
+ete
+3
+vee
+ne
+4
+wey
+32
+on
+وه
+ره
+if
+oy
+ً
+و
+ی
+ی
+qe
+RAS
+s
+ety
+vee
+wa
+£4
+x
+oa
+fee
+pe
+ی
+wk
+11
+Awa)
+3S
+ae
+he
+ws
+ie
+PFN
+1
+ant
+arn
+مت
+کت
+~
+وحدت درمانگاه oft lesT‏
+rie,
+1 ووم 13034 36616016- تلفن:
+NK‏ غربی- سوم غیابان وحدت- شهرگ کرج- آدرس:
+22239 : پیمه شماره
+:17 پذدیرش تاریخ
+93-0
+3
+معمودیان زهوا خانم : لام
+-6سال
+ولیئی دکتر آقای lise: alan‏ پزشک
+on
+89-57 :شریذپ شماره‎
+اجتماعی gall‏ بیمه تام
+از 4 ante‏
+9
+1111/55
+‘Cutrore :
+No bacterin growth after 48 brs,
+LabDirector : Dr.A.Mohtashem,MD,AP,CP.
+=
+©
+زو ار
+=
+SS
+55</pre></details></section><section style="background:#fff8e1;padding:16px;margin:20px 0;border-radius:8px"><h2>20. ۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.jpg</h2><p><b>Status:</b> needs_manual_review | <b>Type:</b> lab | <b>OCR text quality:</b> usable_noisy_text | <b>OCR len:</b> 587 | <b>Lab rows:</b> 4</p><details open><summary><b>Source preview</b></summary><img src="../../notebook_outputs/selected_samples_v6/source_previews/0020_۲۰۲۶۰۴۲۸_۱۵۰۲۲۸.png" style="max-width:700px;border:1px solid #ddd"/></details><details open><summary><b>Common fields</b></summary><p><em>No rows.</em></p></details><details open><summary><b>Lab / extracted rows</b></summary><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>field_name</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>reference_range</th>
+      <th>flag</th>
+      <th>confidence</th>
+      <th>source_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PLT</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>PLT\nZe\nلا\n1\ntf\n2\nsel\nvi Za</td>
+    </tr>
+    <tr>
+      <td>RBC</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.82</td>
+      <td>RBC\nis\n7\n#4\n77\ncA)\nZa\n2</td>
+    </tr>
+    <tr>
+      <td>NEUT%</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>NEUT% 2 gee 7 6x37 HL Lyne 7 bad wh A 109 اهر 12 MxD# iA te 4, of x07 HL</td>
+    </tr>
+    <tr>
+      <td>NEUT#</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.58</td>
+      <td>NEUT# 2 EY, 7 GA i</td>
+    </tr>
+  </tbody>
+</table></details><details><summary><b>Exact extracted text</b></summary><pre style="white-space:pre-wrap;background:white;padding:10px;border:1px solid #ddd">Se *
+i
+A“?
+1
+a
+ee
+es
+a
+3
+7
+7
+9
+7
+oS
+5
+oe
+ید
+7
+=
+7
+Orly ارت‎
+At
+Ee.
+3
+we
+us
+ea
+oo.
+aL
+9و
+erent
+e
+a
+4.84%
+eee
+7d
+14
+a)
+RE
+i
+46
+da.
+Ning
+Stl
+83
+7
+3
+cy
+1
+37
+Poort
+3964x0974
+y
+PLT
+Ze
+لا
+1
+tf
+2
+sel
+vi Za
+7
+2
+3
+27
+=
+ly
+2
+ae
+GA oe,
+TLE
+Led
+GE
+مت
+34
+37.67
+79
+12
+3
+4
+71
+fy
+NEUT% 2
+gee
+7
+6x37 HL
+Lyne
+7
+bad
+wh
+A
+109 اهر
+12
+MxD#
+iA
+te 4,
+of
+x07 HL
+NEUT# 2
+EY,
+7
+GA
+i
+RBC
+is
+7
+#4
+77
+cA)
+Za
+2
+oe.
+غ
+rig
+7
+اب
+7
+2
+ip
+200
+4
+7
+12
+زر
+at
+7
+74
+7
+Ye
+Uy
+444
+RDW_SD
+40.1fL
+RDW_CU
+12.9%
+Zi
+i Levan
+71
+RET
+4
+2
+46 $4
+Rs
+Wes
+7
+15
+7
+4)
+زر
+7
+3
+ue
+17
+1
+Af
+Pow
+190
+tf
+Ay
+eet
+MPU
+10.74L
+0
+1
+4-18
+a
+7
++ 0
+9
+پم
+4
+VE
+2
+/
+Fe</pre></details></section></body></html>

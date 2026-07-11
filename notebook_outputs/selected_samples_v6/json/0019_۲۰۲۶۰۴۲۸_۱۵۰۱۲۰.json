@@ -1,0 +1,223 @@
+{
+  "document": {
+    "index": 19,
+    "filename": "۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.jpg",
+    "source_relative_path": "samples/selected samples/۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.jpg",
+    "file_ext": ".jpg",
+    "mime_type": "image/jpeg",
+    "file_size_kb": 53.32,
+    "status": "needs_manual_review",
+    "warnings": [
+      "low_structured_data"
+    ],
+    "document_type": "lab",
+    "document_type_confidence": 0.4,
+    "relevance_score": 0.75,
+    "medical_hits": [
+      "lab",
+      "درمانگاه",
+      "پزشک"
+    ],
+    "source_preview": "notebook_outputs/selected_samples_v6/source_previews/0019_۲۰۲۶۰۴۲۸_۱۵۰۱۲۰.png"
+  },
+  "quality": {
+    "status": "good_quality",
+    "overall_quality_score": 0.849,
+    "issues": [],
+    "width": 765,
+    "height": 1020,
+    "brightness_mean": 135.0,
+    "contrast_std": 49.81,
+    "laplacian_variance": 612.76
+  },
+  "ocr": {
+    "success": true,
+    "confidence": 0.4813934426229508,
+    "text_length": 536,
+    "source": "image_ocr_variants",
+    "best_variant": "threshold_fallback",
+    "best_psm": 11,
+    "best_lang": "eng+fas",
+    "text_quality": {
+      "score": 0.321,
+      "status": "usable_noisy_text",
+      "alias_hits": 4,
+      "medical_hits": 3,
+      "numeric_hits": 25,
+      "line_count": 76,
+      "token_count": 122,
+      "gibberish_ratio": 0.0
+    },
+    "candidate_count": 102,
+    "candidate_scores": [
+      {
+        "variant": "threshold_fallback",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 32.64,
+        "len": 536,
+        "conf": 0.481,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 32.6,
+        "len": 395,
+        "conf": 0.644,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 32.17,
+        "len": 372,
+        "conf": 0.692,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 4,
+        "lang": "eng+fas",
+        "score": 32.17,
+        "len": 370,
+        "conf": 0.655,
+        "error": null
+      },
+      {
+        "variant": "mild_contrast",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 31.36,
+        "len": 357,
+        "conf": 0.659,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 30.94,
+        "len": 339,
+        "conf": 0.618,
+        "error": null
+      },
+      {
+        "variant": "light_sharpen",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 30.75,
+        "len": 352,
+        "conf": 0.601,
+        "error": null
+      },
+      {
+        "variant": "threshold_fallback",
+        "psm": 11,
+        "lang": "eng",
+        "score": 30.11,
+        "len": 506,
+        "conf": 0.285,
+        "error": null
+      },
+      {
+        "variant": "light_autocontrast",
+        "psm": 6,
+        "lang": "eng+fas",
+        "score": 29.89,
+        "len": 392,
+        "conf": 0.643,
+        "error": null
+      },
+      {
+        "variant": "original_oriented",
+        "psm": 11,
+        "lang": "eng+fas",
+        "score": 29.65,
+        "len": 353,
+        "conf": 0.68,
+        "error": null
+      }
+    ]
+  },
+  "common_fields": {
+    "center_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "national_id": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "tracking_number": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "date_of_test_or_report": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "calendar": null
+    },
+    "patient_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "sex": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "age": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    },
+    "doctor_name": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null
+    }
+  },
+  "extracted_data": {
+    "lab_results": [
+      {
+        "section": "biochemistry",
+        "test_name_standard": "ALT",
+        "test_name_raw": "ALT",
+        "result_value": "47",
+        "result_numeric": 47.0,
+        "unit": null,
+        "reference_range": null,
+        "flag": null,
+        "method": null,
+        "confidence": 0.58,
+        "source_text": "alt al om Ac a f47. ONE eu Pans ete 3 vee ne 4 wey 32 on وه ره if oy ً و ی ی qe RAS s ety vee wa £4 x oa fee pe ی wk 11 Awa) 3S ae he ws ie PFN 1 ant arn مت کت ~ وحدت درمانگاه oft lesT‏ rie, 1 ووم 13034 3661601"
+      }
+    ],
+    "radiology": []
+  },
+  "extracted_parts": [
+    {
+      "part_type": "lab_result",
+      "section": "biochemistry",
+      "field_name": "ALT",
+      "value": "47",
+      "result_numeric": 47.0,
+      "unit": null,
+      "reference_range": null,
+      "flag": null,
+      "method": null,
+      "confidence": 0.58,
+      "source_text": "alt al om Ac a f47. ONE eu Pans ete 3 vee ne 4 wey 32 on وه ره if oy ً و ی ی qe RAS s ety vee wa £4 x oa fee pe ی wk 11 Awa) 3S ae he ws ie PFN 1 ant arn مت کت ~ وحدت درمانگاه oft lesT‏ rie, 1 ووم 13034 3661601",
+      "test_name_raw": "ALT"
+    }
+  ],
+  "extracted_text": "alt al\nom\nAc\na f47.\nONE\neu\nPans\nete\n3\nvee\nne\n4\nwey\n32\non\nوه\nره\nif\noy\nً\nو\nی\nی\nqe\nRAS\ns\nety\nvee\nwa\n£4\nx\noa\nfee\npe\nی\nwk\n11\nAwa)\n3S\nae\nhe\nws\nie\nPFN\n1\nant\narn\nمت\nکت\n~\nوحدت درمانگاه oft lesT‏\nrie,\n1 ووم 13034 36616016- تلفن:\nNK‏ غربی- سوم غیابان وحدت- شهرگ کرج- آدرس:\n22239 : پیمه شماره\n:17 پذدیرش تاریخ\n93-0\n3\nمعمودیان زهوا خانم : لام\n-6سال\nولیئی دکتر آقای lise: alan‏ پزشک\non\n89-57 :شریذپ شماره‎\nاجتماعی gall‏ بیمه تام\nاز 4 ante‏\n9\n1111/55\n‘Cutrore :\nNo bacterin growth after 48 brs,\nLabDirector : Dr.A.Mohtashem,MD,AP,CP.\n=\n©\nزو ار\n=\nSS\n55"
+}
