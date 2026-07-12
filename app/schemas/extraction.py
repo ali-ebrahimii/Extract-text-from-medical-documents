@@ -34,3 +34,38 @@ class ExtractionRequest(BaseModel):
         return self
 class ExtractionResponse(BaseModel):
     request_id:str; document_id:str|None=None; status:ExtractionStatus; document_type:str="unknown_medical"; confidence:float=0.0; quality:QualitySummary=Field(default_factory=QualitySummary); ocr:OCRSummary=Field(default_factory=OCRSummary); common_fields:dict[str,CommonFieldResult]=Field(default_factory=dict); extracted_data:dict[str,Any]=Field(default_factory=dict); errors:list[ExtractionError]=Field(default_factory=list); warnings:list[ExtractionWarning]=Field(default_factory=list); debug:dict[str,Any]|None=None
+
+
+class BackendUserFilesRequest(BaseModel):
+    request_id: str | None = None
+    user_id: str
+    debug: bool = False
+    max_files: int | None = None
+
+
+class BackendFileDescriptor(BaseModel):
+    file_name: str
+    document_id: str | None = None
+    mime_type: str | None = None
+    size_bytes: int | None = None
+
+
+class BatchExtractionItem(BaseModel):
+    file_name: str
+    document_id: str | None = None
+    status: str
+    result: ExtractionResponse | None = None
+    errors: list[ExtractionError] = Field(default_factory=list)
+    warnings: list[ExtractionWarning] = Field(default_factory=list)
+
+
+class BatchExtractionResponse(BaseModel):
+    request_id: str
+    user_id: str
+    status: str
+    total_files: int
+    processed_files: int
+    failed_files: int
+    results: list[BatchExtractionItem] = Field(default_factory=list)
+    errors: list[ExtractionError] = Field(default_factory=list)
+    warnings: list[ExtractionWarning] = Field(default_factory=list)
