@@ -12,3 +12,8 @@ eval_storage/
 debug_output/
 htmlcov/
 .coverage
+
+# Medical extraction PHI/PII and notebook outputs
+samples/selected samples/
+samples/selected_samples/
+notebook_outputs/
