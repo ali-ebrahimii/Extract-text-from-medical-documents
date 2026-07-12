@@ -241,3 +241,81 @@ Metrics include document type accuracy, patient/date found accuracy, lab result 
 - Extraction is regex/dictionary based and can miss vendor-specific table layouts.
 - OCR accuracy depends on image quality, language packs, and installed OCR engines.
 - The backend/dev team must handle auth, storage, database records, review workflow, and patient-profile integration.
+
+## Backend user-files integration
+
+The stateless extraction service can orchestrate extraction for files that are owned by a separate backend. The backend remains responsible for permanent storage, database records, authentication, saved results, and any review UI. This service only lists, temporarily fetches, extracts, returns results, and deletes temporary files.
+
+### Endpoint
+
+`POST /extract/user-files`
+
+Request:
+
+```json
+{
+  "request_id": "req-123",
+  "user_id": "user-456",
+  "debug": false,
+  "max_files": 10
+}
+```
+
+Example response:
+
+```json
+{
+  "request_id": "req-123",
+  "user_id": "user-456",
+  "status": "partial_success",
+  "total_files": 3,
+  "processed_files": 2,
+  "failed_files": 1,
+  "results": [
+    {
+      "file_name": "lab1.pdf",
+      "document_id": "doc-1",
+      "status": "success",
+      "result": {},
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}
+```
+
+### Backend configuration
+
+```env
+BACKEND_FILE_LIST_URL_TEMPLATE=https://backend.example.com/api/users/{user_id}/files
+BACKEND_FILE_FETCH_URL_TEMPLATE=https://backend.example.com/api/users/{user_id}/files/{file_name}
+BACKEND_API_TOKEN=
+BACKEND_API_TIMEOUT_SECONDS=15
+BACKEND_API_MAX_FILES=50
+BACKEND_API_FILE_RESPONSE_MODE=auto
+```
+
+`BACKEND_FILE_LIST_URL_TEMPLATE` should return either an array of file names:
+
+```json
+["lab1.pdf", "image1.jpg"]
+```
+
+or an array of file descriptors:
+
+```json
+[
+  {
+    "file_name": "lab1.pdf",
+    "document_id": "doc-1",
+    "mime_type": "application/pdf",
+    "size_bytes": 12345
+  }
+]
+```
+
+`BACKEND_FILE_FETCH_URL_TEMPLATE` can return binary file content, JSON with a temporary/pre-signed `file_url`, or JSON with `base64_content`. Set `BACKEND_API_FILE_RESPONSE_MODE` to `auto`, `binary`, `json_url`, or `json_base64`. In `auto` mode, JSON responses are inspected for `file_url` or `base64_content`; all other responses are treated as binary files.
+
+Backend implementations should preferably return either binary content or a pre-signed temporary `file_url`. The extraction service does not persist fetched files or extraction results, does not create permanent storage directories, and processes all backend files through temporary files only.

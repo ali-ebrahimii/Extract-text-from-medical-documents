@@ -2,8 +2,17 @@ from __future__ import annotations
 import base64, os, shutil, tempfile, uuid
 from pathlib import Path
 from fastapi import APIRouter, File, Form, UploadFile
-from app.schemas.extraction import ExtractionRequest, ExtractionResponse, ExtractionStatus, ExtractionError
+from app.schemas.extraction import (
+    BackendUserFilesRequest,
+    BatchExtractionItem,
+    BatchExtractionResponse,
+    ExtractionRequest,
+    ExtractionResponse,
+    ExtractionStatus,
+    ExtractionError,
+)
 from app.services.extraction_pipeline import ExtractionInput, ExtractionPipeline
+from app.services.backend_file_client import BackendFileClient, BackendFileClientError
 from app.services.file_validation_service import SUPPORTED, MIME_ALIASES
 from app.services.url_file_loader import UrlFileLoadError, load_url_to_tempfile
 
@@ -27,6 +36,107 @@ async def extract_file(file: UploadFile=File(...), document_id:str|None=Form(Non
             return ExtractionPipeline().process(inp, debug=debug)
     except Exception:
         return ExtractionResponse(request_id=request_id,document_id=document_id,status=ExtractionStatus.INVALID_FILE,errors=[ExtractionError(code='FILE_READ_ERROR',message='Could not read uploaded file')])
+
+
+
+@router.post('/user-files', response_model=BatchExtractionResponse)
+def extract_user_files(req: BackendUserFilesRequest):
+    request_id = req.request_id or str(uuid.uuid4())
+    client = BackendFileClient()
+    try:
+        descriptors = client.list_user_files(req.user_id)
+    except BackendFileClientError as exc:
+        return BatchExtractionResponse(
+            request_id=request_id,
+            user_id=req.user_id,
+            status='failed',
+            total_files=0,
+            processed_files=0,
+            failed_files=0,
+            results=[],
+            errors=[ExtractionError(code=exc.code, message=exc.message)],
+            warnings=[],
+        )
+
+    if req.max_files is not None:
+        descriptors = descriptors[: req.max_files]
+
+    results: list[BatchExtractionItem] = []
+    pipeline = ExtractionPipeline()
+    for descriptor in descriptors:
+        downloaded = None
+        try:
+            downloaded = client.fetch_file_to_tempfile(req.user_id, descriptor)
+            result = pipeline.process(
+                ExtractionInput(
+                    file_path=downloaded.path,
+                    file_name=downloaded.file_name,
+                    mime_type=downloaded.mime_type,
+                    document_id=downloaded.document_id,
+                    request_id=request_id,
+                    debug=req.debug,
+                ),
+                debug=req.debug,
+            )
+            item_status = 'success' if not result.errors and result.status == ExtractionStatus.SUCCESS else str(result.status.value)
+            results.append(
+                BatchExtractionItem(
+                    file_name=descriptor.file_name,
+                    document_id=descriptor.document_id,
+                    status=item_status,
+                    result=result,
+                    errors=result.errors,
+                    warnings=result.warnings,
+                )
+            )
+        except BackendFileClientError as exc:
+            results.append(
+                BatchExtractionItem(
+                    file_name=descriptor.file_name,
+                    document_id=descriptor.document_id,
+                    status='failed',
+                    result=None,
+                    errors=[ExtractionError(code=exc.code, message=exc.message)],
+                    warnings=[],
+                )
+            )
+        except Exception:
+            results.append(
+                BatchExtractionItem(
+                    file_name=descriptor.file_name,
+                    document_id=descriptor.document_id,
+                    status='failed',
+                    result=None,
+                    errors=[ExtractionError(code='EXTRACTION_FAILED', message='Extraction failed')],
+                    warnings=[],
+                )
+            )
+        finally:
+            if downloaded:
+                try:
+                    os.unlink(downloaded.path)
+                except OSError:
+                    pass
+
+    failed = sum(1 for item in results if item.status != 'success')
+    processed = len(results) - failed
+    if not results or processed == 0:
+        status = 'failed'
+    elif failed:
+        status = 'partial_success'
+    else:
+        status = 'success'
+    return BatchExtractionResponse(
+        request_id=request_id,
+        user_id=req.user_id,
+        status=status,
+        total_files=len(results),
+        processed_files=processed,
+        failed_files=failed,
+        results=results,
+        errors=[],
+        warnings=[],
+    )
 
 @router.post('', response_model=ExtractionResponse)
 def extract(req: ExtractionRequest):
