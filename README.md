@@ -319,3 +319,103 @@ or an array of file descriptors:
 `BACKEND_FILE_FETCH_URL_TEMPLATE` can return binary file content, JSON with a temporary/pre-signed `file_url`, or JSON with `base64_content`. Set `BACKEND_API_FILE_RESPONSE_MODE` to `auto`, `binary`, `json_url`, or `json_base64`. In `auto` mode, JSON responses are inspected for `file_url` or `base64_content`; all other responses are treated as binary files.
 
 Backend implementations should preferably return either binary content or a pre-signed temporary `file_url`. The extraction service does not persist fetched files or extraction results, does not create permanent storage directories, and processes all backend files through temporary files only.
+
+## v2 stateless extraction API
+
+The v2 pipeline integrates the frozen v13.2 notebook behavior as reusable FastAPI services while keeping the legacy v1 `/extract` and `/extract/file` routes backward compatible. The service is stateless: it writes no database records and performs no permanent file storage. Uploaded bytes are processed through temporary files that are deleted after the request returns.
+
+### Endpoint
+
+`POST /api/v2/extract/file`
+
+Multipart form fields:
+
+- `file`: required medical document upload.
+- `document_id`: optional backend document identifier.
+- `request_id`: optional caller request identifier; generated when omitted.
+- `debug`: optional boolean, default `false`. Full OCR text, OCR words, visual lines, and candidate details are returned only when debug is true.
+- `privacy_mode`: `internal` or `safe_share`. In `safe_share`, `national_id.raw_value` is null while `masked_value` and `hash_sha256` remain available.
+
+A compatibility v2 upload route is also available at `POST /extract/v2/file`.
+
+### Response model overview
+
+The v2 response contains:
+
+- `api_version`: always `v2`.
+- `document`: filename, MIME type, detected document type, extraction status, and page context.
+- `quality`: quality status, score, and issues.
+- `ocr`: selected OCR/PDF-text variant metadata, confidence, text length, layout status, and score details. Full text is debug-only.
+- `common_fields`: validated common fields such as center name, national ID, tracking number, report date, patient name, sex, age, and doctor name.
+- `lab_results`: validated row-level extraction results with separate printed and computed flags.
+- `persistence_recommendation`: recommendation only; no data is saved by the extraction service.
+- `safe_payload_candidate`: backend-safe metadata, fields, and rows for automatic-save candidates only.
+- `review_payload`: extracted fields and rows for review UI and human/backend decisioning.
+
+### Status definitions
+
+`extraction_status` values:
+
+- `extracted_good`: usable extraction and eligible save candidate.
+- `needs_review`: extraction has review-only rows, image context, or missing backend context.
+- `not_extractable`: no usable lab rows or unrelated/unsupported content.
+- `invalid_file`: file validation failed.
+
+`page_role` values:
+
+- `standalone_report_page`: patient identity and report date are present.
+- `continuation_or_body_only_page`: lab rows exist but patient/date context is missing; backend context is required before saving.
+- `culture_result_page`: culture-only or short culture result page.
+- `header_or_demographic_page`: demographic/header data without enough lab rows.
+- `unknown_page_role`: insufficient signals.
+
+`template_type` values:
+
+- `tav_text_pdf`: actual text-layer TAV-style PDFs only.
+- `nobin_photo_with_history_charts`
+- `atabay_rotated_or_screenshot`
+- `vahdat_multi_page_photo`
+- `emrooz_clean_screenshot`
+- `thermal_or_receipt_cbc`
+- `generic_lab`
+
+`field_validation_status` values:
+
+- `valid`, `review`, `missing`, `missing_required`, `missing_optional`, `invalid`, `unsafe_ocr_context`, `not_applicable`.
+
+`row_validation_status` values:
+
+- `valid`, `review`, `invalid`, `unsafe_ocr_context`.
+
+`column_status` values:
+
+- `valid`, `review`, `missing_required`, `missing_optional`, `invalid`, `not_applicable`, `unsafe_ocr_context`.
+
+`recommended_action` values:
+
+- `save_candidate`: backend may consider automatic persistence using `safe_payload_candidate`.
+- `manual_review`: backend should show `review_payload` in a review workflow.
+- `reupload_recommended`: OCR/layout was unsafe or unusable; backend should request a clearer upload.
+- `reject_or_ignore`: no useful medical extraction result was found.
+
+### Persistence and backend integration semantics
+
+- `recommended_save` is a document-level recommendation from the extraction service. It is never a save operation.
+- `row_save_allowed` means a row is internally valid and safe in isolation.
+- `backend_row_save_recommendation` is `recommended_save AND row_save_allowed`. If the document is not recommended for save, every row has `backend_row_save_recommendation=false`.
+- `safe_payload_candidate` contains only backend-usable common fields and rows where `backend_row_save_recommendation=true`. National ID uses `raw_value`, `masked_value`, and `hash_sha256`; it never uses `value` as a hash.
+- `review_payload` contains extracted review-only fields and rows, including rows that are not safe for automatic persistence.
+- The backend should use `safe_payload_candidate` for automatic persistence candidates, `review_payload` for review UI, and respect `reupload_recommended`. The backend remains the final authority for saving, reviewing, reuploading, or ignoring any extraction result.
+
+### Evaluation on private v13.2 samples
+
+Private v13.2 notebook outputs and selected samples must stay outside Git. Mount them into an ignored/local path and run:
+
+```bash
+python scripts/evaluate_v2_on_selected_samples.py \
+  --samples-dir /path/to/private/selected_samples \
+  --reference-dir /path/to/private/v13_2_reference_outputs \
+  --output-dir /tmp/eval_v2
+```
+
+The script prints the v13.2 acceptance counters, including processed file count, save/manual-review/reupload counts, backend-safe row counts, image-save guardrails, unsafe doctor-name leakage, false culture/Bacteria=48 rows, AST/ALT false Low flags, national ID schema violations, and missing TAV tracking numbers.

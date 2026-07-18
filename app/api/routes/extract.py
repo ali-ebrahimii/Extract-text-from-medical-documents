@@ -12,6 +12,8 @@ from app.schemas.extraction import (
     ExtractionError,
 )
 from app.services.extraction_pipeline import ExtractionInput, ExtractionPipeline
+from app.services.extraction_pipeline_v2 import ExtractionInputV2, ExtractionPipelineV2
+from app.schemas.extraction_v2 import ExtractionResponseV2
 from app.services.backend_file_client import BackendFileClient, BackendFileClientError
 from app.services.file_validation_service import SUPPORTED, MIME_ALIASES
 from app.services.url_file_loader import UrlFileLoadError, load_url_to_tempfile
@@ -24,6 +26,20 @@ def _mime_for(name, provided=None):
 
 @router.get('/health')
 def health(): return {'status':'ok','service':'stateless-extraction'}
+
+
+@router.post('/v2/file', response_model=ExtractionResponseV2)
+async def extract_file_v2(file: UploadFile=File(...), document_id:str|None=Form(None), request_id:str|None=Form(None), debug:bool=Form(False), privacy_mode:str=Form('internal')):
+    request_id=request_id or str(uuid.uuid4())
+    suffix=Path(file.filename or 'upload').suffix
+    try:
+        with tempfile.NamedTemporaryFile(prefix='extract_v2_upload_', suffix=suffix, delete=True) as tmp:
+            shutil.copyfileobj(file.file, tmp); tmp.flush()
+            inp=ExtractionInputV2(document_id=document_id,request_id=request_id,file_path=tmp.name,file_name=file.filename or f'upload{suffix}',mime_type=_mime_for(file.filename,file.content_type),debug=debug,privacy_mode=privacy_mode)
+            return ExtractionPipelineV2().process(inp, debug=debug, privacy_mode=privacy_mode)
+    except Exception:
+        doc={'filename': file.filename, 'mime_type': file.content_type, 'document_type':'unknown', 'document_type_confidence':0.0, 'extraction_status':'invalid_file', 'page_context':{'page_role':'unknown_page_role','template_type':'generic_lab','requires_backend_context_for_save':False}}
+        return ExtractionResponseV2(request_id=request_id,document_id=document_id,document=doc)
 
 @router.post('/file', response_model=ExtractionResponse)
 async def extract_file(file: UploadFile=File(...), document_id:str|None=Form(None), request_id:str|None=Form(None), debug:bool=Form(False)):
