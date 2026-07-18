@@ -17,3 +17,7 @@ htmlcov/
 samples/selected samples/
 samples/selected_samples/
 notebook_outputs/
+.local_eval/
+tmp_eval/
+notebook_reference/
+selected_samples_private/

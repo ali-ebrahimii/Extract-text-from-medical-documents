@@ -5,6 +5,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from app.api.routes.health import router as health_router
 from app.api.routes.extract import router as extract_router
+from app.api.routes.extract_v2 import router as extract_v2_router
 from app.schemas.extraction import ExtractionError, ExtractionResponse, ExtractionStatus
 
 app = FastAPI(title="Stateless Medical Document Extraction Service")
@@ -29,3 +30,4 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 app.include_router(health_router)
 app.include_router(extract_router)
+app.include_router(extract_v2_router)
