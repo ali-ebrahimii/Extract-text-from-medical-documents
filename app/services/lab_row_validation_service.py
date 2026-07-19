@@ -2,7 +2,7 @@ from __future__ import annotations
 import re
 from app.schemas.extraction_v2 import LabResultV2, ColumnStatuses
 
-EXPECTED_UNITS={'HGB':['g/dL'],'HCT':['%'],'RBC':['10^6/uL','Mil/Cumm'],'WBC':['10^3/uL','1000/Cumm'],'PLT':['10^3/uL','1000/Cumm'],'MCV':['fL'],'MCH':['pg'],'MCHC':['g/dL'],'HbA1c':['%'],'FBS':['mg/dL'],'Creatinine':['mg/dL'],'HDL':['mg/dL'],'LDL':['mg/dL'],'Total Cholesterol':['mg/dL'],'Triglycerides':['mg/dL'],'AST':['U/L','IU/L'],'ALT':['U/L','IU/L'],'ALP':['U/L','IU/L'],'TSH':['uIU/mL','µIU/mL','mIU/L'],'PT':['Sec'],'PTT':['Sec'],'INR':['Ratio',''],'ESR':['mm/hr'],'Ferritin':['ng/mL'],'Vitamin D':['ng/mL']}
+EXPECTED_UNITS={'PDW':['fL'],'RDW':['%','fL'],'HGB':['g/dL'],'HCT':['%'],'RBC':['10^6/uL','Mil/Cumm'],'WBC':['10^3/uL','1000/Cumm'],'PLT':['10^3/uL','1000/Cumm'],'MCV':['fL'],'MCH':['pg'],'MCHC':['g/dL'],'HbA1c':['%'],'FBS':['mg/dL'],'Creatinine':['mg/dL'],'HDL':['mg/dL'],'LDL':['mg/dL'],'Total Cholesterol':['mg/dL'],'Triglycerides':['mg/dL'],'AST':['U/L','IU/L'],'ALT':['U/L','IU/L'],'ALP':['U/L','IU/L'],'TSH':['uIU/mL','µIU/mL','mIU/L'],'PT':['Sec'],'PTT':['Sec'],'INR':['Ratio',''],'ESR':['mm/hr'],'Ferritin':['ng/mL'],'Vitamin D':['ng/mL']}
 RANGES={'WBC':(0.1,200),'RBC':(.1,10),'HGB':(1,25),'HCT':(5,75),'MCV':(40,140),'MCH':(10,50),'MCHC':(20,45),'PLT':(1,2000),'HbA1c':(2,20),'FBS':(10,800),'Creatinine':(.1,25),'Ferritin':(1,5000),'Vitamin D':(1,300),'TSH':(.001,200),'HDL':(1,200),'LDL':(1,500),'Triglycerides':(1,3000),'BUN':(1,200),'Urea':(1,500),'AST':(1,5000),'ALT':(1,5000),'ESR':(0,200),'PT':(5,120),'INR':(.5,20),'PTT':(5,200),'CRP':(0,500),'DHT':(1,5000),'LH':(0,500),'FSH':(0,500),'Prolactin':(0,1000),'Testosterone':(0,3000),'Free Testosterone':(0,100),'Estradiol':(0,5000),'DHEA-SO4':(1,2000),'17OH-Progesterone':(0,100),'T3':(.1,1000),'T4':(.1,1000),'Free T3':(.1,50),'Free T4':(.1,20),'Calcium':(1,20),'Phosphorus':(1,20),'Iron':(1,1000),'TIBC':(1,1000),'Bilirubin Total':(0,50),'Bilirubin Direct':(0,50),'ALP':(1,5000),'Zinc':(1,1000),'Folic Acid':(.1,100),'Vitamin B12':(1,5000)}
 QUAL_OK={'Color','Appearance','Protein','Urine Glucose','Ketone','Bilirubin Urine','Urobilinogen','Nitrite','Blood/Hb','Bacteria','Mucus','Casts','Crystals','Urine Culture','Epithelial Cells'}
 
@@ -50,9 +50,12 @@ class LabRowValidationService:
             row.row_validation_status='invalid'; row.reason_codes.append('qualitative_value_not_allowed')
         elif row.column_statuses.unit_status=='invalid':
             row.row_validation_status='invalid'; row.reason_codes.append('expected_unit_mismatch')
+        elif row.result_numeric is not None and row.test_name_standard in EXPECTED_UNITS and row.column_statuses.unit_status=='missing_optional':
+            row.row_validation_status='invalid'; row.reason_codes.append('expected_unit_missing')
         elif row.result_numeric is not None and row.test_name_standard in RANGES and not (RANGES[row.test_name_standard][0] <= row.result_numeric <= RANGES[row.test_name_standard][1]):
             row.row_validation_status='review'; row.reason_codes.append('outside_physiological_range')
         else:
             row.row_validation_status='valid'
-        row.row_save_allowed=row.row_validation_status=='valid' and row.column_statuses.result_status=='valid' and row.column_statuses.unit_status!='invalid'
+        unit_backend_ok = row.column_statuses.unit_status=='valid' or (row.column_statuses.unit_status=='missing_optional' and row.test_name_standard not in EXPECTED_UNITS)
+        row.row_save_allowed=row.row_validation_status=='valid' and row.column_statuses.result_status=='valid' and unit_backend_ok
         return row

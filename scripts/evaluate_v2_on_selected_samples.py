@@ -86,7 +86,7 @@ def evaluate(samples_dir: Path, output_dir: Path) -> dict[str, int]:
         metrics["clean_pdfs_recommended_save_count"] += int(clean_pdf and recommendation.recommended_save)
         metrics["image_recommended_save_count"] += int(image and recommendation.recommended_save)
 
-        metrics["backend_safe_row_count"] += sum(int(row.row_save_allowed) for row in result.lab_results)
+        metrics["backend_safe_row_count"] += sum(int(row.backend_row_save_recommendation) for row in result.lab_results)
         image_backend_recommended_rows = sum(
             int(row.backend_row_save_recommendation) for row in result.lab_results
         )
@@ -123,7 +123,7 @@ def evaluate(samples_dir: Path, output_dir: Path) -> dict[str, int]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--samples-dir", required=True)
-    parser.add_argument("--reference-dir")
+    parser.add_argument("--reference-dir", help="Accepted for compatibility only; reference-output validation is not implemented.")
     parser.add_argument("--output-dir", required=True)
     return parser.parse_args()
 

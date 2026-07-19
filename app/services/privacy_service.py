@@ -1,8 +1,9 @@
 from __future__ import annotations
-import hashlib, re
+import hashlib, re, unicodedata
 
 def normalize_persian_text(text: str | None) -> str:
     if not text: return ''
+    text = unicodedata.normalize('NFKC', text)
     table = str.maketrans({'ك':'ک','ي':'ی','ھ':'ه','ة':'ه','أ':'ا','إ':'ا','ٱ':'ا','ؤ':'و','ئ':'ی'})
     text = text.translate(table)
     text = text.replace('مھلا','مهلا').replace('طھران','تهران').replace('طهران','تهران')

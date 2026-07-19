@@ -94,7 +94,7 @@ def test_backend_row_save_recommendation_is_conjunction():
     row=LabRowValidationService().validate(row)
     recommended_save=False
     row.backend_row_save_recommendation = recommended_save and row.row_save_allowed
-    assert row.row_save_allowed is True and row.backend_row_save_recommendation is False
+    assert row.row_save_allowed is False and row.backend_row_save_recommendation is False
 
 def test_expected_unit_mismatch_blocks_backend_safe_row():
     row=LabResultV2(test_name_standard='HCT',result_value='42',result_numeric=42,unit='g/dL')
@@ -178,3 +178,90 @@ U/L
     assert ast.unit=='U/L'
     assert ast.source_flag is None
     assert ast.flag is None
+
+
+def test_persian_presentation_forms_normalize_before_extraction():
+    text = 'اﻣﯿﻨﻲ ﺗﻬﺮان- آﻗﺎی کورش- دﻛﺘﺮ34 : ﺳﻦ\nﮐﺪ ﻣﻠﻲ : 0014161672'
+    normalized = normalize_persian_text(text)
+    assert 'امینی تهران' in normalized
+    assert 'آقای کورش' in normalized
+    assert 'دکتر34 : سن' in normalized
+    assert 'کد ملی' in normalized
+    fields = CommonFieldValidationService().extract(text)
+    assert fields['patient_name']['value'] == 'کورش امینی تهران'
+    assert fields['sex']['value'] == 'male'
+    assert fields['age']['value'] == 34
+    assert fields['national_id']['raw_value'] == '0014161672'
+
+
+def test_v2_tav_dotted_cbc_aliases_extract_and_validate_units():
+    rows = LabExtractorV2().extract('''R.B.C
+5.01
+10^6/uL
+4.5-5.9
+
+Hemoglobin
+14.2
+g/dL
+13-17
+
+H.C.T
+42
+%
+40-52
+
+M.C.V
+84
+fL
+80-100
+
+M.C.H
+28
+pg
+27-33
+
+M.C.H.C
+33
+g/dL
+32-36
+
+Platelets count
+250
+10^3/uL
+150-450
+
+RDW-CV
+13
+%
+11-15
+
+PDW
+11
+fL
+9-17
+
+Fasting blood sugar
+91
+mg/dL
+70-100''')
+    by_name = {row.test_name_standard: row for row in rows}
+    assert by_name['RBC'].test_name_raw == 'R.B.C'
+    assert by_name['HGB'].test_name_raw == 'Hemoglobin'
+    assert by_name['HCT'].test_name_raw == 'H.C.T'
+    assert by_name['MCV'].test_name_raw == 'M.C.V'
+    assert by_name['MCH'].test_name_raw == 'M.C.H'
+    assert by_name['MCHC'].test_name_raw == 'M.C.H.C'
+    assert by_name['PLT'].test_name_raw == 'Platelets count'
+    assert by_name['RDW'].test_name_raw == 'RDW-CV'
+    assert by_name['PDW'].test_name_raw == 'PDW'
+    assert by_name['FBS'].test_name_raw == 'Fasting blood sugar'
+    assert all(row.row_save_allowed for row in by_name.values())
+
+
+def test_expected_unit_missing_blocks_quantitative_backend_safe_row():
+    row = LabResultV2(test_name_standard='WBC', result_value='5', result_numeric=5)
+    row = LabRowValidationService().validate(row)
+    assert row.column_statuses.unit_status == 'missing_optional'
+    assert row.row_validation_status == 'invalid'
+    assert 'expected_unit_missing' in row.reason_codes
+    assert row.row_save_allowed is False
