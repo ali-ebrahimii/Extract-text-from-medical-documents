@@ -95,3 +95,34 @@ def test_backend_row_save_recommendation_is_conjunction():
     recommended_save=False
     row.backend_row_save_recommendation = recommended_save and row.row_save_allowed
     assert row.row_save_allowed is True and row.backend_row_save_recommendation is False
+
+def test_expected_unit_mismatch_blocks_backend_safe_row():
+    row=LabResultV2(test_name_standard='HCT',result_value='42',result_numeric=42,unit='g/dL')
+    row=LabRowValidationService().validate(row)
+    assert row.column_statuses.unit_status in ('invalid','review')
+    assert row.row_validation_status in ('invalid','review')
+    assert row.row_save_allowed is False
+
+
+def test_tsh_ul_unit_is_not_valid():
+    row=LabResultV2(test_name_standard='TSH',result_value='2.1',result_numeric=2.1,unit='U/L')
+    row=LabRowValidationService().validate(row)
+    assert row.column_statuses.unit_status in ('invalid','review')
+    assert row.row_validation_status in ('invalid','review')
+    assert row.row_save_allowed is False
+
+
+def test_ast_alt_ul_and_iul_units_valid():
+    for test_name, unit in [('AST','U/L'),('AST','IU/L'),('ALT','U/L'),('ALT','IU/L')]:
+        row=LabResultV2(test_name_standard=test_name,result_value='19',result_numeric=19,unit=unit)
+        row=LabRowValidationService().validate(row)
+        assert row.column_statuses.unit_status=='valid'
+        assert row.row_validation_status=='valid'
+        assert row.row_save_allowed is True
+
+
+def test_qualitative_value_invalid_for_quantitative_non_urine_tests():
+    row=LabResultV2(test_name_standard='TSH',result_value='Negative',result_numeric=None,unit='uIU/mL')
+    row=LabRowValidationService().validate(row)
+    assert row.row_validation_status=='invalid'
+    assert row.row_save_allowed is False
