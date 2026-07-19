@@ -26,6 +26,44 @@ def test_tracking_number_validation_rejection():
     assert not valid_tracking_number('Culture')
     assert not valid_tracking_number('1404/01/01')
 
+def test_clean_tav_tracking_number_patterns():
+    service=CommonFieldValidationService()
+    for text in ['شماره : O-40412-1721', 'شماره:O-40412-1721', 'آزمایشگاه تاو\nO-40412-1721\nنام بیمار']:
+        field=service.extract(text)['tracking_number']
+        assert field['value']=='O-40412-1721'
+        assert field['field_validation_status']=='valid'
+    for text in ['شماره : 1404', 'شماره : 1404/12/09', 'Result', 'Hormone', 'Culture']:
+        field=service.extract(text)['tracking_number']
+        assert field['field_validation_status']=='missing_optional'
+
+def test_clean_tav_date_patterns():
+    service=CommonFieldValidationService()
+    for text in ['تاریخ پذیرش1404/12/09', 'تاریخ پذیرش : 1404/12/09', 'تاریخ جوابدهی1404/12/09']:
+        field=service.extract(text)['date_of_test_or_report']
+        assert field['value']=='1404/12/09'
+        assert field['field_validation_status']=='valid'
+
+def test_clean_tav_compact_patient_sex_age_line_male():
+    fields=CommonFieldValidationService().extract('امینی تهران- آقای کورش- دکتر34 : سن')
+    assert fields['patient_name']['value']=='کورش امینی تهران'
+    assert fields['sex']['value']=='male'
+    assert fields['age']['value']==34
+    assert fields['doctor_name']['field_validation_status']=='missing_optional'
+
+def test_clean_tav_compact_patient_sex_age_line_female():
+    fields=CommonFieldValidationService().extract('روشن- خانم مهلا- دکتر27 : سن')
+    assert fields['patient_name']['value']=='مهلا روشن'
+    assert fields['sex']['value']=='female'
+    assert fields['age']['value']==27
+    assert fields['doctor_name']['field_validation_status']=='missing_optional'
+
+def test_national_id_preserves_leading_zeros_schema():
+    fields=CommonFieldValidationService().extract('کد ملی : 0014161672')
+    nid=fields['national_id']
+    assert nid['raw_value']=='0014161672'
+    assert nid['masked_value']=='001****672'
+    assert nid['hash_sha256']
+
 def test_doctor_rejected_from_patient_age_line():
     fields=CommonFieldValidationService().extract('دکتر34 : سن')
     assert fields['doctor_name']['field_validation_status']=='missing_optional'
