@@ -252,7 +252,7 @@ mg/dL
     assert by_name['MCH'].test_name_raw == 'M.C.H'
     assert by_name['MCHC'].test_name_raw == 'M.C.H.C'
     assert by_name['PLT'].test_name_raw == 'Platelets count'
-    assert by_name['RDW'].test_name_raw == 'RDW-CV'
+    assert by_name['RDW-CV'].test_name_raw == 'RDW-CV'
     assert by_name['PDW'].test_name_raw == 'PDW'
     assert by_name['FBS'].test_name_raw == 'Fasting blood sugar'
     assert all(row.row_save_allowed for row in by_name.values())
@@ -264,4 +264,104 @@ def test_expected_unit_missing_blocks_quantitative_backend_safe_row():
     assert row.column_statuses.unit_status == 'missing_optional'
     assert row.row_validation_status == 'invalid'
     assert 'expected_unit_missing' in row.reason_codes
+    assert row.row_save_allowed is False
+
+
+def test_v2_tav_real_like_cbc_rows_with_ref_units_and_spaced_units():
+    rows = LabExtractorV2().extract('''W.B.C
+7.24
+10^3/uL
+3.5-10.5
+
+R.B.C
+4.90
+10^6/uL
+4.32 - 5.72
+
+Hemoglobin
+15.0
+g/dL
+13.5-17.5
+
+H.C.T
+45.0
+%
+38.8-50 %
+
+M.C.V
+91.8
+fl
+81.2-95.1 fl
+
+M.C.H
+30.6
+pg
+25.8-33.1 pg
+
+M.C.H.C
+33.3
+g/dl
+32-36 g/dl
+
+Platelets
+265
+10^3 /uL
+150 - 450
+
+RDW-CV
+12.6
+%
+11.8-15.6 %
+
+RDW-SD
+40.7
+fl
+36 - 54
+
+Monocytes
+5.5
+%
+4.1-12.4 %
+
+Eosinophils
+1.7
+%
+0.4-6.7 %
+
+Basophils
+0.1
+%
+0.3-1.4 %
+
+Fasting blood sugar
+91
+mg/dl
+70-100
+
+SGOT(AST)
+19
+U/L
+<37
+
+SGPT(ALT)
+21
+IU/L
+< 40''')
+    by_name = {row.test_name_standard: row for row in rows}
+    expected = ['WBC','RBC','HGB','HCT','MCV','MCH','MCHC','PLT','RDW-CV','RDW-SD','Monocytes','Eosinophils','Basophils','FBS','AST','ALT']
+    assert set(expected).issubset(by_name)
+    assert by_name['PLT'].unit == '10^3/uL'
+    assert by_name['RBC'].unit == '10^6/uL'
+    assert by_name['MCV'].unit == 'fL'
+    assert by_name['MCHC'].unit == 'g/dL'
+    assert by_name['FBS'].unit == 'mg/dL'
+    assert by_name['RDW-CV'].test_name_raw == 'RDW-CV'
+    assert by_name['RDW-SD'].test_name_raw == 'RDW-SD'
+    assert by_name['AST'].flag is None and by_name['ALT'].flag is None
+    assert all(by_name[name].row_save_allowed for name in expected)
+
+
+def test_quantitative_negative_not_allowed_from_extractor():
+    row = LabExtractorV2().extract('TSH Negative uIU/mL')[0]
+    assert row.row_validation_status == 'invalid'
     assert row.row_save_allowed is False
