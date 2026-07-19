@@ -126,3 +126,55 @@ def test_qualitative_value_invalid_for_quantitative_non_urine_tests():
     row=LabRowValidationService().validate(row)
     assert row.row_validation_status=='invalid'
     assert row.row_save_allowed is False
+def test_v2_tav_cbc_multiline_rows():
+    rows=LabExtractorV2().extract('''W.B.C
+7.24
+10^3/uL
+3.5-10.5''')
+    wbc=next(row for row in rows if row.test_name_standard=='WBC')
+    assert wbc.result_value=='7.24'
+    assert wbc.result_numeric==7.24
+    assert wbc.unit=='10^3/uL'
+    assert wbc.reference_range=='3.5-10.5'
+
+
+def test_v2_tav_ast_alt_multiline_one_sided_refs():
+    rows=LabExtractorV2().extract('''SGOT(AST)
+19
+U/L
+<37
+
+SGPT(ALT)
+21
+U/L
+<40''')
+    by_name={row.test_name_standard: row for row in rows}
+    ast=by_name['AST']
+    alt=by_name['ALT']
+    assert ast.result_value=='19' and ast.unit=='U/L' and ast.reference_range=='<37'
+    assert alt.result_value=='21' and alt.unit=='U/L' and alt.reference_range=='<40'
+    assert ast.flag is None and ast.source_flag is None
+    assert alt.flag is None and alt.source_flag is None
+
+
+def test_v2_tav_multiline_printed_high_is_source_flag():
+    rows=LabExtractorV2().extract('''AST
+47
+U/L
+<37
+High''')
+    ast=next(row for row in rows if row.test_name_standard=='AST')
+    assert ast.source_flag=='High'
+    assert ast.flag=='High'
+    assert ast.flag_source=='source'
+
+
+def test_v2_tav_ul_unit_does_not_create_false_low_flag():
+    rows=LabExtractorV2().extract('''AST
+19
+U/L
+<37''')
+    ast=next(row for row in rows if row.test_name_standard=='AST')
+    assert ast.unit=='U/L'
+    assert ast.source_flag is None
+    assert ast.flag is None
